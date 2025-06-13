@@ -1,0 +1,8 @@
+@use "/src/sass/base/variables.scss" as *;
+
+h1 {
+    font-size: 36px;
+    margin-top: 20px;
+    text-align: center;
+    color: $color-mint;
+}

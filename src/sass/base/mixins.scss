@@ -1,0 +1,3 @@
+@mixin fluid-font($min-size, $max-size, $min-width: 320, $max-width: 1440) {
+    font-size: clamp(#{$min-size}px, calc(#{$min-size}px + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width}))), #{$max-size}px);
+}

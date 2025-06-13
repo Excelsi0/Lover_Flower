@@ -1,0 +1,22 @@
+@use "/src/sass/base/variables.scss" as *;
+
+h1 {
+    font-size: 36px;
+    margin-top: 20px;
+    text-align: center;
+    color: $color-mint;
+    text-shadow: 0 0 20px #000;
+    text-transform: capitalize;
+    font-family: $font-family;
+    font-weight: 700;
+}
+h2 {
+    font-size: 36px;
+    margin-top: 20px;
+    text-align: center;
+    color: $color-mint;
+    text-shadow: 0 0 20px #000;
+    text-transform: capitalize;
+    font-family: $second-family;
+    font-weight: 700;
+}
