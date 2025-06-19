@@ -1,0 +1,81 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        font-family: $font-family;
+    }
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__trigger {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+    }
+
+    &__text {
+        transition: opacity 0.3s ease;
+    }
+
+    &__box {
+        position: absolute;
+        left: 18px; /* Ширина иконки */
+        width: 0;
+        overflow: hidden;
+        transition: width 0.3s ease;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 5px;
+        border: none;
+        background: transparent;
+        color: white;
+        border-bottom: 1px solid white;
+    }
+
+    &.active {
+        .search__text {
+            opacity: 0;
+        }
+        .search__box {
+            width: 180px;
+        }
+        ~ .heeader__actions .header__phone {
+            opacity: 0;
+            width: 0;
+            overflow: hidden;
+        }
+    }
+    ~ .heeader__actions .header__phone {
+        display: none;
+    }
+}
+
+.heeader__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .header__phone {
+        transition: all 0.3s ease;
+    }
+}

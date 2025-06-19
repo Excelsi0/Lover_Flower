@@ -1,0 +1,76 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        font-family: $font-family;
+    }
+    &__phone {
+        display: block;
+    }
+    &__actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 22px;
+    }
+    &__phone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-left: 86px;
+        color: $color-mint;
+    }
+    &__btn {
+        background: none;
+        border: none;
+    }
+    &.search-active {
+        .header__phone {
+            display: none;
+        }
+    }
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    &__input {
+        display: none;
+        width: 338px;
+        margin-left: 10px;
+        transition: all 0.5s linears;
+    }
+
+    &.active {
+        .search__input {
+            display: block;
+        }
+
+        .search__text {
+            display: none;
+        }
+    }
+}

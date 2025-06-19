@@ -1,0 +1,33 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.hero {
+    position: relative;
+    height: 100vh; // Важно для правильного позиционирования
+
+    &__title {
+        position: absolute;
+        top: 50%; // Стартовая позиция по вертикали
+        left: 50%;
+        transform: translate(-50%, -50%); // Изначальное центрирование
+        font-weight: 300;
+        font-size: 50px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: $second-family;
+        width: 100%; // Чтобы text-align работал правильно
+        padding: 0 20px; // Защита от прилипания к краям
+        box-sizing: border-box;
+
+        transition: transform 0.3s ease;
+        will-change: transform; // Оптимизация анимации
+    }
+
+    &__spacer {
+        height: 100vh;
+        background-image: url("/src/image/main/hero__bg.png");
+        background-position: center;
+        background-size: cover;
+    }
+}

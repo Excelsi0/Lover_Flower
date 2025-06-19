@@ -1,0 +1,14 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.hero__title {
+    font-weight: 300;
+    font-size: 50px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color-white;
+    font-family: $second-family;
+    transition: font-size 0.3s ease;
+}
+
+@media screen {
+}

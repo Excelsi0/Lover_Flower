@@ -1,0 +1,72 @@
+<div class="wrap" id="header">
+    <div class="container">
+        <header class="header">
+            <button
+                class="header-mobile__btn"><span></span><span></span><span></span></button>
+            <div class="header__logo logo">
+                <span class="l">l</span><span class="f">f</span>
+            </div>
+
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li><a href="#" class="header__link">Каталог</a></li>
+                    <li><a href="#" class="header__link">Доставка и
+                            оплата</a></li>
+                    <li><a href="#" class="header__link">О нас</a></li>
+                    <li><a href="#" class="header__link">Контакты</a></li>
+                    <li><a href="#" class="header__link">FAQ</a></li>
+                    <li class="search js-search">
+                        <button class="search__trigger js-search-trigger">
+                            <img src="/src/icon/search.svg" alt="поиск" />
+                            <span class="search__text">Поиск</span>
+                        </button>
+                        <div class="search__overlay">
+                            <input id="#"
+                                type="search"
+                                class="search__input"
+                                placeholder="Введите свой запрос" />
+                            <button
+                                class="search__close js-close-search">╳</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:<%= phoneNumber %>" class="header__phone js-phone">
+                    <img src="/src/icon/phone.svg" alt />
+                    <div class="header__phone_number"><%= phoneNumber %></div>
+                </a>
+                <button class="header__btn">
+                    <img src="/src/icon/shop.svg" alt />
+                </button>
+            </div>
+        </header>
+    </div>
+</div>
+<div class="container">
+    <nav class="header-mobile">
+        <ul class="header-mobile__menu">
+            <li class="search js-search">
+                <button class="search__trigger js-search-trigger">
+                    <img src="/src/icon/search.svg" alt="поиск" />
+                    <span class="search__text">Поиск</span>
+                </button>
+                <div class="search__overlay">
+                    <input id="#"
+                        type="search"
+                        class="search__input"
+                        placeholder="Введите свой запрос" />
+                    <button class="search__close js-close-search">╳</button>
+                </div>
+            </li>
+            <li><a href="#" class="header-mobile__link">Каталог</a></li>
+            <li><a href="#" class="header-mobile__link">Доставка и
+                    оплата</a></li>
+            <li><a href="#" class="header-mobile__link">О нас</a></li>
+            <li><a href="#" class="header-mobile__link">Контакты</a></li>
+            <li><a href="#" class="header-mobile__link">FAQ</a></li>
+
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,27 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.hero {
+    position: relative;
+    &__title {
+        position: absolute;
+        top: 0;
+        font-weight: 300;
+        font-size: 50px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: $second-family;
+
+        transition: transform 0.3s ease, font-size 0.3s ease;
+        transform-origin: top center;
+    }
+    &__spacer {
+        height: 100vh;
+        background-image: url("/src/image/main/hero__bg.png");
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 500px;
+    }
+}

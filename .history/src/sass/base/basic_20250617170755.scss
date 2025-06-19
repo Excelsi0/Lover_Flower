@@ -1,0 +1,15 @@
+@use "/src/sass/base/variables.scss" as *;
+
+html {
+    background-color: $color-dark;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: non;
+}

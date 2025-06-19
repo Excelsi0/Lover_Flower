@@ -1,0 +1,40 @@
+ <div class="container">
+    <header class="header">
+        <div class="logo header__logo"><span class="l">l</span><span
+                class="f">f</span></div>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="#" class="header__link">Каталог</a></li>
+                <li><a href="#" class="header__link">Доставка и
+                        оплата</a></li>
+                <li><a href="#" class="header__link">О нас</a></li>
+                <li><a href="#" class="header__link">Контакты</a></li>
+                <li><a href="#" class="header__link">FAQ</a></li>
+                <li>
+                    <div class="search">
+                        <div class="search__icon">
+                            <img src="/src/icon/search.svg" alt="Поиск">
+                            <div class="search__text">Поиск</div>
+                        </div>
+                        <div class="search__input">
+                            <input type="text" placeholder="Введите свой запрос"
+                                id="mySearch">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="header__actions">
+                        <a href="tel:<%= phoneNumber %>"
+                            class="header__phone"><%=
+                            phoneNumber %></a>
+                        <button class="header__btn">
+                            <img src="/src/icon/shop.svg" alt>
+                        </button>
+                    </div>
+
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+</div>

@@ -1,0 +1,77 @@
+ <div class="container">
+    <!-- <header class="header">
+        <div class="logo header__logo"><span class="l">l</span><span
+                class="f">f</span></div>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="#" class="header__link">Каталог</a></li>
+                <li><a href="#" class="header__link">Доставка и
+                        оплата</a></li>
+                <li><a href="#" class="header__link">О нас</a></li>
+                <li><a href="#" class="header__link">Контакты</a></li>
+                <li><a href="#" class="header__link">FAQ</a></li>
+                <li>
+                    <div class="search">
+                        <div class="search__icon">
+                            <img src="/src/icon/search.svg" alt="Поиск">
+                            <div class="search__text">Поиск</div>
+                        </div>
+                        <div class="search__input">
+                            <input type="text" placeholder="Введите свой запрос"
+                                id="mySearch">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="header__actions">
+                        <a href="tel:<%= phoneNumber %>"
+                            class="header__phone"><img src="/src/icon/phone.svg"
+                                alt><%=
+                            phoneNumber %></a>
+                        <button class="header__btn">
+                            <img src="/src/icon/shop.svg" alt>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+     -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">LF</div>
+
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li>
+                        <button class="search-button js-search-button">
+                            <svg class="icon icon--search"></svg>
+                            <span>Поиск</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__right">
+                <div class="header__search js-search">
+                    <input type="text" placeholder="Введите свой запрос" />
+                    <button class="search-close js-search-close">×</button>
+                </div>
+                <div class="header__phone js-phone">
+                    <svg class="icon icon--phone"></svg>
+                    <span>+375 (29) 113-69-69</span>
+                </div>
+                <div class="header__cart">
+                    <svg class="icon icon--cart"></svg>
+                    <span class="cart-count">5</span>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>

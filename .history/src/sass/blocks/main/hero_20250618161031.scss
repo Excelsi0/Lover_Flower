@@ -1,0 +1,17 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.hero {
+    &__title {
+        font-weight: 300;
+        font-size: 50px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 64px;
+        transition: transform 0.3s ease, font-size 0.3s ease;
+        transform-origin: top center;
+        margin: 0;
+        line-height: 1;
+        text-align: center;
+    }
+}

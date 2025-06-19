@@ -1,0 +1,26 @@
+@use "/src/sass/base/variables.scss" as *;
+
+html {
+    background-color: $color-dark;
+
+    // временный bg
+    background-color: #041417;
+
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 5px;
+    max-width: 1100px;
+}

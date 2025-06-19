@@ -1,0 +1,19 @@
+@use "/src//sass/base/variables.scss" as *;
+
+.logo {
+    position: relative;
+    font-weight: 300;
+    font-size: 50px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: $second-family;
+    .l {
+        font-size: 60px;
+        color: #8a8686;
+    }
+    .r {
+        position: absolute;
+        left: -10px;
+    }
+}
