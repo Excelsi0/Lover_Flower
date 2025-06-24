@@ -1,92 +1,113 @@
 import "/src/sass/style.scss";
 
-// для поиска
-const search = document.querySelector(".js-search");
-const openSearchBtn = document.querySelector(".js-search-trigger");
-const closeSearchBtn = document.querySelector(".js-close-search");
-const searchInput = document.querySelector(".search__input");
-const header = document.querySelector(".header");
+try {
+    // Элементы поиска
+    const search = document.querySelector(".js-search");
+    const openSearchBtn = document.querySelector(".js-search-trigger");
+    const closeSearchBtn = document.querySelector(".js-close-search");
+    const searchInput = document.querySelector(".search__input");
+    const header = document.querySelector(".header");
 
-// Открытие поиска
-function openSearch() {
-    search.classList.add("active");
-    header.classList.add("search-active");
-    searchInput.focus();
+    if (!search || !openSearchBtn || !closeSearchBtn || !searchInput || !header) {
+        throw new Error("Некоторые элементы поиска не найдены.");
+    }
+
+    const toggleSearch = (isOpen) => {
+        search.classList.toggle("active", isOpen);
+        header.classList.toggle("search-active", isOpen);
+        if (isOpen) searchInput.focus();
+    };
+
+    openSearchBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleSearch(true);
+    });
+
+    closeSearchBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleSearch(false);
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".search")) {
+            toggleSearch(false);
+        }
+    });
+} catch (err) {
+    console.error("Ошибка в блоке поиска:", err);
 }
 
-// Закрытие поиска
-function closeSearch() {
-    search.classList.remove("active");
-    header.classList.remove("search-active");
+try {
+    const bgHeader = document.getElementById("header");
+
+    if (!bgHeader) throw new Error("Элемент #header не найден");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+            bgHeader.classList.add("scrolled");
+            bgHeader.style.background = "#040a0a"; // fallback
+        } else {
+            bgHeader.classList.remove("scrolled");
+            bgHeader.style.background = "rgba(0, 0, 0, 0)"; // fallback
+        }
+    });
+} catch (err) {
+    console.error("Ошибка при окрашивании header:", err);
 }
 
-// Клик по кнопке открытия
-openSearchBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // чтобы клик не дошёл до document
-    openSearch();
-});
-
-// Клик по кнопке закрытия
-closeSearchBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    closeSearch();
-});
-
-// Клик вне блока поиска
-document.addEventListener("click", (e) => {
-    if (!e.target.closest(".search")) {
-        closeSearch();
-    }
-});
-
-// окрашивание bg при прокрутке для header
-const bgHeader = document.getElementById("header");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 10) {
-        // Если прокрутка больше 10px
-        bgHeader.style.background = "#040a0a";
-    } else {
-        bgHeader.style.background = "rgba(0, 0, 0, 0)";
-    }
-});
-
-// для тайтла
-window.addEventListener("scroll", function () {
-    if (window.innerWidth > 768) return;
+try {
     const textElement = document.getElementById("hero__title");
-    const scrollPosition = window.scrollY;
-    const scrollRange = 10; // На сколько px прокрутки растянуть анимацию
+    if (!textElement) throw new Error("Элемент #hero__title не найден");
 
-    // 1. Анимация положения (top)
-    const startTop = 14; // Начальная позиция
-    const endTop = 16; // Конечная позиция
-    let newTop;
+    const startTop = 14;
+    const endTop = 16;
+    const startSize = 50;
+    const endSize = 20;
+    const scrollRange = 10;
 
-    if (scrollPosition <= 0) {
-        newTop = startTop;
-    } else if (scrollPosition >= scrollRange) {
-        newTop = endTop;
-    } else {
-        // Плавный расчет между startTop и endTop
-        newTop = startTop + (endTop - startTop) * (scrollPosition / scrollRange);
+    let isMobile = window.innerWidth <= 768;
+
+    function animateTitle() {
+        if (!isMobile) return;
+
+        const scrollY = window.scrollY;
+        const ratio = Math.min(scrollY / scrollRange, 1);
+
+        const newTop = startTop + (endTop - startTop) * ratio;
+        const newSize = startSize - (startSize - endSize) * ratio;
+
+        textElement.style.top = `${newTop}px`;
+        textElement.style.fontSize = `${newSize}px`;
     }
 
-    // 2. Анимация размера текста (font-size)
-    const startSize = 50; // Начальный размер
-    const endSize = 20; // Конечный размер
-    let newSize;
-
-    if (scrollPosition <= 0) {
-        newSize = startSize;
-    } else if (scrollPosition >= scrollRange) {
-        newSize = endSize;
-    } else {
-        // Плавный расчет между startSize и endSize
-        newSize = startSize - (startSize - endSize) * (scrollPosition / scrollRange);
+    function resetTitle() {
+        textElement.style.removeProperty("top");
+        textElement.style.removeProperty("font-size");
     }
 
-    // Применяем все изменения
-    textElement.style.top = `${newTop}px`;
-    textElement.style.fontSize = `${newSize}px`;
-});
+    function handleResize() {
+        const newIsMobile = window.innerWidth <= 768;
+
+        if (!newIsMobile && isMobile) {
+            // Перешли с мобилки на десктоп — очищаем изменения
+            resetTitle();
+        }
+
+        isMobile = newIsMobile;
+
+        if (isMobile) {
+            animateTitle(); // актуализируем размер
+        } else {
+            resetTitle(); // вдруг пользователь просто ресайзит браузер
+        }
+    }
+
+    window.addEventListener("scroll", animateTitle);
+    window.addEventListener("resize", handleResize);
+
+    // Первый запуск
+    handleResize();
+    animateTitle();
+} catch (err) {
+    console.error("Ошибка в анимации заголовка:", err);
+}

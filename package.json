@@ -1,7 +1,6 @@
 {
     "name": "lover_flower",
     "module": "index.ts",
-    "type": "module",
     "private": true,
     "scripts": {
         "dev": "vite",
