@@ -5,6 +5,8 @@
 @use "/src/sass/base/variables.scss";
 
 @use "/src/sass/ui/logo.scss";
+@use "/src//sass/blocks/buble.scss";
+@use "/src/sass/blocks/sidebar.scss" as *;
 
 @use "/src/sass/blocks/main/hero.scss";
 @use "/src/sass/blocks/header.scss";

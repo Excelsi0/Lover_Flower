@@ -1,0 +1,103 @@
+@use "/src//sass/base/variables.scss" as *;
+
+.bubble__mint {
+    width: clamp(200px, 50vw, 879px);
+    height: clamp(100px, 30vh, 211px);
+    border-radius: 100%;
+    filter: blur(150px);
+    background-color: $color-mint;
+    animation: bubbleAnimateMint 20s infinite, bubbleTransformMint 20s infinite;
+}
+
+@keyframes bubbleAnimateMint {
+    0% {
+        top: 100%;
+        left: -20%;
+    }
+    25% {
+        top: 100%;
+        left: 50%;
+    }
+    50% {
+        top: 100%;
+        left: 50%;
+    }
+    75% {
+        top: 50%;
+        left: 50%;
+    }
+    100% {
+        top: 100%;
+        left: -20%;
+    }
+}
+
+@keyframes bubbleTransformMint {
+    0% {
+        transform: rotate(180deg);
+    }
+    25% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    75% {
+        transform: rotate(135deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.bubble__wine {
+    width: clamp(200px, 50vw, 879px);
+    height: clamp(100px, 30vh, 211px);
+    border-radius: 100%;
+    filter: blur(150px);
+    background-color: $color-wine;
+    animation: bubbleAnimateWine 25s infinite, bubbleTransformWine 25s infinite;
+    top: 0%;
+    right: 0%;
+}
+
+@keyframes bubbleAnimateWine {
+    0% {
+        top: 0%;
+        right: 0%;
+    }
+    25% {
+        top: 100%;
+        right: 0%;
+    }
+    50% {
+        top: 0%;
+        right: 80%;
+    }
+    75% {
+        top: 50%;
+        right: 50%;
+    }
+    100% {
+        top: 0%;
+        right: 0%;
+    }
+}
+
+@keyframes bubbleTransformWine {
+    0% {
+        transform: rotate(180deg);
+    }
+    25% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    75% {
+        transform: rotate(135deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}

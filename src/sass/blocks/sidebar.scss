@@ -1,0 +1,113 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.sidebar {
+    position: absolute;
+    padding-right: 5px;
+    top: -62px; // подогнал
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    z-index: 3;
+    &__title {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $color-mint;
+    }
+    &__subtitle {
+        margin-top: 4px;
+        font-family: $font-family;
+        font-weight: 300;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    &__info {
+        margin-top: 26px;
+    }
+    &__actions {
+        margin-top: 60px;
+        display: flex;
+        align-self: self-end;
+        flex-direction: column;
+        gap: 20px;
+        width: 60px;
+        padding: 20px 0;
+        backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+    &__btn {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    &__callback {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        margin-top: 184px;
+    }
+    &__phone {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $color-mint;
+    }
+    &__callback-button {
+        display: flex;
+        max-width: max-content;
+        gap: 6px;
+        justify-content: center;
+        align-items: center;
+        align-self: self-end;
+        margin-top: 7px;
+        padding: 10px 19px;
+
+        background: none;
+        border: none;
+
+        border-radius: 10px;
+        backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, 0.2);
+
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #43ffd2;
+
+        cursor: pointer;
+    }
+    &__cart {
+        margin-top: 20px;
+        display: flex;
+        align-self: flex-end;
+    }
+    &__shop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border: none;
+        border-radius: 10px;
+        backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        display: none;
+    }
+}

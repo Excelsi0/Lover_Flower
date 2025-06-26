@@ -5,6 +5,7 @@
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 99;
 
     transition: background-color 0.3s linear;
     &__wrap {
@@ -38,6 +39,7 @@
 
     &__phone {
         display: flex;
+        visibility: hidden;
         align-items: center;
         gap: 10px;
         font-weight: 400;
@@ -53,6 +55,7 @@
     &__btn {
         background: none;
         border: none;
+        visibility: hidden;
     }
     &-mobile {
         display: none;
@@ -86,7 +89,7 @@
 
     &__overlay {
         position: absolute;
-        left: 10px;
+        left: 8px;
         top: 0;
         height: 100%;
         display: flex;
@@ -151,18 +154,12 @@
     }
 }
 
-.header.search-active {
-    .header__phone {
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s linear;
-    }
-
-    .search__text {
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s linear;
-    }
+.search-active .sidebar__contacts,
+.search-active .header__phone,
+.search-active .search__text {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s linear;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -189,6 +186,14 @@ input[type="search"]::-webkit-search-cancel-button {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .header {
+        &__btn {
+            visibility: visible;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .header {
         width: 100%;
@@ -209,6 +214,7 @@ input[type="search"]::-webkit-search-cancel-button {
             gap: 5px;
             background: none;
             border: none;
+
             span {
                 width: 20px;
                 height: 1px;
