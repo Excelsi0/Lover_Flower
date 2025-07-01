@@ -37,6 +37,11 @@
                         свежесть и
                         изящество цветка</h2>
                     <button class="hero__btn">смотреть каталог</button>
+                    <div class="hero__painting-wrap">
+                        <img src="/src//image/main/hero__painting.svg"
+                            alt="painting"
+                            class="hero__painting">
+                    </div>
                 </div>
 
                 <%- include('src/templates/sidebar.html'); %>
@@ -47,11 +52,74 @@
             <img src="/src/image/main/hero__bg.png" alt="background"
                 class="hero__bg">
             <div class="hero__black-bottom"></div>
+
         </section>
 
-        <!-- для проверки прокрутки -->
-        <section style="height: 1000px;"></section>
+        <section class="catalog">
+            <div class="container">
+                <h2 class="title catalog__title">каталог</h2>
+                <div class="catalog__wrapper">
+                    <div class="catalog__content">
+                        <p class="catalog__text">У нас самый большой выбор
+                            цветов,
+                            букетов, открыток и подарков.
+                            Мы всегда поможем вам подобрать букет для вашего
+                            события,
+                            наш менеджер вас проконсультирует и поможет
+                            определиться
+                            с
+                            выбором</p>
+                        <p class="catalog__text">Ознакомьтесь с нашими разделами
+                            каталога</p>
+                    </div>
+                    <div class="catalog__category catalog__category-mini">
+                        <h3 class="catalog__category-title title-h3">
+                            готовые
+                            букеты из
+                            сухоцветов</h3>
+                        <ul class="catalog__list">
 
+                            <li>букеты</li>
+                            <li>для интерьера</li>
+                            <li>Композиции</li>
+                        </ul>
+                        <a href="#" class="catalog__link">смотреть каталог</a>
+                    </div>
+                    <div class="catalog__category catalog__category-first">
+                        <h3 class="catalog__category-title title-h3">Цветы</h3>
+                        <ul class="catalog__list">
+                            <li>Сборные букеты</li>
+                            <li>Монобукеты</li>
+                            <li>Композиции из цветов</li>
+                            <li>розы</li>
+                            <li>свадебные</li>
+                        </ul>
+                        <a href="#" class="catalog__link">смотреть каталог</a>
+                    </div>
+                    <div class="catalog__category">
+                        <h3
+                            class="catalog__category-title title-h3">дополнительно</h3>
+                        <ul class="catalog__list">
+                            <li>шары</li>
+                            <li>игрушки</li>
+                            <li>открытки</li>
+                            <li>упаковка</li>
+                        </ul>
+                        <a href="#" class="catalog__link">смотреть каталог</a>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__bg-words">
+                <div class="catalog__bg-word">букеты</div>
+                <div
+                    class="catalog__bg-word catalog__bg-word_center">цветы</div>
+                <div class="catalog__bg-word">дополнительно</div>
+            </div>
+            <div class="catalog__bubble bubble__mint"></div>
+            <div class="catalog__bubble bubble__wine"></div>
+        </section>
+
+        <div class style="height: 1000px;"></div>
         <script type="module" src="/src/js/main.js"></script>
 
     </body>

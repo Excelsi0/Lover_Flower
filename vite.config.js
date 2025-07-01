@@ -13,10 +13,11 @@ export default defineConfig({
         }),
     ],
 
-    css: {
-        preprocessorOptions: {
-            scss: {},
-        },
+    server: {
+        // Добавьте эту секцию
+        port: 5173,
+        strictPort: true,
+        open: true, // автоматически открывать браузер
     },
 
     build: {
@@ -24,14 +25,23 @@ export default defineConfig({
             input: {
                 main: path.resolve(__dirname, "index.html"),
             },
+            output: {
+                assetFileNames: "assets/[name][extname]",
+            },
         },
+        emptyOutDir: true,
     },
 
-    // Добавляем алиасы для удобных путей
     resolve: {
-        alias: {
-            "@": path.resolve(__dirname, "./src"),
-            "@sass": path.resolve(__dirname, "./src/sass"),
-        },
+        alias: [
+            {
+                find: "@",
+                replacement: path.resolve(__dirname, "src"),
+            },
+            {
+                find: "@sass",
+                replacement: path.resolve(__dirname, "src/sass"),
+            },
+        ],
     },
 });

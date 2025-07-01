@@ -4,7 +4,8 @@
     width: clamp(200px, 50vw, 879px);
     height: clamp(100px, 30vh, 211px);
     border-radius: 100%;
-    filter: blur(150px);
+    filter: blur(130px);
+    box-shadow: 0 0 200px 100px $color-mint;
     background-color: $color-mint;
     animation: bubbleAnimateMint 20s infinite, bubbleTransformMint 20s infinite;
 }
@@ -12,7 +13,7 @@
 @keyframes bubbleAnimateMint {
     0% {
         top: 100%;
-        left: -20%;
+        left: 0%;
     }
     25% {
         top: 100%;
@@ -28,7 +29,7 @@
     }
     100% {
         top: 100%;
-        left: -20%;
+        left: 0%;
     }
 }
 
@@ -54,7 +55,8 @@
     width: clamp(200px, 50vw, 879px);
     height: clamp(100px, 30vh, 211px);
     border-radius: 100%;
-    filter: blur(150px);
+    filter: blur(130px);
+    box-shadow: 0 0 200px 100px $color-wine;
     background-color: $color-wine;
     animation: bubbleAnimateWine 25s infinite, bubbleTransformWine 25s infinite;
     top: 0%;
@@ -67,7 +69,7 @@
         right: 0%;
     }
     25% {
-        top: 100%;
+        top: 90%;
         right: 0%;
     }
     50% {
@@ -99,5 +101,12 @@
     }
     100% {
         transform: rotate(180deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bubble__mint,
+    .bubble__wine {
+        filter: blur(50px);
     }
 }
