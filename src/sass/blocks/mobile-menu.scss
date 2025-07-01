@@ -1,0 +1,62 @@
+// @use "/src/sass/base/variables.scss" as *;
+
+// .mobile-menu {
+//     position: fixed;
+//     display: block;
+//     background-color: $color-dark;
+//     padding: 12px;
+//     width: 80%;
+//     height: 100vh;
+//     z-index: 100;
+
+//     &__btn {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         flex-direction: column;
+//         gap: 5px;
+//         background: none;
+//         border: none;
+
+//         span {
+//             width: 20px;
+//             height: 1px;
+//             background-color: $color-mint;
+//         }
+//     }
+//     &__menu {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 10px;
+//         li {
+//             font-family: $font-family;
+//             font-weight: 400;
+//             font-size: 14px;
+//             letter-spacing: 0.04em;
+//             text-transform: uppercase;
+//             color: $color-white;
+//         }
+//     }
+//     &__logo {
+//         font-size: 30px;
+//         .l {
+//             font-size: 40px;
+//         }
+//         .f {
+//             top: 3px;
+//             left: 5px;
+//         }
+//     }
+//     .search {
+//         margin-top: 8px;
+//         &__trigger {
+//             padding: 0;
+//         }
+//     }
+//     &__strip {
+//         background-color: #555;
+//         width: 100px;
+//         height: 1px;
+//         margin-top: 10px;
+//     }
+// }

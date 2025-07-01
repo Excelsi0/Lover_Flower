@@ -10,6 +10,8 @@ export default defineConfig({
     plugins: [
         ViteEjsPlugin({
             phoneNumber: "+375 (29) 113-69-69",
+            email: "zakaz@loverflower.by",
+            address: "ул. Тимирязева 67",
         }),
     ],
 

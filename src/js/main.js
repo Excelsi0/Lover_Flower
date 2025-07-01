@@ -1,66 +1,70 @@
 import "/src/sass/style.scss";
 
-try {
-    // Элементы поиска
-    const search = document.querySelector(".js-search");
-    const openSearchBtn = document.querySelector(".js-search-trigger");
-    const closeSearchBtn = document.querySelector(".js-close-search");
-    const searchInput = document.querySelector(".search__input");
-    const header = document.querySelector(".header");
-    const sidebarContacts = document.querySelector(".sidebar__contacts");
+document.addEventListener("DOMContentLoaded", function () {
+    try {
+        // Определяем, мобильная это версия или десктопная
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+        const headerClass = isMobile ? ".header-mobile" : ".header";
 
-    // Проверка всех необходимых элементов
-    if (!search || !openSearchBtn || !closeSearchBtn || !searchInput || !header || !sidebarContacts) {
-        const missingElements = [];
-        if (!search) missingElements.push(".js-search");
-        if (!openSearchBtn) missingElements.push(".js-search-trigger");
-        if (!closeSearchBtn) missingElements.push(".js-close-search");
-        if (!searchInput) missingElements.push(".search__input");
-        if (!header) missingElements.push(".header");
-        if (!sidebarContacts) missingElements.push(".sidebar__contacts");
+        // Находим элементы поиска в соответствующем хедере
+        const search = document.querySelector(`${headerClass} .js-search`);
+        const openSearchBtn = document.querySelector(`${headerClass} .js-search-trigger`);
+        const closeSearchBtn = document.querySelector(`${headerClass} .js-close-search`);
+        const searchInput = document.querySelector(`${headerClass} .search__input`);
 
-        throw new Error(`Отсутствуют элементы: ${missingElements.join(", ")}`);
+        // Проверяем, все ли элементы найдены
+        if (!search || !openSearchBtn || !closeSearchBtn || !searchInput) {
+            const missingElements = [];
+            if (!search) missingElements.push(`${headerClass} .js-search`);
+            if (!openSearchBtn) missingElements.push(`${headerClass} .js-search-trigger`);
+            if (!closeSearchBtn) missingElements.push(`${headerClass} .js-close-search`);
+            if (!searchInput) missingElements.push(`${headerClass} .search__input`);
+
+            throw new Error(`Отсутствуют элементы: ${missingElements.join(", ")}`);
+        }
+
+        // Функция переключения поиска
+        const toggleSearch = (isOpen) => {
+            search.classList.toggle("active", isOpen);
+            document.body.classList.toggle("search-active", isOpen);
+            if (isOpen) {
+                searchInput.focus();
+            } else {
+                searchInput.blur();
+            }
+        };
+
+        // Открытие поиска
+        openSearchBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleSearch(true);
+        });
+
+        // Закрытие поиска
+        closeSearchBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleSearch(false);
+        });
+
+        // Закрытие при клике вне области поиска
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".search") && search.classList.contains("active")) {
+                toggleSearch(false);
+            }
+        });
+
+        // Закрытие по Escape
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && search.classList.contains("active")) {
+                toggleSearch(false);
+            }
+        });
+
+        console.log("Скрипт поиска успешно инициализирован для", isMobile ? "мобильной" : "десктопной", "версии");
+    } catch (err) {
+        console.error("Ошибка в блоке поиска:", err);
     }
-
-    const toggleSearch = (isOpen) => {
-        search.classList.toggle("active", isOpen);
-        document.body.classList.toggle("search-active", isOpen); // Изменено с header на body
-        if (isOpen) {
-            searchInput.focus();
-        } else {
-            searchInput.blur();
-        }
-    };
-
-    // Открытие поиска
-    openSearchBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        toggleSearch(true);
-    });
-
-    // Закрытие поиска
-    closeSearchBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        toggleSearch(false);
-    });
-
-    // Закрытие при клике вне области поиска
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest(".search") && search.classList.contains("active")) {
-            toggleSearch(false);
-        }
-    });
-
-    // Закрытие по Escape
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && search.classList.contains("active")) {
-            toggleSearch(false);
-        }
-    });
-} catch (err) {
-    console.error("Ошибка в блоке поиска:", err);
-    // Можно добавить обработку ошибки, например показать уведомление
-}
+});
 try {
     const bgHeader = document.getElementById("header");
     const textElement = document.getElementById("hero__title");
@@ -259,6 +263,69 @@ try {
         checkSidebarPosition();
     }
     window.addEventListener("resize", handleResize);
+} catch (err) {
+    console.error("Ошибка:", err);
+}
+
+//мобильное меню
+
+try {
+    document.addEventListener("DOMContentLoaded", function () {
+        // Элементы меню
+        const mobileMenu = document.querySelector(".header-mobile");
+        const openButton = document.querySelector(".header-mobile__btn");
+        const closeButton = document.querySelector(".header-mobile__exit");
+
+        // Функция для открытия меню
+        function openMenu() {
+            mobileMenu.classList.add("active");
+            document.body.classList.add("menu-open");
+        }
+
+        // Функция для закрытия меню
+        function closeMenu() {
+            mobileMenu.classList.remove("active");
+            document.body.classList.remove("menu-open");
+        }
+
+        // Обработчики событий
+        if (openButton) {
+            openButton.addEventListener("click", openMenu);
+        }
+
+        if (closeButton) {
+            closeButton.addEventListener("click", closeMenu);
+        }
+
+        // Закрытие при клике вне меню
+        document.addEventListener("click", function (event) {
+            if (mobileMenu.classList.contains("active") && !event.target.closest(".header-mobile") && !event.target.closest(".header-mobile__btn")) {
+                closeMenu();
+            }
+        });
+
+        // Закрытие при нажатии ESC
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && mobileMenu.classList.contains("active")) {
+                closeMenu();
+            }
+        });
+
+        // Закрытие при изменении ориентации
+        window.addEventListener("orientationchange", function () {
+            if (mobileMenu.classList.contains("active")) {
+                closeMenu();
+            }
+        });
+
+        // Закрытие при изменении размера окна (на всякий случай)
+        window.addEventListener("resize", function () {
+            // Проверяем, если ширина стала больше определенного значения (например, 768px)
+            if (window.innerWidth > 768 && mobileMenu.classList.contains("active")) {
+                closeMenu();
+            }
+        });
+    });
 } catch (err) {
     console.error("Ошибка:", err);
 }

@@ -9,6 +9,8 @@
 @use "/src/sass/blocks/sidebar.scss";
 @use "/src/sass/ui/titles.scss";
 
-@use "/src/sass/blocks/main/hero.scss";
 @use "/src/sass/blocks/header.scss";
-@use "/src/sass/blocks/catalog.scss";
+@use "/src/sass/blocks/mobile-menu.scss";
+
+@use "/src/sass/blocks/main/hero.scss";
+@use "/src/sass/blocks/main/catalog.scss";
