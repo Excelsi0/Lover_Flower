@@ -1,0 +1,163 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.hits {
+    padding-top: 100px;
+    &__carusel {
+        position: relative;
+    }
+    &__card {
+        position: relative;
+        margin: 10px;
+    }
+    &__badge {
+        &_sale,
+        &_new {
+            display: none;
+
+            position: absolute;
+            right: -10px;
+            top: -10px;
+
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 0.02em;
+            color: $color-dark;
+            &-active {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        &_sale {
+            background-color: $color-sale;
+        }
+        &_new {
+            background-color: $color-pink;
+        }
+    }
+    &__title {
+        span {
+            padding-left: 380px;
+        }
+    }
+    &__subtitle {
+        margin-top: 10px;
+
+        font-family: $font-family;
+        font-weight: 300;
+        font-size: 20px;
+        letter-spacing: 0.02em;
+        color: $color-white;
+        text-align: center;
+    }
+    &__carusel {
+        margin-top: 86px;
+    }
+    &__card-wrapper {
+        position: relative;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    &__image {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+    }
+    &__name {
+        margin-top: 10px;
+
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $color-white;
+    }
+    &__price {
+        margin-top: 10px;
+
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $color-white;
+        &_old {
+            font-weight: 300;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-decoration: line-through;
+            color: #939393;
+            padding-right: 10px;
+        }
+    }
+    &__btn {
+        margin-top: 20px;
+
+        padding: 16px 76px;
+        border: 0.5px solid $color-white;
+        background: none;
+
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $color-white;
+    }
+
+    &__button-prev,
+    &__button-next {
+        position: absolute;
+        width: 80px;
+        top: 225px;
+        transform: translateY(-50%);
+    }
+
+    &__button-prev {
+        left: -100px;
+    }
+    &__button-next {
+        right: -100px;
+    }
+
+    &__arrow-l,
+    &__arrow-r {
+        path {
+            fill: $color-mint;
+        }
+    }
+}
+
+@media screen and (max-width: 1290px) {
+    .hits {
+        &__button-prev {
+            top: -15px;
+            left: 10px;
+        }
+        &__button-next {
+            top: -15px;
+            right: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hits {
+        &__title {
+            text-align: center;
+            span {
+                padding-left: 0;
+            }
+        }
+        &__subtitle {
+            text-align: end;
+        }
+    }
+}

@@ -1,5 +1,11 @@
 import "/src/sass/style.scss";
 
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+
 document.addEventListener("DOMContentLoaded", function () {
     try {
         // Определяем, мобильная это версия или десктопная
@@ -328,4 +334,28 @@ try {
     });
 } catch (err) {
     console.error("Ошибка:", err);
+}
+
+try {
+    const swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        loop: true,
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 5,
+            },
+            1290: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+        navigation: {
+            nextEl: ".hits__button-next",
+            prevEl: ".hits__button-prev",
+        },
+        modules: [Navigation],
+    });
+} catch (e) {
+    console.e("Ошибка:", e);
 }

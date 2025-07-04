@@ -18,8 +18,9 @@
     }
     &__menu {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        gap: clamp(10px, 5vw, 50px);
+        column-gap: clamp(10px, 5vw, 50px);
     }
 
     &__link {
@@ -173,7 +174,7 @@ input[type="search"]::-webkit-search-cancel-button {
             display: none;
         }
         &__menu {
-            gap: clamp(10px, 3vw, 50px);
+            column-gap: clamp(10px, 3vw, 50px);
         }
     }
 
