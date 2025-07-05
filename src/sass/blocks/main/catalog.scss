@@ -153,6 +153,7 @@
 
 @media screen and (max-width: 768px) {
     .catalog {
+        padding: 100px 0 50px;
         &__wrapper {
             grid-template-columns: 1fr;
         }

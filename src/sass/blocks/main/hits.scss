@@ -1,7 +1,13 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .hits {
+    position: relative;
+    overflow: hidden;
     padding-top: 100px;
+    background: linear-gradient(0deg, #040a0a 0%, rgba(4, 10, 10, 0) 100%), linear-gradient(180deg, #040a0a 0%, rgba(4, 10, 10, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 20%;
+    background-position: bottom, top;
     &__carusel {
         position: relative;
     }
@@ -17,6 +23,7 @@
             position: absolute;
             right: -10px;
             top: -10px;
+            z-index: 2;
 
             width: 60px;
             height: 60px;
@@ -110,6 +117,8 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: $color-white;
+
+        cursor: pointer;
     }
 
     &__button-prev,
@@ -118,6 +127,8 @@
         width: 80px;
         top: 225px;
         transform: translateY(-50%);
+
+        cursor: pointer;
     }
 
     &__button-prev {
@@ -133,6 +144,38 @@
             fill: $color-mint;
         }
     }
+
+    &__bg {
+        position: absolute;
+        top: 120px;
+        right: 0;
+        z-index: -2; // да, должно быть -1, но я бы вообще убрал бы этот bg
+    }
+    &__more-link {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #d978ac;
+
+        display: block;
+        margin: 60px 0 0 10px;
+    }
+}
+@media (hover: hover) and (pointer: fine) {
+    .hits {
+        &__image {
+            filter: grayscale(100%);
+
+            transition: filter 0.3s linear;
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1290px) {
@@ -145,11 +188,15 @@
             top: -15px;
             right: 10px;
         }
+        &__bg {
+            display: none;
+        }
     }
 }
 
 @media screen and (max-width: 768px) {
     .hits {
+        padding-top: 50px;
         &__title {
             text-align: center;
             span {
@@ -158,6 +205,10 @@
         }
         &__subtitle {
             text-align: end;
+            font-size: 14px;
+        }
+        &__more-link {
+            margin-top: 40px;
         }
     }
 }

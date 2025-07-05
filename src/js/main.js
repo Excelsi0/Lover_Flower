@@ -340,12 +340,19 @@ try {
     const swiper = new Swiper(".swiper", {
         slidesPerView: 1,
         loop: true,
+
+        direction: "vertical",
+        slidesPerView: "auto",
+        spaceBetween: 10,
+
         breakpoints: {
             768: {
+                direction: "horizontal",
                 slidesPerView: 2,
                 spaceBetween: 5,
             },
             1290: {
+                direction: "horizontal",
                 slidesPerView: 3,
                 spaceBetween: 30,
             },
