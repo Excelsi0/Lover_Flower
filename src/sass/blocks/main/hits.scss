@@ -3,7 +3,7 @@
 .hits {
     position: relative;
     overflow: hidden;
-    padding-top: 100px;
+    padding: 100px 0 360px; // pb360px для того что бы bubble нализали на следующую секцию
     background: linear-gradient(0deg, #040a0a 0%, rgba(4, 10, 10, 0) 100%), linear-gradient(180deg, #040a0a 0%, rgba(4, 10, 10, 0) 100%);
     background-repeat: no-repeat;
     background-size: 100% 20%;
@@ -163,6 +163,10 @@
 
         display: block;
         margin: 60px 0 0 10px;
+    }
+    &__bubble {
+        position: absolute;
+        z-index: -2;
     }
 }
 @media (hover: hover) and (pointer: fine) {

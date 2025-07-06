@@ -346,7 +346,7 @@ try {
         spaceBetween: 10,
 
         breakpoints: {
-            768: {
+            769: {
                 direction: "horizontal",
                 slidesPerView: 2,
                 spaceBetween: 5,
