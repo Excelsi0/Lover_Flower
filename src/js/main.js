@@ -343,7 +343,7 @@ try {
 
         direction: "vertical",
         slidesPerView: "auto",
-        spaceBetween: 10,
+        spaceBetween: 40,
 
         breakpoints: {
             769: {

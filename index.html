@@ -22,7 +22,7 @@
             rel="stylesheet">
 
         <title>Lover Flower</title>
-        <link rel="stylesheet" href="/src//sass/libs/fontello.css">
+
     </head>
     <body>
         <%- include('src/templates/header.html'); %>
@@ -37,10 +37,11 @@
                     <h2 class="hero__subtitle">Создаём для тех, кто ценит
                         свежесть и
                         изящество цветка</h2>
-                    <button class="hero__btn">смотреть каталог</button>
+                    <button class="hero__btn btn-color">смотреть
+                        каталог</button>
                     <div class="hero__painting-wrap">
                         <img src="/src//image/main/hero__painting.svg"
-                            alt="painting"
+                            alt="signature"
                             class="hero__painting">
                     </div>
                 </div>
@@ -128,7 +129,7 @@
                     наших клиентов</h3>
 
                 <div class="hits__carusel">
-                    <div class="swiper">
+                    <div class="swiper hits__swiper">
                         <div class="swiper-wrapper">
 
                             <div class="swiper-slide">
@@ -145,7 +146,7 @@
                                             утро</div>
                                         <div class="hits__price">167.000 ₽<span
                                                 class="hits__price_old"></span></div>
-                                        <button class="hits__btn">В
+                                        <button class="hits__btn btn">В
                                             корзину</button>
                                     </div>
                                 </div>
@@ -164,7 +165,7 @@
                                             день</div>
                                         <div class="hits__price">127.000 ₽<span
                                                 class="hits__price_old"></span></div>
-                                        <button class="hits__btn">В
+                                        <button class="hits__btn btn">В
                                             корзину</button>
                                     </div>
                                 </div>
@@ -186,7 +187,7 @@
                                         <div class="hits__price">176.000 ₽ <span
                                                 class="hits__price_old">203.000
                                                 ₽</span></div>
-                                        <button class="hits__btn">В
+                                        <button class="hits__btn btn">В
                                             корзину</button>
                                     </div>
                                 </div>
@@ -204,7 +205,7 @@
                                             ночь</div>
                                         <div class="hits__price">163.000 ₽<span
                                                 class="hits__price_old"></span></div>
-                                        <button class="hits__btn">В
+                                        <button class="hits__btn btn">В
                                             корзину</button>
                                     </div>
                                 </div>
@@ -212,7 +213,7 @@
                         </div>
                     </div>
 
-                    <div class="hits__button-prev">
+                    <button class="hits__button-prev">
                         <svg class="hits__arrow-l" width="80" height="6"
                             viewBox="0 0 80 6" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -221,8 +222,8 @@
                                 fill="#43FFD2" />
                         </svg>
 
-                    </div>
-                    <div class="hits__button-next">
+                    </button>
+                    <button class="hits__button-next">
                         <svg class="hits__arrow-r" width="80" height="6"
                             viewBox="0 0 80 6" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -231,9 +232,15 @@
                                 fill="#43FFD2" />
                         </svg>
 
-                    </div>
+                    </button>
                 </div>
-                <a class="hits__more-link" href="#">смотреть весь каталог</a>
+                <a class="hits__more-link" href="#">смотреть весь каталог <svg
+                        width="40" height="6" viewBox="0 0 40 6" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M40 3L35 0.113249V5.88675L40 3ZM0 3V3.5H35.5V3V2.5H0V3Z"
+                            fill="#D978AC" />
+                    </svg></a>
             </div>
 
             <img class="hits__bg" src="/src/image/main/top-picks__bg.png"
@@ -246,46 +253,47 @@
         <section class="ordering">
             <div class="container">
                 <h2 class="title ordering__title">Как сделать <br> заказ</h2>
-                <div class="ordering__wrapper">
-                    <div class="ordering__steps">
-                        <div class="ordering__step">
+                <li class="ordering__wrapper">
+                    <ul class="ordering__steps">
+                        <li class="ordering__step">
                             <h3 class="ordering__point ordering__point_decor">1
                                 шаг</h3>
                             <p class="ordering__text">Выберите какие цветы или
                                 подарки вы хотите купить</p>
-                        </div>
-                        <div class="ordering__step">
+                        </li>
+                        <li class="ordering__step">
                             <h3 class="ordering__point">2 шаг</h3>
                             <p class="ordering__text">Оформите заказ, и мы
                                 отправим
                                 вам подтверждение на электронную почту, а так же
                                 менеджер свяжется с вами по телефону или в
                                 WhatsApp</p>
-                        </div>
-                        <div class="ordering__step">
+                        </li>
+                        <li class="ordering__step">
                             <h3 class="ordering__point">3 шаг</h3>
                             <p class="ordering__text">Наши флористы бережно
                                 подойдут
                                 к созданию букета цветов в самом начале дня или
                                 накануне</p>
-                        </div>
-                        <div class="ordering__step">
+                        </li>
+                        <li class="ordering__step">
                             <h3 class="ordering__point">4 шаг</h3>
                             <p class="ordering__text">Один из наших курьеров или
                                 партнёров доставит ваш заказ по указанному
                                 адресу.
                                 Мы отправим вам сообщение в whatsapp как только
                                 заказ будет доставлен</p>
-                        </div>
-                        <div class="ordering__step">
+                        </li>
+                        <li class="ordering__step">
                             <h3 class="ordering__point">5 шаг</h3>
                             <p class="ordering__text">Наслаждайтесь цветами,
                                 если
                                 вы заказали их для дома или любовью, которой
                                 поделились, если вы заказали для друга</p>
-                        </div>
-                    </div>
-                    <img src="/src/image/main/hero__painting.svg" alt="painting"
+                        </li>
+                    </ul>
+                    <img src="/src/image/main/hero__painting.svg"
+                        alt="signature"
                         class="ordering__painting">
                 </div>
             </div>

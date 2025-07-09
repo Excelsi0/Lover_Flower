@@ -55,20 +55,8 @@
         background-position: center;
     }
     &__btn {
-        display: block;
         padding: 16px 50px;
         margin: 63px auto 0;
-        background-color: $color-mint;
-        border: none;
-
-        font-family: $font-family;
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: #000;
-
-        cursor: pointer;
     }
     &__bubble {
         position: absolute;

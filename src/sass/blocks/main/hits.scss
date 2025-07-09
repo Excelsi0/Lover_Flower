@@ -106,23 +106,13 @@
     }
     &__btn {
         margin-top: 20px;
-
         padding: 16px 76px;
-        border: 0.5px solid $color-white;
-        background: none;
-
-        font-family: $font-family;
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: $color-white;
-
-        cursor: pointer;
     }
 
     &__button-prev,
     &__button-next {
+        background: none;
+        border: none;
         position: absolute;
         width: 80px;
         top: 225px;
@@ -163,6 +153,14 @@
 
         display: block;
         margin: 60px 0 0 10px;
+        svg {
+            width: 40px;
+            height: 6px;
+            padding-left: 6px;
+            path {
+                fill: $color-pink;
+            }
+        }
     }
     &__bubble {
         position: absolute;
@@ -207,12 +205,27 @@
                 padding-left: 0;
             }
         }
+        &__swiper {
+            overflow: visible !important;
+        }
+        &__carusel {
+            margin-top: 25px;
+        }
+        &__card {
+            margin: 0;
+        }
         &__subtitle {
             text-align: end;
             font-size: 14px;
         }
         &__more-link {
             margin-top: 40px;
+        }
+        &__btn {
+            padding: 16px 93px;
+        }
+        &__image {
+            height: 335px;
         }
     }
 }
