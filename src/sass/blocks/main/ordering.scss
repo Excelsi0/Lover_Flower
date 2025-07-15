@@ -2,7 +2,7 @@
 .ordering {
     position: relative;
     margin-top: -200px; // что бы bubble касаись этой секции
-    padding-bottom: 117px;
+    padding-bottom: 168px;
     overflow: hidden;
 
     &__wrapper {
@@ -111,6 +111,7 @@
 
 @media screen and (max-width: 425px) {
     .ordering {
+        padding-bottom: 100px;
         &__wrapper {
             justify-content: center;
         }
