@@ -343,11 +343,16 @@
                     <div class="connect__wrap">
                         <form class="connect__form" action="#">
                             <input class="connect__input" id="name" type="text"
-                                placeholder="Ваше имя">
-                            <input class="connect__input" id="phone" type="text"
-                                placeholder="+7 (977) 777-77-77">
+                                placeholder="Ваше имя" required
+                                pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
+                                minlength="2">
+                            <input class="connect__input" id="phone" type="tel"
+                                placeholder="+7 (977) 777-77-77" required
+                                pattern="^(\+7|7|8)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$">
                             <textarea class="connect__textarea"
-                                placeholder="Ваш комментарий"></textarea>
+                                placeholder="Ваш комментарий"
+                                minlength="5"
+                                required></textarea>
                             <button
                                 class="btn-color connect__btn">отправить</button>
                             <div class="connect__policy">Нажимая на кнопку
