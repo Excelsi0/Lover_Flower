@@ -1,28 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <meta name="author" content="Excelsio">
-        <meta name="copyright" content="© 2025 Excelsio">
-
-        <link rel="apple-touch-icon" sizes="180x180"
-            href="/src/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32"
-            href="/src/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16"
-            href="/src/favicon/favicon-16x16.png">
-        <link rel="manifest" href="src/favicon/site.webmanifest">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300..700&family=Oswald:wght@200..700&display=swap"
-            rel="stylesheet">
-
+        <%- include('src/templates/head.html'); %>
         <title>Lover Flower</title>
-
     </head>
     <body>
         <%- include('src/templates/header.html'); %>
@@ -40,7 +20,7 @@
                     <button class="hero__btn btn-color">смотреть
                         каталог</button>
                     <div class="hero__painting-wrap">
-                        <img src="/src//image/main/hero__painting.svg"
+                        <img src="/src/image/main/hero__painting.svg"
                             alt="signature"
                             class="hero__painting">
                     </div>
@@ -348,6 +328,53 @@
                 </div>
             </div>
             <div class="custom__bubble bubble__wine"></div>
+        </section>
+
+        <section class="connect">
+            <div class="connect__inner">
+                <div class="container">
+                    <h2 class="title connect__title">остались <br>
+                        <span>вопросы?</span>
+                    </h2>
+                    <div class="connect__text">Отправьте ваш вопрос, заказ,
+                        предложение или жалобу через форму обратной связи, и наш
+                        специалист свяжется с вами в течение 15 минут.
+                    </div>
+                    <div class="connect__wrap">
+                        <form class="connect__form" action="#">
+                            <input class="connect__input" id="name" type="text"
+                                placeholder="Ваше имя">
+                            <input class="connect__input" id="phone" type="text"
+                                placeholder="+7 (977) 777-77-77">
+                            <textarea class="connect__textarea"
+                                placeholder="Ваш комментарий"></textarea>
+                            <button
+                                class="btn-color connect__btn">отправить</button>
+                            <div class="connect__policy">Нажимая на кнопку
+                                «Отправить»,
+                                я даю свое согласие на обработку персональных
+                                данных, в
+                                соответствии
+                                с <a class="connect__link"
+                                    href="/privacy/index.html">Политикой
+                                    конфиденциальности</a></div>
+                        </form>
+                    </div>
+                    <img src="/src/image/main/painting.svg"
+                        alt="signature"
+                        class="connect__painting">
+                    <img src="/src/image/main/painting_mobile.svg"
+                        alt="signature"
+                        class="connect__painting_mobile">
+                </div>
+                <div class="connect__bubble bubble__mint"></div>
+                <div class="connect__bubble bubble__wine"></div>
+            </div>
+            <img src="/src/image/main/contact-form__bg.png" alt="tree leaves"
+                class="connect__bg">
+            <img src="/src/image/main/contact-form__bg_mobile.png"
+                alt="tree leaves"
+                class="connect__bg_mobile">
         </section>
 
         <div class style="height: 1000px; background-color: #000;"></div>

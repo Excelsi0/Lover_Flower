@@ -1,0 +1,183 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.connect {
+    position: relative;
+    &__inner {
+        position: relative;
+        overflow: hidden;
+
+        padding-top: 22px;
+        padding-bottom: 52px;
+        background: #0f222293;
+    }
+    .container {
+        position: relative;
+    }
+    &__title {
+        span {
+            padding-left: 95px;
+        }
+    }
+    &__text {
+        position: absolute;
+        top: min(136px, 9.4vw);
+        right: 10px;
+        max-width: 255px;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $color-white;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -53px;
+            width: 255px;
+            width: 100%;
+            border: 0.5px solid $color-mint;
+        }
+    }
+    &__wrap {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__form {
+        margin-top: 5px;
+        // margin-left: auto;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__input,
+    &__textarea {
+        border: 1px solid $color-mint;
+        background: none;
+        width: 100%;
+        max-width: 445px;
+        min-width: 300px;
+        padding: 20px;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        color: $color-white;
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #395959;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__input {
+        height: 60px;
+    }
+    &__textarea {
+        height: 120px;
+    }
+    &__btn {
+        margin-top: 10px;
+        width: fit-content;
+        padding: 16px 93px;
+    }
+    &__policy {
+        font-family: $font4;
+        font-weight: 400;
+        font-size: 10px;
+        letter-spacing: 0.02em;
+        color: $color-white;
+        max-width: 342px;
+    }
+    &__link {
+        text-decoration: underline;
+        color: $color-pink;
+    }
+    &__painting {
+        position: absolute;
+        width: clamp(132px, 21vw, 305px);
+        left: clamp(200px, 21vw, 305px);
+        top: clamp(115px, 18.5vw, 269px);
+        &_mobile {
+            display: none;
+        }
+    }
+    &__bubble {
+        position: absolute;
+        z-index: -2;
+    }
+    &__bg {
+        position: absolute;
+        width: clamp(675px, 53vw, 759px);
+        top: -80px;
+        left: 0;
+        &_mobile {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .connect {
+        &__inner {
+            padding-top: 30px;
+            padding-bottom: 34px;
+        }
+        &__title {
+            span {
+                padding-left: 0;
+            }
+        }
+
+        &__text {
+            position: relative;
+            top: auto;
+            right: auto;
+            margin-top: 135px;
+            &::before {
+                top: -20px;
+                width: 96px;
+            }
+        }
+        &__bg {
+            display: none;
+            &_mobile {
+                display: block;
+                position: absolute;
+                top: -104px;
+                right: 0;
+            }
+        }
+
+        &__wrap {
+            justify-content: center;
+        }
+        &__form {
+            margin-top: 30px;
+        }
+        &__policy {
+            max-width: 248px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .connect {
+        &__painting {
+            display: none;
+            &_mobile {
+                display: block;
+                position: absolute;
+                top: 134px;
+                transform: translateY(-50%);
+                left: 94px;
+            }
+        }
+    }
+}

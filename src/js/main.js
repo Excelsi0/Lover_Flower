@@ -71,89 +71,109 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Ошибка в блоке поиска:", err);
     }
 });
-try {
-    const bgHeader = document.getElementById("header");
-    const textElement = document.getElementById("hero__title");
-    const sidebar = document.querySelector(".sidebar"); // Добавляем элемент sidebar
 
-    if (!bgHeader) throw new Error("Элемент #header не найден");
-    if (!textElement) throw new Error("Элемент #hero__title не найден");
-    if (!sidebar) throw new Error("Элемент .sidebar не найден");
+// Header Scroll Effect
+function initHeaderScroll() {
+    try {
+        const bgHeader = document.getElementById("header");
+        if (!bgHeader) return; // Выходим если header не найден
 
-    // Настройки для заголовка
-    const startTop = 14;
-    const endTop = 16;
-    const startSize = 50;
-    const endSize = 20;
-    const scrollRange = 10;
+        let isMobile = window.innerWidth <= 768;
 
-    // Настройки z-index
-    const defaultZIndex = "99";
-    const scrolledZIndex = "2";
+        function handleHeaderScroll() {
+            const scrollY = window.scrollY;
 
-    let isMobile = window.innerWidth <= 768;
+            if (scrollY > 10) {
+                bgHeader.classList.add("scrolled");
+                bgHeader.style.background = "#040a0a";
+            } else {
+                bgHeader.classList.remove("scrolled");
+                bgHeader.style.background = "rgba(0, 0, 0, 0)";
+            }
+        }
 
-    function handleScrollEffects() {
-        const scrollY = window.scrollY;
-        const ratio = Math.min(scrollY / scrollRange, 1);
+        window.addEventListener("scroll", handleHeaderScroll);
+        handleHeaderScroll(); // Инициализация при загрузке
+    } catch (err) {
+        console.error("Header Scroll Error:", err);
+    }
+}
 
-        // Анимация заголовка
-        if (isMobile) {
+// Hero Title Animation (только если элемент существует)
+function initHeroTitle() {
+    try {
+        const textElement = document.getElementById("hero__title");
+        if (!textElement) return; // Выходим если элемент не найден
+
+        const startTop = 14;
+        const endTop = 16;
+        const startSize = 50;
+        const endSize = 20;
+        const scrollRange = 10;
+        const defaultZIndex = "99";
+
+        let isMobile = window.innerWidth <= 768;
+
+        function updateTitle() {
+            if (!isMobile) return;
+
+            const scrollY = window.scrollY;
+            const ratio = Math.min(scrollY / scrollRange, 1);
             const newTop = startTop + (endTop - startTop) * ratio;
             const newSize = startSize - (startSize - endSize) * ratio;
 
             textElement.style.top = `${newTop}px`;
             textElement.style.fontSize = `${newSize}px`;
-            textElement.style.zIndex = ratio > 0 ? defaultZIndex : defaultZIndex;
+            textElement.style.zIndex = defaultZIndex;
         }
 
-        // Управление z-index для sidebar
-        if (scrollY > 10) {
-            bgHeader.classList.add("scrolled");
-            bgHeader.style.background = "#040a0a";
-            sidebar.style.zIndex = scrolledZIndex;
-        } else {
-            bgHeader.classList.remove("scrolled");
-            bgHeader.style.background = "rgba(0, 0, 0, 0)";
-            sidebar.style.zIndex = defaultZIndex;
+        function handleResize() {
+            isMobile = window.innerWidth <= 768;
+            if (!isMobile) {
+                textElement.style.removeProperty("top");
+                textElement.style.removeProperty("font-size");
+                textElement.style.removeProperty("z-index");
+            } else {
+                updateTitle();
+            }
         }
+
+        window.addEventListener("scroll", updateTitle);
+        window.addEventListener("resize", handleResize);
+        handleResize(); // Инициализация
+    } catch (err) {
+        console.error("Hero Title Error:", err);
     }
-
-    function resetTitle() {
-        textElement.style.removeProperty("top");
-        textElement.style.removeProperty("font-size");
-        textElement.style.removeProperty("z-index");
-    }
-
-    function handleResize() {
-        const newIsMobile = window.innerWidth <= 768;
-
-        if (!newIsMobile && isMobile) {
-            resetTitle();
-        }
-
-        isMobile = newIsMobile;
-
-        if (isMobile) {
-            handleScrollEffects();
-        } else {
-            resetTitle();
-        }
-    }
-
-    // Инициализация
-    sidebar.style.zIndex = defaultZIndex; // Устанавливаем начальный z-index
-
-    window.addEventListener("scroll", handleScrollEffects);
-    window.addEventListener("resize", handleResize);
-
-    // Первый запуск
-    handleResize();
-    handleScrollEffects();
-} catch (err) {
-    console.error("Ошибка:", err);
 }
 
+// Sidebar Z-index Control
+function initSidebar() {
+    try {
+        const sidebar = document.querySelector(".sidebar");
+        if (!sidebar) return;
+
+        const bgHeader = document.getElementById("header");
+        const scrolledZIndex = "2";
+        const defaultZIndex = "99";
+
+        function updateSidebar() {
+            const scrollY = window.scrollY;
+            sidebar.style.zIndex = scrollY > 10 ? scrolledZIndex : defaultZIndex;
+        }
+
+        window.addEventListener("scroll", updateSidebar);
+        updateSidebar(); // Инициализация
+    } catch (err) {
+        console.error("Sidebar Error:", err);
+    }
+}
+
+// Запуск всех модулей
+document.addEventListener("DOMContentLoaded", function () {
+    initHeaderScroll();
+    initHeroTitle();
+    initSidebar();
+});
 try {
     const header = document.querySelector(".header");
     const sidebarCart = document.querySelector(".sidebar__cart");
