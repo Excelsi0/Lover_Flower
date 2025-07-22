@@ -12,6 +12,9 @@ export default defineConfig({
             phoneNumber: "+375 (29) 113-69-69",
             email: "zakaz@loverflower.by",
             address: "ул. Тимирязева 67",
+            instagram: "https://www.instagram.com/",
+            whatsapp: "https://wa.me/",
+            viber: "https://vb.me/",
         }),
     ],
 

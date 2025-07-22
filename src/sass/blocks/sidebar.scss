@@ -33,6 +33,7 @@
         margin-top: 60px;
         display: flex;
         align-self: self-end;
+        align-items: center;
         flex-direction: column;
         gap: 20px;
         width: 60px;
@@ -41,7 +42,7 @@
         background: rgba(0, 0, 0, 0.2);
         border-radius: 10px;
     }
-    &__btn {
+    &__link {
         display: block;
         background: none;
         border: none;

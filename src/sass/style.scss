@@ -9,6 +9,7 @@
 @use "/src/sass/blocks/sidebar.scss";
 @use "/src/sass/ui/titles.scss";
 @use "/src/sass/ui/btn.scss";
+@use "/src/sass/blocks/bg__word.scss";
 
 @use "/src/sass/blocks/header.scss";
 @use "/src/sass/blocks/privacy.scss";
@@ -19,3 +20,4 @@
 @use "/src/sass/blocks/main/ordering.scss";
 @use "/src/sass/blocks/main/custom.scss";
 @use "/src/sass/blocks/main/connect.scss";
+@use "/src/sass/blocks/main/socials.scss";
