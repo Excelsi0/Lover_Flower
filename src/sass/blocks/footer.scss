@@ -1,0 +1,135 @@
+@use "/src/sass/base/variables.scss" as *;
+.footer {
+    padding: 30px 0 60px;
+    &__wrapper {
+        display: flex;
+        gap: 31px;
+        justify-content: space-between;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        max-width: 247px;
+        &_contacts {
+            gap: 20px;
+        }
+    }
+    &__text {
+        margin-top: 10px;
+        font-family: $font-family;
+        font-weight: 300;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    &__secondary {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__title {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #43ffd2;
+    }
+    &__lable {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $color-mint;
+    }
+    &__note {
+        margin-top: 6px;
+        font-family: $font-family;
+        font-weight: 300;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    &__info {
+        margin-top: 26px;
+    }
+    &__links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        svg {
+            width: 24px;
+            height: 24px;
+            path {
+                fill: $color-mint;
+            }
+        }
+    }
+    &__logo {
+        display: block;
+        margin-top: -30px;
+        &_mobile {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        &__item {
+            max-width: 175px;
+        }
+        &__bouquets {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        text-align: center;
+        &__wrapper {
+            flex-direction: column;
+            gap: 10px;
+            > :nth-child(2) {
+                order: 6;
+                margin-top: 40px;
+                .footer__text {
+                    font-size: 10px;
+                    text-transform: none;
+                    margin: 10px auto;
+                    max-width: 244px;
+                }
+            }
+        }
+        &__secondary {
+            gap: 10px;
+        }
+        &__item {
+            max-width: 100%;
+            &_contacts {
+                margin-top: 30px;
+            }
+        }
+        &__info {
+            margin-top: 20px;
+        }
+        &__list_catalog {
+            display: none;
+        }
+        &__links {
+            justify-content: center;
+        }
+        &__logo {
+            display: none;
+            &_mobile {
+                display: block;
+                margin: -30px auto 0;
+                width: 34px;
+            }
+        }
+    }
+}

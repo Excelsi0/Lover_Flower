@@ -22,6 +22,31 @@
         align-items: center;
         column-gap: clamp(10px, 5vw, 50px);
     }
+    &__submenu {
+        margin-top: 30px;
+        left: -20px;
+
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+
+        width: 260px;
+        padding: 10px 20px;
+
+        backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, 0.2);
+        &_wrapper {
+            position: absolute;
+        }
+    }
+    &__catalog {
+        position: relative;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover .header__submenu {
+                display: flex;
+            }
+        }
+    }
 
     &__link {
         font-weight: 400;
@@ -30,6 +55,12 @@
         text-transform: uppercase;
         font-family: $font-family;
         white-space: nowrap;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                color: $color-mint;
+                text-decoration: underline;
+            }
+        }
     }
 
     &__actions {
