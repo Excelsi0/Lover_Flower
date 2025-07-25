@@ -1,0 +1,160 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.page-catalog {
+    .hero {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 30px;
+        &__path {
+            margin-top: 115px;
+        }
+        .sidebar {
+            top: -82px;
+        }
+        &__wrapper {
+            padding-right: 190px;
+            margin-top: 23px;
+        }
+        &__content {
+            position: relative;
+            z-index: 1;
+            max-width: 926px; // сделал на 6px больше чтобы кнопки визуально совпадали
+            width: 100%;
+            padding: 15px 11px 30px 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.3);
+        }
+        &__title {
+            font-family: $second-family;
+
+            font-weight: 400;
+            @include fluid-font(40, 100);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            text-align: left;
+            color: $color-white;
+            margin: 0;
+            span {
+                padding-left: 265px;
+            }
+        }
+        &__subtitle {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-white;
+            text-align: left;
+            padding-left: 265px;
+            max-width: calc(430px + 265px);
+
+            margin-top: 20px;
+        }
+        &__category {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 59px;
+            &-btn {
+                padding: 11px 16px;
+                background: none;
+                border: 0.5px solid $color-white;
+                border-radius: 40px;
+
+                color: $color-white;
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 12px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+            }
+        }
+        &__bg {
+            position: absolute;
+            &_desktop {
+                width: 1073px;
+                height: 717px;
+                top: -42px;
+                left: -296px;
+            }
+            &_secondary {
+                top: 22px;
+                left: auto;
+                right: -438px;
+                transform: rotate(-79deg);
+            }
+            &_mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .page-catalog {
+        .hero {
+            &__wrapper {
+                padding-right: 0;
+            }
+            &__content {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-catalog {
+        .hero {
+            &__path {
+                margin-top: 100px;
+            }
+            &__content {
+                backdrop-filter: none;
+                background: none;
+                padding: 0;
+            }
+            &__title {
+                position: relative;
+                span {
+                    padding-left: 50px;
+                }
+            }
+            &__subtitle {
+                padding-left: 50px;
+                max-width: calc(240px + 50px);
+            }
+            &__category {
+                display: none;
+            }
+            &__bg {
+                &_desktop {
+                    display: none;
+                }
+                &_desktop &_secondary {
+                    display: none;
+                }
+                &_mobile {
+                    display: block;
+                    width: 182px;
+                    height: 9.375rem;
+                    top: 123px;
+                    left: -89px;
+                    transform: rotate(91deg) scaleX(-1);
+                }
+                &_secondary {
+                    z-index: 100;
+                    width: 318px;
+                    height: auto;
+                    transform: rotate(-91deg);
+                    top: -3px;
+                    left: auto;
+                    right: -135px;
+                }
+            }
+        }
+    }
+}
