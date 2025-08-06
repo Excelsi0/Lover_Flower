@@ -4,6 +4,7 @@
         <%- include('src/templates/head.html'); %>
         <title>LF-Catalog</title>
     </head>
+
     <body class="page-catalog">
         <%- include('src/templates/header.html'); %>
         <div class="hero">
@@ -407,26 +408,29 @@
                                 </li>
 
                             </ul>
-
                         </details>
+
                     </div>
-                    <div class="hero__bubble bubble__mint"></div>
-                    <div class="hero__bubble bubble__wine"></div>
-
-                    <img src="/src/image/catalog/hero__bg.png" alt
-                        class="hero__bg hero__bg_desktop">
-                    <img src="/src/image/catalog/hero__bg.png" alt
-                        class="hero__bg hero__bg_desktop hero__bg_secondary">
-
-                    <img src="/src/image/catalog/hero__bg.png" alt
-                        class="hero__bg hero__bg_mobile">
-                    <img src="/src/image/catalog/hero__bg.png" alt
-                        class="hero__bg hero__bg_mobile hero__bg_secondary">
-
                 </div>
+            </div>
 
-                <div style="height: 1000px;"></div>
-                <%- include('src/templates/footer.html'); %>
-                <script type="module" src="/src/js/main.js"></script>
-            </body>
-        </html>
+            <div class="hero__bubble bubble__mint"></div>
+            <div class="hero__bubble bubble__wine"></div>
+
+            <img src="/src/image/catalog/hero__bg.png" alt="flower"
+                class="hero__bg hero__bg_desktop">
+            <img src="/src/image/catalog/hero__bg.png" alt="flower "
+                class="hero__bg hero__bg_desktop hero__bg_secondary">
+
+            <img src="/src/image/catalog/hero__bg.png" alt="flower"
+                class="hero__bg hero__bg_mobile">
+            <img src="/src/image/catalog/hero__bg.png" alt="flower"
+                class="hero__bg hero__bg_mobile hero__bg_secondary">
+
+        </div>
+
+        <div style="height: 1000px;"></div>
+        <%- include('src/templates/footer.html'); %>
+        <script type="module" src="/src/js/main.js"></script>
+    </body>
+</html>
