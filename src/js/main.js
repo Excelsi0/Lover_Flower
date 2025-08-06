@@ -386,3 +386,108 @@ try {
 } catch (e) {
     console.e("Ошибка:", e);
 }
+
+// стоимость в фильтре
+
+try {
+    const rangeMin = document.getElementById("range-min");
+    const rangeMax = document.getElementById("range-max");
+    const minValue = document.getElementById("min-value");
+    const maxValue = document.getElementById("max-value");
+    const sliderRange = document.getElementById("slider__range");
+
+    const minGap = 10;
+
+    function updateSlider(event) {
+        const min = parseInt(rangeMin.value);
+        const max = parseInt(rangeMax.value);
+
+        if (max - min < minGap) {
+            if (event.target === rangeMin) {
+                rangeMin.value = max - minGap;
+            } else {
+                rangeMax.value = min + minGap;
+            }
+        }
+
+        const percentMin = ((rangeMin.value - 50) / (400 - 50)) * 100;
+        const percentMax = ((rangeMax.value - 50) / (400 - 50)) * 100;
+
+        sliderRange.style.left = percentMin + "%";
+        sliderRange.style.width = percentMax - percentMin + "%";
+
+        // Форматируем в 2 знака после запятой
+        minValue.textContent = `${parseFloat(rangeMin.value).toFixed(2)} ₽`;
+        maxValue.textContent = `${parseFloat(rangeMax.value).toFixed(2)} ₽`;
+    }
+
+    rangeMin.addEventListener("input", updateSlider);
+    rangeMax.addEventListener("input", updateSlider);
+
+    updateSlider({ target: rangeMin }); // initial call
+} catch (e) {
+    console.error("Ошибка:", e);
+}
+
+// сброс фильтров
+
+try {
+    document.addEventListener("DOMContentLoaded", function () {
+        const resetButton = document.querySelector(".filter__btn");
+        const checkboxes = document.querySelectorAll('.filter__input[type="checkbox"]');
+        const rangeMin = document.getElementById("range-min");
+        const rangeMax = document.getElementById("range-max");
+        const minValueSpan = document.getElementById("min-value");
+        const maxValueSpan = document.getElementById("max-value");
+
+        resetButton.addEventListener("click", function (e) {
+            e.preventDefault(); // чтобы кнопка не перезагружала страницу
+
+            // Снимаем все чекбоксы
+            checkboxes.forEach((cb) => (cb.checked = false));
+
+            // Сбрасываем диапазон цен
+            rangeMin.value = rangeMin.min;
+            rangeMax.value = rangeMax.max;
+
+            // Обновляем текстовое отображение значений
+            minValueSpan.textContent = `${rangeMin.value} ₽`;
+            maxValueSpan.textContent = `${rangeMax.value} ₽`;
+
+            // При необходимости, вызовите функцию для обновления визуального диапазона слайдера
+            updateSliderRange();
+        });
+
+        function updateSliderRange() {
+            const min = parseInt(rangeMin.value);
+            const max = parseInt(rangeMax.value);
+            const range = document.getElementById("slider__range");
+            const trackWidth = rangeMin.offsetWidth;
+
+            const minPercent = ((min - rangeMin.min) / (rangeMin.max - rangeMin.min)) * 100;
+            const maxPercent = ((max - rangeMin.min) / (rangeMin.max - rangeMin.min)) * 100;
+
+            range.style.left = `${minPercent}%`;
+            range.style.width = `${maxPercent - minPercent}%`;
+        }
+
+        // Добавляем обработчики для обновления значений при изменении диапазона
+        rangeMin.addEventListener("input", () => {
+            if (parseInt(rangeMin.value) > parseInt(rangeMax.value)) {
+                rangeMin.value = rangeMax.value;
+            }
+            minValueSpan.textContent = `${rangeMin.value} ₽`;
+            updateSliderRange();
+        });
+
+        rangeMax.addEventListener("input", () => {
+            if (parseInt(rangeMax.value) < parseInt(rangeMin.value)) {
+                rangeMax.value = rangeMin.value;
+            }
+            maxValueSpan.textContent = `${rangeMax.value} ₽`;
+            updateSliderRange();
+        });
+    });
+} catch (e) {
+    console.error("Ошибка:", e);
+}
