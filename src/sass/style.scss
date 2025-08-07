@@ -11,6 +11,7 @@
 @use "/src/sass/ui/btn.scss";
 @use "/src/sass/blocks/bg__word.scss";
 @use "/src/sass/blocks/path.scss";
+@use "/src/sass/blocks/card.scss";
 
 @use "/src/sass/blocks/header.scss";
 @use "/src/sass/blocks/footer.scss";
@@ -25,4 +26,7 @@
 @use "/src/sass/blocks/main/connect.scss";
 @use "/src/sass/blocks/main/socials.scss";
 
+@use "/src/sass/blocks/catalog/filter.scss";
+
 @use "/src/sass/blocks/catalog/hero-catalog.scss";
+@use "/src/sass/blocks/catalog/catalog-catalog.scss";

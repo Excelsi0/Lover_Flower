@@ -1,0 +1,106 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.card {
+    position: relative;
+    margin: 10px;
+    &__wrapper {
+        position: relative;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    &__badge {
+        &_sale,
+        &_new {
+            display: none;
+
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            z-index: 2;
+
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 0.02em;
+            color: $color-dark;
+            &-active {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        &_sale {
+            background-color: $color-sale;
+        }
+        &_new {
+            background-color: $color-pink;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+    }
+    &__name {
+        margin-top: 10px;
+
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $color-white;
+    }
+    &__price {
+        margin-top: 10px;
+
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $color-white;
+        &_old {
+            font-weight: 300;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-decoration: line-through;
+            color: #939393;
+            padding-right: 10px;
+        }
+    }
+    &__btn {
+        margin-top: 20px;
+        padding: 16px 76px;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .card {
+        &__img {
+            filter: grayscale(100%);
+
+            transition: filter 0.3s linear;
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        margin: 0;
+        &__btn {
+            padding: 16px 93px;
+        }
+        &__img {
+            height: 335px;
+        }
+    }
+}

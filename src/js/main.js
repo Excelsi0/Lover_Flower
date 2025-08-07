@@ -491,3 +491,55 @@ try {
 } catch (e) {
     console.error("Ошибка:", e);
 }
+
+// выбор сортировки
+
+try {
+    document.addEventListener("DOMContentLoaded", function () {
+        const sortButtons = document.querySelectorAll(".hero__category-btn");
+        const activeSortText = document.getElementById("catalog__active-text");
+        const clearSortButton = document.getElementById("catalog__clear");
+
+        activeSortText.textContent = "";
+        clearSortButton.style.display = "none";
+
+        sortButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                activeSortText.textContent = this.textContent;
+                clearSortButton.style.display = "inline";
+
+                sortButtons.forEach((btn) => btn.classList.remove("hero__category-btn_active"));
+
+                this.classList.add("hero__category-btn_active");
+            });
+        });
+
+        clearSortButton.addEventListener("click", function () {
+            activeSortText.textContent = "";
+            this.style.display = "none";
+
+            sortButtons.forEach((btn) => btn.classList.remove("hero__category-btn_active"));
+        });
+    });
+} catch (e) {
+    console.error("Ошибка:", e);
+}
+
+// Смена заголовка фильтра при выборе сортировки
+
+try {
+    document.addEventListener("DOMContentLoaded", function () {
+        const sortInputs = document.querySelectorAll(".catalog__filter-input");
+        const headerTitle = document.querySelector(".catalog__filter-header-title");
+
+        sortInputs.forEach((input) => {
+            input.addEventListener("change", function () {
+                if (this.checked) {
+                    headerTitle.textContent = this.value;
+                }
+            });
+        });
+    });
+} catch (e) {
+    console.error("Ошибка:", e);
+}
