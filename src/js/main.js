@@ -388,14 +388,12 @@ try {
 }
 
 // стоимость в фильтре
-
-try {
-    const rangeMin = document.getElementById("range-min");
-    const rangeMax = document.getElementById("range-max");
-    const minValue = document.getElementById("min-value");
-    const maxValue = document.getElementById("max-value");
-    const sliderRange = document.getElementById("slider__range");
-
+document.querySelectorAll(".slider").forEach((slider) => {
+    const rangeMin = slider.querySelector(".range-min");
+    const rangeMax = slider.querySelector(".range-max");
+    const minValue = slider.querySelector(".min-value");
+    const maxValue = slider.querySelector(".max-value");
+    const sliderRange = slider.querySelector(".slider__range");
     const minGap = 10;
 
     function updateSlider(event) {
@@ -416,19 +414,14 @@ try {
         sliderRange.style.left = percentMin + "%";
         sliderRange.style.width = percentMax - percentMin + "%";
 
-        // Форматируем в 2 знака после запятой
         minValue.textContent = `${parseFloat(rangeMin.value).toFixed(2)} ₽`;
         maxValue.textContent = `${parseFloat(rangeMax.value).toFixed(2)} ₽`;
     }
 
     rangeMin.addEventListener("input", updateSlider);
     rangeMax.addEventListener("input", updateSlider);
-
-    updateSlider({ target: rangeMin }); // initial call
-} catch (e) {
-    console.error("Ошибка:", e);
-}
-
+    updateSlider({ target: rangeMin });
+});
 // сброс фильтров
 
 try {
