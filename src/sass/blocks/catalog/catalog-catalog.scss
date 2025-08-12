@@ -5,6 +5,7 @@
         position: relative;
         background: none;
         padding-top: 30px;
+
         &__sort {
             display: flex;
             align-items: flex-start;
@@ -140,6 +141,32 @@
                 height: 335px;
                 filter: none;
             }
+            &__btn {
+                width: 100%;
+            }
+        }
+        &__top-btn {
+            display: none;
+            position: absolute;
+            right: 10px;
+            bottom: -54px;
+
+            background: none;
+            border: none;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            fill: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            @media (hover: hover) and (pointer: fine) {
+                &:hover {
+                    background-color: $color-pink;
+                }
+            }
         }
     }
 
@@ -147,7 +174,7 @@
         .catalog {
             &__content {
                 justify-content: center;
-                column-gap: 3q0px;
+                column-gap: 30px;
             }
         }
     }
@@ -171,6 +198,12 @@
                     height: 335px;
                     filter: none;
                 }
+                &__btn {
+                    max-width: 255px;
+                }
+            }
+            &__top-btn {
+                display: none !important;
             }
         }
     }

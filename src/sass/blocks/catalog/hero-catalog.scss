@@ -82,6 +82,7 @@
                 letter-spacing: 0.03em;
 
                 text-transform: uppercase;
+                cursor: pointer;
                 &_active {
                     background-color: $color-mint;
                     border-color: $color-mint;

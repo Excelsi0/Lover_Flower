@@ -536,3 +536,88 @@ try {
 } catch (e) {
     console.error("Ошибка:", e);
 }
+
+// прокркутка вниз
+try {
+    const container = document.querySelector(".catalog__content");
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    let page = 1;
+    let isLoading = false;
+    let hasLoadedMore = false;
+
+    function createCard(item) {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+      <div class="card__wrapper">
+        <div class="card__badge card__badge_sale${item.saleActive ? " card__badge_sale-active" : ""}">SALE</div>
+        <div class="card__badge card__badge_new${item.newActive ? " card__badge_new-active" : ""}">NEW</div>
+        <img src="${item.img}" alt="bouquet" class="card__img">
+        <div class="card__name">${item.name}</div>
+        <div class="card__price">
+          ${item.price} ₽
+          <span class="card__price_old">${item.saleActive ? item.oldPrice : ""}</span>
+        </div>
+        <button class="card__btn btn">В корзину</button>
+      </div>
+    `;
+        return card;
+    }
+
+    function loadCards() {
+        if (isLoading) return;
+        isLoading = true;
+
+        setTimeout(() => {
+            const data = Array.from({ length: 6 }).map((_, i) => {
+                const imgNumber = (((page - 1) * 6 + i) % 12) + 1;
+                const saleActive = Math.random() < 0.1;
+                const price = 167000;
+                const oldPrice = saleActive ? price + Math.floor(Math.random() * 50000 + 10000) : "";
+
+                return {
+                    img: `/src/image/bouquet/bouquet${imgNumber}.jpg`,
+                    name: "лучшее утро",
+                    price: price.toLocaleString("ru-RU"),
+                    oldPrice: oldPrice ? oldPrice.toLocaleString("ru-RU") : "",
+                    saleActive,
+                    newActive: Math.random() < 0.1,
+                };
+            });
+
+            data.forEach((item) => {
+                const card = createCard(item);
+                container.appendChild(card);
+            });
+
+            page++;
+            isLoading = false;
+
+            if (page > 2 && !hasLoadedMore) {
+                scrollTopBtn.style.display = "block";
+                hasLoadedMore = true;
+            }
+        }, 1000);
+    }
+
+    window.addEventListener("scroll", () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+            loadCards();
+        }
+    });
+
+    scrollTopBtn.addEventListener("click", () => {
+        const headerOffset = 150;
+        const elementPosition = container.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+        });
+    });
+
+    loadCards();
+} catch (e) {
+    console.error("Ошибка:", e);
+}
