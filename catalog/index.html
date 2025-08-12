@@ -6,108 +6,515 @@
     </head>
 
     <body class="page-catalog">
-        <%- include('src/templates/header.html'); %>
-        <div class="hero">
-            <div class="container">
-                <%- include('src/templates/sidebar.html'); %>
+        <main class="page-catalog__main">
+            <%- include('src/templates/header.html'); %>
+            <section class="hero">
+                <div class="container">
+                    <%- include('src/templates/sidebar.html'); %>
 
-                <div class="path hero__path">
-                    <a href="/index.html">Главная</a>
-                    /
-                    <a href="/catalog/index.html">Каталог</a>
-                </div>
-
-                <div class="hero__wrapper">
-                    <div class="hero__content">
-                        <h1 class="hero__title">каталог <br>
-                            <span>букетов</span>
-                        </h1>
-                        <p class="hero__subtitle">
-                            В нашем магазине самый большой
-                            выбор букетов для любых событий:
-                        </p>
-                        <ul class="hero__category">
-                            <li>
-                                <button class="hero__category-btn">Букеты из
-                                    гипсофил</button>
-                            </li>
-                            <li>
-                                <button class="hero__category-btn">Букеты из
-                                    ромашек</button>
-                            </li>
-                            <li>
-                                <button class="hero__category-btn">Букеты из
-                                    хризантем</button>
-                            </li>
-                            <li>
-                                <button class="hero__category-btn">Комнатные
-                                    цветы в
-                                    горшках</button>
-                            </li>
-                            <li>
-                                <button
-                                    class="hero__category-btn">Монобукеты</button>
-                            </li>
-                            <li>
-                                <button class="hero__category-btn">Сборные
-                                    букеты</button>
-                            </li>
-                            <li>
-                                <button class="hero__category-btn">Букет на
-                                    праздник</button>
-                            </li>
-                            <li>
-                                <button
-                                    class="hero__category-btn">Композиции из
-                                    цветов</button>
-                            </li>
-                            <li>
-                                <button
-                                    class="hero__category-btn">Конверты</button>
-                            </li>
-                            <li>
-                                <button
-                                    class="hero__category-btn">Открытки</button>
-                            </li>
-                            <li>
-                                <button
-                                    class="hero__category-btn">Подарки</button>
-                            </li>
-                            <li>
-                                <button class="hero__category-btn">Букеты из
-                                    сухоцветов</button>
-                            </li>
-                            <li>
-                                <button
-                                    class="hero__category-btn">Шары</button>
-                            </li>
-                            <li>
-                                <button
-                                    class="hero__category-btn">Популярное</button>
-                            </li>
-                            <li>
-                                <button class="hero__category-btn">Букеты
-                                    роз</button>
-                            </li>
-                            <li>
-                                <button class="hero__category-btn">Цветы на
-                                    похороны</button>
-                            </li>
-                            <li>
-                                <button class="hero__category-btn">Упаковка
-                                    подарков</button>
-                            </li>
-                        </ul>
+                    <div class="path hero__path">
+                        <a href="/index.html">Главная</a>
+                        /
+                        <a href="/catalog/index.html">Каталог</a>
                     </div>
 
-                    <div class="filter">
-                        <details class="filter__section">
-                            <summary class="filter__header">
-                                <span class="filter__header_title">фильтр
-                                    товаров</span> <span
-                                    class="filter__header_arrow">▶</span>
+                    <div class="hero__wrapper">
+                        <div class="hero__content">
+                            <h1 class="hero__title">каталог <br>
+                                <span>букетов</span>
+                            </h1>
+                            <p class="hero__subtitle">
+                                В нашем магазине самый большой
+                                выбор букетов для любых событий:
+                            </p>
+                            <ul class="hero__category">
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Букеты из
+                                        гипсофил</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Букеты из
+                                        ромашек</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Букеты из
+                                        хризантем</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Комнатные
+                                        цветы в
+                                        горшках</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Монобукеты</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Сборные
+                                        букеты</button>
+                                </li>
+                                <li>
+                                    <button class="hero__category-btn">Букет
+                                        на
+                                        праздник</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Композиции
+                                        из
+                                        цветов</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Конверты</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Открытки</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Подарки</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Букеты из
+                                        сухоцветов</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Шары</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Популярное</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Букеты
+                                        роз</button>
+                                </li>
+                                <li>
+                                    <button class="hero__category-btn">Цветы
+                                        на
+                                        похороны</button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="hero__category-btn">Упаковка
+                                        подарков</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="filter">
+                            <details class="filter__section">
+                                <summary class="filter__header">
+                                    <span
+                                        class="filter__header_title">фильтр
+                                        товаров</span> <span
+                                        class="filter__header_arrow">▶</span>
+                                </summary>
+
+                                <div class="filter__content">
+
+                                    <div class="filter__group">
+                                        <h3 class="filter__title">По
+                                            свету</h3>
+
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">нежные</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">яркие</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter__group">
+                                        <h3 class="filter__title">По
+                                            цвету</h3>
+
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">белый</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">желтый</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">зеленый</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">красный</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">оранжевый</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">розовый</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">синий</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter__group">
+                                        <h3 class="filter__title">по
+                                            формату</h3>
+
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">букет</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">в
+                                                вазе</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">в
+                                                конверте</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">в
+                                                корзине</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">в
+                                                шляпной
+                                                коробке</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">в
+                                                ящике</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter__group">
+                                        <h3
+                                            class="filter__title">стоимость</h3>
+                                        <div class="slider">
+                                            <div
+                                                class="slider__track"></div>
+                                            <div class="slider__range"
+                                                id="slider__range"></div>
+
+                                            <input type="range"
+                                                id="range-min"
+                                                min="50"
+                                                max="400" value="50"
+                                                step="1">
+                                            <input type="range"
+                                                id="range-max"
+                                                min="50"
+                                                max="400" value="400"
+                                                step="1">
+
+                                            <div class="slider__values">
+                                                Цена: <span
+                                                    id="min-value">50
+                                                    ₽</span> –
+                                                <span id="max-value">400
+                                                    ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter__group">
+                                        <h3 class="filter__title">по
+                                            цветку</h3>
+
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">Альстромерия
+                                                (2)</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">Антуриум
+                                                (1)</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">Аспарагус
+                                                (1)</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">Астильба
+                                                (7)</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">Астранция
+                                                (1)</span>
+                                        </label>
+                                    </div>
+
+                                    <button class="btn filter__btn">Сбросить
+                                        фильтр</button>
+                                </div>
+                            </details>
+
+                            <details class="filter__section">
+                                <summary class="filter__header">
+                                    <span
+                                        class="filter__header_title">сортировка
+                                        товаров</span> <span
+                                        class="filter__header_arrow">▶</span>
+                                </summary>
+
+                                <div class="filter__content_sort">
+
+                                    <div class="filter__group">
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">по
+                                                популярности</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">сначала
+                                                дорогие</span>
+                                        </label>
+                                        <label class="filter__option">
+                                            <input type="checkbox"
+                                                class="filter__input">
+                                            <span
+                                                class="filter__label">сначала
+                                                дешевые</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <details class="filter__section">
+                                <summary class="filter__header">
+                                    <span
+                                        class="filter__header_title">Категории</span>
+                                    <span
+                                        class="filter__header_arrow">▶</span>
+                                </summary>
+
+                                <ul
+                                    class="hero__category hero__category_mobile">
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Букеты
+                                            из
+                                            гипсофил</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Букеты
+                                            из
+                                            ромашек</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Букеты
+                                            из
+                                            хризантем</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Сборные
+                                            букеты</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Комнатные
+                                            цветы в
+                                            горшках</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Популярное</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Букет
+                                            на
+                                            праздник</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Композиции
+                                            из
+                                            цветов</button>
+                                    </li>
+
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Конверты</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Открытки</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Подарки</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Букеты
+                                            из
+                                            сухоцветов</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Букеты
+                                            роз</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Цветы
+                                            на
+                                            похороны</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Упаковка
+                                            подарков</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Монобукеты</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="hero__category-btn">Шары</button>
+                                    </li>
+
+                                </ul>
+                            </details>
+
+                        </div>
+                    </div>
+                </div>
+
+                <img src="/src/image/catalog/hero__bg.png" alt="flower"
+                    class="hero__bg hero__bg_desktop">
+                <img src="/src/image/catalog/hero__bg.png" alt="flower "
+                    class="hero__bg hero__bg_desktop hero__bg_secondary">
+
+                <img src="/src/image/catalog/hero__bg.png" alt="flower"
+                    class="hero__bg hero__bg_mobile">
+                <img src="/src/image/catalog/hero__bg.png" alt="flower"
+                    class="hero__bg hero__bg_mobile hero__bg_secondary">
+
+            </section>
+
+            <section class="catalog">
+                <div class="container">
+                    <div class="catalog__sort">
+                        <div class="catalog__active">
+                            <span class="catalog__active-text"
+                                id="catalog__active-text"></span>
+                            <button class="catalog__active-clear"
+                                id="catalog__clear">✕</button>
+                        </div>
+                        <details class="catalog__filter">
+                            <summary class="catalog__filter-header">
+                                <span
+                                    class="catalog__filter-header-title">по
+                                    популярности</span>
+                                <span
+                                    class="catalog__filter-header-arrow">▶</span>
                             </summary>
 
+                            <div class="catalog__filter-content">
+                                <label class="catalog__filter-option">
+                                    <input type="radio" name="sort"
+                                        class="catalog__filter-input"
+                                        value="по популярности" checked>
+                                    <span class="catalog__filter-label">по
+                                        популярности</span>
+                                </label>
+                                <label class="catalog__filter-option">
+                                    <input type="radio" name="sort"
+                                        class="catalog__filter-input"
+                                        value="сначала дорогие">
+                                    <span
+                                        class="catalog__filter-label">сначала
+                                        дорогие</span>
+                                </label>
+                                <label class="catalog__filter-option">
+                                    <input type="radio" name="sort"
+                                        class="catalog__filter-input"
+                                        value="сначала дешевые">
+                                    <span
+                                        class="catalog__filter-label">сначала
+                                        дешевые</span>
+                                </label>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="catalog__layout">
+                        <aside class="catalog__sidebar filter">
                             <div class="filter__content">
 
                                 <div class="filter__group">
@@ -287,488 +694,126 @@
                                 <button class="btn filter__btn">Сбросить
                                     фильтр</button>
                             </div>
-                        </details>
+                        </aside>
+                        <div class="catalog__content">
+                            <div class="card">
+                                <div class="card__wrapper">
+                                    <div
+                                        class="card__badge card__badge_sale">SALE</div>
+                                    <div
+                                        class="card__badge card__badge_new card__badge_new-active">NEW</div>
+                                    <img
+                                        src="/src/image/bouquet/bouquet1.jpg"
+                                        alt="bouquet" class="card__img">
 
-                        <details class="filter__section">
-                            <summary class="filter__header">
-                                <span
-                                    class="filter__header_title">сортировка
-                                    товаров</span> <span
-                                    class="filter__header_arrow">▶</span>
-                            </summary>
-
-                            <div class="filter__content_sort">
-
-                                <div class="filter__group">
-                                    <label class="filter__option">
-                                        <input type="checkbox"
-                                            class="filter__input">
-                                        <span
-                                            class="filter__label">по
-                                            популярности</span>
-                                    </label>
-                                    <label class="filter__option">
-                                        <input type="checkbox"
-                                            class="filter__input">
-                                        <span
-                                            class="filter__label">сначала
-                                            дорогие</span>
-                                    </label>
-                                    <label class="filter__option">
-                                        <input type="checkbox"
-                                            class="filter__input">
-                                        <span
-                                            class="filter__label">сначала
-                                            дешевые</span>
-                                    </label>
+                                    <div class="hits__name">лучшее
+                                        утро</div>
+                                    <div class="card__price">167.000 ₽<span
+                                            class="card__price_old"></span></div>
+                                    <button class="card__btn btn">В
+                                        корзину</button>
                                 </div>
                             </div>
-                        </details>
+                            <div class="card">
+                                <div class="card__wrapper">
+                                    <div
+                                        class="card__badge card__badge_sale">SALE</div>
+                                    <div
+                                        class="card__badge card__badge_new card__badge_new-active">NEW</div>
+                                    <img
+                                        src="/src/image/bouquet/bouquet1.jpg"
+                                        alt="bouquet" class="card__img">
 
-                        <details class="filter__section">
-                            <summary class="filter__header">
-                                <span
-                                    class="filter__header_title">Категории</span>
-                                <span
-                                    class="filter__header_arrow">▶</span>
-                            </summary>
-
-                            <ul class="hero__category hero__category_mobile">
-                                <li>
-                                    <button class="hero__category-btn">Букеты из
-                                        гипсофил</button>
-                                </li>
-                                <li>
-                                    <button class="hero__category-btn">Букеты из
-                                        ромашек</button>
-                                </li>
-                                <li>
-                                    <button class="hero__category-btn">Букеты из
-                                        хризантем</button>
-                                </li>
-                                <li>
-                                    <button class="hero__category-btn">Сборные
-                                        букеты</button>
-                                </li>
-                                <li>
-                                    <button class="hero__category-btn">Комнатные
-                                        цветы в
-                                        горшках</button>
-                                </li>
-                                <li>
-                                    <button
-                                        class="hero__category-btn">Популярное</button>
-                                </li>
-                                <li>
-                                    <button class="hero__category-btn">Букет на
-                                        праздник</button>
-                                </li>
-                                <li>
-                                    <button
-                                        class="hero__category-btn">Композиции из
-                                        цветов</button>
-                                </li>
-
-                                <li>
-                                    <button
-                                        class="hero__category-btn">Конверты</button>
-                                </li>
-                                <li>
-                                    <button
-                                        class="hero__category-btn">Открытки</button>
-                                </li>
-                                <li>
-                                    <button
-                                        class="hero__category-btn">Подарки</button>
-                                </li>
-                                <li>
-                                    <button class="hero__category-btn">Букеты из
-                                        сухоцветов</button>
-                                </li>
-                                <li>
-                                    <button class="hero__category-btn">Букеты
-                                        роз</button>
-                                </li>
-                                <li>
-                                    <button class="hero__category-btn">Цветы на
-                                        похороны</button>
-                                </li>
-                                <li>
-                                    <button
-                                        class="hero__category-btn">Упаковка
-                                        подарков</button>
-                                </li>
-                                <li>
-                                    <button
-                                        class="hero__category-btn">Монобукеты</button>
-                                </li>
-                                <li>
-                                    <button
-                                        class="hero__category-btn">Шары</button>
-                                </li>
-
-                            </ul>
-                        </details>
-
-                    </div>
-                </div>
-            </div>
-
-            <img src="/src/image/catalog/hero__bg.png" alt="flower"
-                class="hero__bg hero__bg_desktop">
-            <img src="/src/image/catalog/hero__bg.png" alt="flower "
-                class="hero__bg hero__bg_desktop hero__bg_secondary">
-
-            <img src="/src/image/catalog/hero__bg.png" alt="flower"
-                class="hero__bg hero__bg_mobile">
-            <img src="/src/image/catalog/hero__bg.png" alt="flower"
-                class="hero__bg hero__bg_mobile hero__bg_secondary">
-
-        </div>
-
-        <section class="catalog">
-            <div class="container">
-                <div class="catalog__sort">
-                    <div class="catalog__active">
-                        <span class="catalog__active-text"
-                            id="catalog__active-text"></span>
-                        <button class="catalog__active-clear"
-                            id="catalog__clear">✕</button>
-                    </div>
-                    <details class="catalog__filter">
-                        <summary class="catalog__filter-header">
-                            <span class="catalog__filter-header-title">по
-                                популярности</span>
-                            <span class="catalog__filter-header-arrow">▶</span>
-                        </summary>
-
-                        <div class="catalog__filter-content">
-                            <label class="catalog__filter-option">
-                                <input type="radio" name="sort"
-                                    class="catalog__filter-input"
-                                    value="по популярности" checked>
-                                <span class="catalog__filter-label">по
-                                    популярности</span>
-                            </label>
-                            <label class="catalog__filter-option">
-                                <input type="radio" name="sort"
-                                    class="catalog__filter-input"
-                                    value="сначала дорогие">
-                                <span class="catalog__filter-label">сначала
-                                    дорогие</span>
-                            </label>
-                            <label class="catalog__filter-option">
-                                <input type="radio" name="sort"
-                                    class="catalog__filter-input"
-                                    value="сначала дешевые">
-                                <span class="catalog__filter-label">сначала
-                                    дешевые</span>
-                            </label>
-                        </div>
-                    </details>
-                </div>
-
-                <div class="catalog__layout">
-                    <aside class="catalog__sidebar filter">
-                        <div class="filter__content">
-
-                            <div class="filter__group">
-                                <h3 class="filter__title">По свету</h3>
-
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">нежные</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">яркие</span>
-                                </label>
-                            </div>
-
-                            <div class="filter__group">
-                                <h3 class="filter__title">По цвету</h3>
-
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">белый</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">желтый</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">зеленый</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">красный</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">оранжевый</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">розовый</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">синий</span>
-                                </label>
-                            </div>
-
-                            <div class="filter__group">
-                                <h3 class="filter__title">по
-                                    формату</h3>
-
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">букет</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">в
-                                        вазе</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">в
-                                        конверте</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">в
-                                        корзине</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">в шляпной
-                                        коробке</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">в
-                                        ящике</span>
-                                </label>
-                            </div>
-
-                            <div class="filter__group">
-                                <h3 class="filter__title">стоимость</h3>
-                                <div class="slider">
-                                    <div class="slider__track"></div>
-                                    <div class="slider__range"
-                                        id="slider__range"></div>
-
-                                    <input type="range" id="range-min"
-                                        min="50"
-                                        max="400" value="50" step="1">
-                                    <input type="range" id="range-max"
-                                        min="50"
-                                        max="400" value="400" step="1">
-
-                                    <div class="slider__values">
-                                        Цена: <span id="min-value">50
-                                            ₽</span> –
-                                        <span id="max-value">400
-                                            ₽</span>
-                                    </div>
+                                    <div class="hits__name">лучшее
+                                        утро</div>
+                                    <div class="card__price">167.000 ₽<span
+                                            class="card__price_old"></span></div>
+                                    <button class="card__btn btn">В
+                                        корзину</button>
                                 </div>
                             </div>
+                            <div class="card">
+                                <div class="card__wrapper">
+                                    <div
+                                        class="card__badge card__badge_sale">SALE</div>
+                                    <div
+                                        class="card__badge card__badge_new card__badge_new-active">NEW</div>
+                                    <img
+                                        src="/src/image/bouquet/bouquet1.jpg"
+                                        alt="bouquet" class="card__img">
 
-                            <div class="filter__group">
-                                <h3 class="filter__title">по цветку</h3>
-
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">Альстромерия
-                                        (2)</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">Антуриум
-                                        (1)</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">Аспарагус
-                                        (1)</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">Астильба
-                                        (7)</span>
-                                </label>
-                                <label class="filter__option">
-                                    <input type="checkbox"
-                                        class="filter__input">
-                                    <span
-                                        class="filter__label">Астранция
-                                        (1)</span>
-                                </label>
+                                    <div class="hits__name">лучшее
+                                        утро</div>
+                                    <div class="card__price">167.000 ₽<span
+                                            class="card__price_old"></span></div>
+                                    <button class="card__btn btn">В
+                                        корзину</button>
+                                </div>
                             </div>
+                            <div class="card">
+                                <div class="card__wrapper">
+                                    <div
+                                        class="card__badge card__badge_sale">SALE</div>
+                                    <div
+                                        class="card__badge card__badge_new card__badge_new-active">NEW</div>
+                                    <img
+                                        src="/src/image/bouquet/bouquet1.jpg"
+                                        alt="bouquet" class="card__img">
 
-                            <button class="btn filter__btn">Сбросить
-                                фильтр</button>
-                        </div>
-                    </aside>
-                    <div class="catalog__content">
-                        <div class="card">
-                            <div class="card__wrapper">
-                                <div
-                                    class="card__badge card__badge_sale">SALE</div>
-                                <div
-                                    class="card__badge card__badge_new card__badge_new-active">NEW</div>
-                                <img
-                                    src="/src/image/bouquet/bouquet1.jpg"
-                                    alt="bouquet" class="card__img">
-
-                                <div class="hits__name">лучшее
-                                    утро</div>
-                                <div class="card__price">167.000 ₽<span
-                                        class="card__price_old"></span></div>
-                                <button class="card__btn btn">В
-                                    корзину</button>
+                                    <div class="hits__name">лучшее
+                                        утро</div>
+                                    <div class="card__price">167.000 ₽<span
+                                            class="card__price_old"></span></div>
+                                    <button class="card__btn btn">В
+                                        корзину</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__wrapper">
-                                <div
-                                    class="card__badge card__badge_sale">SALE</div>
-                                <div
-                                    class="card__badge card__badge_new card__badge_new-active">NEW</div>
-                                <img
-                                    src="/src/image/bouquet/bouquet1.jpg"
-                                    alt="bouquet" class="card__img">
+                            <div class="card">
+                                <div class="card__wrapper">
+                                    <div
+                                        class="card__badge card__badge_sale">SALE</div>
+                                    <div
+                                        class="card__badge card__badge_new card__badge_new-active">NEW</div>
+                                    <img
+                                        src="/src/image/bouquet/bouquet1.jpg"
+                                        alt="bouquet" class="card__img">
 
-                                <div class="hits__name">лучшее
-                                    утро</div>
-                                <div class="card__price">167.000 ₽<span
-                                        class="card__price_old"></span></div>
-                                <button class="card__btn btn">В
-                                    корзину</button>
+                                    <div class="hits__name">лучшее
+                                        утро</div>
+                                    <div class="card__price">167.000 ₽<span
+                                            class="card__price_old"></span></div>
+                                    <button class="card__btn btn">В
+                                        корзину</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__wrapper">
-                                <div
-                                    class="card__badge card__badge_sale">SALE</div>
-                                <div
-                                    class="card__badge card__badge_new card__badge_new-active">NEW</div>
-                                <img
-                                    src="/src/image/bouquet/bouquet1.jpg"
-                                    alt="bouquet" class="card__img">
+                            <div class="card">
+                                <div class="card__wrapper">
+                                    <div
+                                        class="card__badge card__badge_sale">SALE</div>
+                                    <div
+                                        class="card__badge card__badge_new card__badge_new-active">NEW</div>
+                                    <img
+                                        src="/src/image/bouquet/bouquet1.jpg"
+                                        alt="bouquet" class="card__img">
 
-                                <div class="hits__name">лучшее
-                                    утро</div>
-                                <div class="card__price">167.000 ₽<span
-                                        class="card__price_old"></span></div>
-                                <button class="card__btn btn">В
-                                    корзину</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__wrapper">
-                                <div
-                                    class="card__badge card__badge_sale">SALE</div>
-                                <div
-                                    class="card__badge card__badge_new card__badge_new-active">NEW</div>
-                                <img
-                                    src="/src/image/bouquet/bouquet1.jpg"
-                                    alt="bouquet" class="card__img">
-
-                                <div class="hits__name">лучшее
-                                    утро</div>
-                                <div class="card__price">167.000 ₽<span
-                                        class="card__price_old"></span></div>
-                                <button class="card__btn btn">В
-                                    корзину</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__wrapper">
-                                <div
-                                    class="card__badge card__badge_sale">SALE</div>
-                                <div
-                                    class="card__badge card__badge_new card__badge_new-active">NEW</div>
-                                <img
-                                    src="/src/image/bouquet/bouquet1.jpg"
-                                    alt="bouquet" class="card__img">
-
-                                <div class="hits__name">лучшее
-                                    утро</div>
-                                <div class="card__price">167.000 ₽<span
-                                        class="card__price_old"></span></div>
-                                <button class="card__btn btn">В
-                                    корзину</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__wrapper">
-                                <div
-                                    class="card__badge card__badge_sale">SALE</div>
-                                <div
-                                    class="card__badge card__badge_new card__badge_new-active">NEW</div>
-                                <img
-                                    src="/src/image/bouquet/bouquet1.jpg"
-                                    alt="bouquet" class="card__img">
-
-                                <div class="hits__name">лучшее
-                                    утро</div>
-                                <div class="card__price">167.000 ₽<span
-                                        class="card__price_old"></span></div>
-                                <button class="card__btn btn">В
-                                    корзину</button>
+                                    <div class="hits__name">лучшее
+                                        утро</div>
+                                    <div class="card__price">167.000 ₽<span
+                                            class="card__price_old"></span></div>
+                                    <button class="card__btn btn">В
+                                        корзину</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+            </section>
+            <div class="page__bubble bubble__mint"></div>
+            <div class="page__bubble bubble__wine"></div>
 
-            </div>
-        </section>
-
-        <div style="height: 1000px;"></div>
-        <div class="hero__bubble bubble__mint"></div>
-        <div class="hero__bubble bubble__wine"></div>
-
+        </main>
+        <!-- <div style="height: 1000px;"></div> -->
         <%- include('src/templates/footer.html'); %>
         <script type="module" src="/src/js/main.js"></script>
     </body>

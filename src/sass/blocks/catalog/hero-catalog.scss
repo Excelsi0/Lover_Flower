@@ -2,14 +2,22 @@
 @use "/src/sass/base/mixins.scss" as *;
 
 .page-catalog {
+    &__main {
+        position: relative;
+        overflow: hidden;
+    }
+    .page__bubble {
+        position: absolute;
+        z-index: -2;
+    }
+
     .hero {
-        padding-bottom: 30px;
         overflow: visible;
         &__path {
             margin-top: 115px;
         }
         .sidebar {
-            top: -82px;
+            top: -90px;
         }
         &__wrapper {
             padding-right: 190px;
@@ -20,6 +28,7 @@
             z-index: 1;
             max-width: 920px;
             width: 100%;
+            min-height: 534px;
             padding: 15px 11px 30px 20px;
             border-radius: 20px;
             backdrop-filter: blur(20px);
@@ -89,7 +98,7 @@
                 left: -296px;
             }
             &_secondary {
-                top: -78px;
+                top: -96px;
                 left: auto;
                 right: -438px;
                 transform: rotate(-79deg);
@@ -141,6 +150,7 @@
                 backdrop-filter: none;
                 background: none;
                 padding: 0;
+                min-height: auto;
             }
             &__title {
                 position: relative;

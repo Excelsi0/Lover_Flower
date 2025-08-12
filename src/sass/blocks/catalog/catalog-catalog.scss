@@ -142,4 +142,36 @@
             }
         }
     }
+
+    @media screen and (max-width: 1024px) {
+        .catalog {
+            &__content {
+                justify-content: center;
+                column-gap: 3q0px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .catalog {
+            padding-top: 40px;
+            &__filter {
+                display: none;
+            }
+            &__sort {
+                display: none;
+            }
+            .filter {
+                display: none;
+            }
+            .card {
+                &__wrapper {
+                    min-width: 300px;
+                }
+                &__img {
+                    height: 335px;
+                    filter: none;
+                }
+            }
+        }
+    }
 }
