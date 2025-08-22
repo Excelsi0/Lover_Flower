@@ -1,144 +1,146 @@
 @use "/src/sass/base/variables.scss" as *;
 
-.socials {
-    background: linear-gradient(to bottom, black 0%, black 260px, rgba(0, 0, 0, 0) 500px);
-    position: relative;
-    overflow: hidden;
-    padding: 261px 0 200px;
-
-    &__wrapper {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        gap: 30px;
-    }
-    &__images {
-        display: flex;
-        gap: 30px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    &__img {
-        width: 160px;
-        height: 160px;
-        object-fit: cover;
-    }
-    &__inner {
-        position: relative;
-        display: flex;
-        justify-content: flex-end;
-        align-items: end;
-        width: 350px;
-        border-top: 0.5px solid $color-mint;
-    }
-    &__painting {
-        position: absolute;
-        top: -80px;
-        left: 0;
-        &_mobile {
-            display: none;
-        }
-    }
-    &__links {
-        display: flex;
-        gap: 30px;
-        flex-wrap: wrap;
-        z-index: 1;
-        svg {
-            width: 40px;
-            height: 40px;
-            path {
-                fill: $color-mint;
-            }
-        }
-    }
-    &__bubble {
-        position: absolute;
-        z-index: -2;
-    }
-    .bubble__wine {
-        animation: bubbleAnimateWine 30s infinite, bubbleTransformWine 30s infinite;
-        width: clamp(707px, 50vw, 879px);
-        height: clamp(236px, 30vh, 211px);
-    }
-    .bubble__mint {
-        animation: bubbleAnimateMint 25s infinite, bubbleTransformMint 25s infinite;
-        width: clamp(667px, 50vw, 879px);
-        height: clamp(127px, 30vh, 211px);
-    }
-    &__bg_word {
-        position: absolute;
-        top: 274px;
-        left: 0;
-        z-index: 1;
-        color: #10272785;
-    }
-}
-
-@media screen and (max-width: 1024px) {
+.page-main {
     .socials {
-        &__images {
-            gap: 20px;
-        }
-        &__links {
-            gap: 20px;
-            svg {
-                width: 30px;
-                height: 30px;
-            }
-        }
-    }
-}
+        background: linear-gradient(to bottom, black 0%, black 260px, rgba(0, 0, 0, 0) 500px);
+        position: relative;
+        overflow: hidden;
+        padding: 261px 0 200px;
 
-@media screen and (max-width: 768px) {
-    .socials {
-        background: linear-gradient(to bottom, black 0%, black 128px, rgba(0, 0, 0, 0) 200px);
-        padding: 67px 0 100px;
         &__wrapper {
-            flex-direction: column;
-            align-items: center;
-            > :nth-child(1) {
-                order: 2;
-            }
-            > :nth-child(2) {
-                order: 1;
-            }
+            position: relative;
+            z-index: 2;
+            display: flex;
+            gap: 30px;
+        }
+        &__images {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
         }
         &__inner {
             position: relative;
-            border-top: none;
-            height: 20px;
-            width: 100%;
-            justify-content: space-between;
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 121px;
-                border-top: 0.5px solid $color-mint;
-            }
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            width: 350px;
+            border-top: 0.5px solid $color-mint;
         }
         &__painting {
-            display: none;
+            position: absolute;
+            top: -80px;
+            left: 0;
             &_mobile {
-                display: block;
-                transform: translateY(48%);
+                display: none;
             }
         }
-        &__images {
-            margin-top: 61px;
-            gap: 6px;
-        }
-        &__img {
-            width: 147px;
-            height: 137px;
-        }
         &__links {
-            gap: 20px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            z-index: 1;
             svg {
-                width: 20px;
+                width: 40px;
+                height: 40px;
+                path {
+                    fill: $color-mint;
+                }
+            }
+        }
+        &__bubble {
+            position: absolute;
+            z-index: -2;
+        }
+        .bubble__wine {
+            animation: bubbleAnimateWine 30s infinite, bubbleTransformWine 30s infinite;
+            width: clamp(707px, 50vw, 879px);
+            height: clamp(236px, 30vh, 211px);
+        }
+        .bubble__mint {
+            animation: bubbleAnimateMint 25s infinite, bubbleTransformMint 25s infinite;
+            width: clamp(667px, 50vw, 879px);
+            height: clamp(127px, 30vh, 211px);
+        }
+        &__bg_word {
+            position: absolute;
+            top: 274px;
+            left: 0;
+            z-index: 1;
+            color: #10272785;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .socials {
+            &__images {
+                gap: 20px;
+            }
+            &__links {
+                gap: 20px;
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .socials {
+            background: linear-gradient(to bottom, black 0%, black 128px, rgba(0, 0, 0, 0) 200px);
+            padding: 67px 0 100px;
+            &__wrapper {
+                flex-direction: column;
+                align-items: center;
+                > :nth-child(1) {
+                    order: 2;
+                }
+                > :nth-child(2) {
+                    order: 1;
+                }
+            }
+            &__inner {
+                position: relative;
+                border-top: none;
                 height: 20px;
+                width: 100%;
+                justify-content: space-between;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 121px;
+                    border-top: 0.5px solid $color-mint;
+                }
+            }
+            &__painting {
+                display: none;
+                &_mobile {
+                    display: block;
+                    transform: translateY(48%);
+                }
+            }
+            &__images {
+                margin-top: 61px;
+                gap: 6px;
+            }
+            &__img {
+                width: 147px;
+                height: 137px;
+            }
+            &__links {
+                gap: 20px;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
     }

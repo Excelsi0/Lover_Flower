@@ -4,7 +4,7 @@
     .catalog {
         position: relative;
         background: none;
-        padding-top: 30px;
+        padding: 30px 0 200px;
 
         &__sort {
             display: flex;
@@ -148,8 +148,8 @@
         &__top-btn {
             display: none;
             position: absolute;
-            right: 10px;
-            bottom: -54px;
+            right: 20px;
+            bottom: -125px;
 
             background: none;
             border: none;
@@ -180,7 +180,7 @@
     }
     @media screen and (max-width: 768px) {
         .catalog {
-            padding-top: 40px;
+            padding: 40px 0 100px;
             &__filter {
                 display: none;
             }

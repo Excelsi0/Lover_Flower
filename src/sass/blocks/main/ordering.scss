@@ -1,137 +1,140 @@
 @use "/src/sass/base/variables.scss" as *;
-.ordering {
-    position: relative;
-    margin-top: -200px; // что бы bubble касаись этой секции
-    padding-bottom: 168px;
-    overflow: hidden;
 
-    &__wrapper {
-        display: flex;
-        justify-content: end;
-        margin-top: 15px;
-        padding-top: 40px;
-    }
-    &__steps {
-        display: flex;
-        row-gap: 40px;
-        column-gap: 95px;
-        flex-wrap: wrap;
-        max-width: 730px;
-        border-right: 1px solid $color-pink;
-    }
-    &__step {
-        max-width: 285px;
-    }
-    &__point {
+.page-main {
+    .ordering {
         position: relative;
-        font-family: $font-family;
-        font-weight: 700;
-        font-size: 30px;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: #d978ac;
-        &_decor {
-            &::before {
-                content: "";
-                display: block;
-                width: 65px;
-                height: 10px;
-                background-color: $color-pink;
-                position: absolute;
-                top: -40px;
-                transform: translateY(-100%);
-                left: 0;
-            }
-        }
-    }
-    &__text {
-        margin-top: 12px;
-        font-family: $font-family;
-        font-weight: 400;
-        font-size: 14px;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: #fff;
-    }
-    &__bg {
-        position: absolute;
-        top: 34px;
-        left: -130px;
-        width: clamp(249px, 35vw, 562px);
-    }
-    &__painting {
-        position: absolute;
-        bottom: -100px;
-        right: -10px;
-        z-index: -1;
-        height: auto;
+        margin-top: -200px; // что бы bubble касаись этой секции
+        padding-bottom: 168px;
+        overflow: hidden;
 
-        width: clamp(137px, 21.25vw + 0.625rem, 305px);
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .ordering {
-        &__title {
-            text-align: center;
+        &__wrapper {
+            display: flex;
+            justify-content: end;
+            margin-top: 15px;
+            padding-top: 40px;
         }
         &__steps {
-            column-gap: 20px;
-            max-width: 600px;
+            display: flex;
+            row-gap: 40px;
+            column-gap: 95px;
+            flex-wrap: wrap;
+            max-width: 730px;
+            border-right: 1px solid $color-pink;
         }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .ordering {
-        &__steps {
-            z-index: 1;
-            flex-direction: column;
-            border: 0;
-        }
-        &__bg {
-            left: -70px;
+        &__step {
+            max-width: 285px;
         }
         &__point {
-            font-size: 20px;
+            position: relative;
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 30px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #d978ac;
             &_decor {
                 &::before {
-                    top: -20px;
+                    content: "";
+                    display: block;
+                    width: 65px;
+                    height: 10px;
+                    background-color: $color-pink;
+                    position: absolute;
+                    top: -40px;
+                    transform: translateY(-100%);
+                    left: 0;
                 }
             }
         }
         &__text {
-            line-height: 121%;
+            margin-top: 12px;
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        &__bg {
+            position: absolute;
+            top: 34px;
+            left: -130px;
+            width: clamp(249px, 35vw, 562px);
         }
         &__painting {
-            right: 0;
+            position: absolute;
+            bottom: -100px;
+            right: -10px;
+            z-index: -1;
+            height: auto;
+
+            width: clamp(137px, 21.25vw + 0.625rem, 305px);
         }
     }
-}
 
-@media screen and (max-width: 425px) {
-    .ordering {
-        padding-bottom: 100px;
-        &__wrapper {
-            justify-content: center;
-        }
-        &__steps {
-            max-width: 100%;
-            width: 100%;
-        }
-        &__step {
-            max-width: 300px;
-            &:nth-child(1) {
-                max-width: 147px;
-                margin-left: auto;
+    @media screen and (max-width: 1024px) {
+        .ordering {
+            &__title {
+                text-align: center;
             }
-            &:nth-child(2) {
-                max-width: 204px;
-                margin-left: auto;
+            &__steps {
+                column-gap: 20px;
+                max-width: 600px;
             }
-            &:nth-child(3) {
-                max-width: 210px;
-                margin: 0 auto;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .ordering {
+            &__steps {
+                z-index: 1;
+                flex-direction: column;
+                border: 0;
+            }
+            &__bg {
+                left: -70px;
+            }
+            &__point {
+                font-size: 20px;
+                &_decor {
+                    &::before {
+                        top: -20px;
+                    }
+                }
+            }
+            &__text {
+                line-height: 121%;
+            }
+            &__painting {
+                right: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        .ordering {
+            padding-bottom: 100px;
+            &__wrapper {
+                justify-content: center;
+            }
+            &__steps {
+                max-width: 100%;
+                width: 100%;
+            }
+            &__step {
+                max-width: 300px;
+                &:nth-child(1) {
+                    max-width: 147px;
+                    margin-left: auto;
+                }
+                &:nth-child(2) {
+                    max-width: 204px;
+                    margin-left: auto;
+                }
+                &:nth-child(3) {
+                    max-width: 210px;
+                    margin: 0 auto;
+                }
             }
         }
     }

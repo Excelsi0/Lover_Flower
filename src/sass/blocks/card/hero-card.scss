@@ -1,0 +1,293 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.page-card {
+    .header {
+        background-color: $color-black !important;
+    }
+    .header__phone,
+    .header__btn {
+        visibility: visible;
+    }
+    .hero {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 700px; // для вида
+        &__path {
+            margin-top: 115px;
+        }
+        &__content {
+            margin-top: 60px;
+            display: flex;
+            gap: 30px;
+            flex-direction: row;
+        }
+        .carousel {
+            align-self: center;
+            position: relative;
+            &__wrapper {
+                height: 393px;
+                width: 160px;
+            }
+            &__img {
+                min-width: 160px;
+                height: 100%;
+                object-fit: cover;
+            }
+            &__prev,
+            &__next {
+                display: block;
+                background: none;
+                border: none;
+                position: absolute;
+                left: 50%;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                padding: 0;
+            }
+            &__prev {
+                top: -7px;
+                transform: translateY(-100%) translateX(-50%);
+            }
+            &__next {
+                bottom: -15px;
+                transform: translateY(100%) translateX(-50%);
+            }
+        }
+        &__info {
+            position: relative;
+            font-family: $font-family;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $color-white;
+
+            max-width: 474px;
+        }
+
+        &__back {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 6px;
+            font-size: 10px;
+            letter-spacing: 0.04em;
+            &_mobile {
+                display: none;
+            }
+        }
+        &__title {
+            line-height: 48px;
+            font-family: $second-family;
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 40px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+        }
+        &__price {
+            line-height: 44px;
+            font-weight: 700;
+            font-size: 30px;
+            letter-spacing: 0.04em;
+            color: $color-mint;
+            &_old {
+                font-weight: 300;
+                text-decoration: line-through;
+                color: #555;
+                padding-left: 20px;
+            }
+        }
+
+        &__structure {
+            line-height: 21px;
+            margin-top: 20px;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            &_bold {
+                font-weight: 700;
+            }
+        }
+        &__description {
+            line-height: 21px;
+            margin-top: 20px;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+        }
+        &__meta {
+            max-width: 428px;
+            line-height: 18px;
+            margin-top: 20px;
+            font-weight: 300;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: none;
+            &_bold {
+                font-weight: 700;
+            }
+        }
+        &__buttons {
+            margin-top: 70px;
+            display: flex;
+            gap: 29px;
+            width: 100%;
+        }
+        &__btn {
+            padding: 18px;
+            width: 100%;
+            max-width: 255px;
+            margin: 0;
+        }
+        .qty {
+            color: $color-disabled;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            justify-content: space-between;
+            padding: 16px 13px;
+            border: 1px solid $color-disabled;
+            min-width: 160px;
+            &__btn {
+                border: none;
+                background: none;
+                padding: 0;
+
+                width: 10px;
+
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 20px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                text-align: center;
+                color: $color-disabled;
+                cursor: pointer;
+            }
+            &__input {
+                background: none;
+                border: none;
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 20px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                text-align: center;
+                color: $color-disabled;
+            }
+        }
+        &__bubble {
+            position: absolute;
+            z-index: -2;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .hero {
+            &__content {
+                justify-content: center;
+            }
+            &__main-img {
+                display: none;
+            }
+            .carousel {
+                &__wrapper {
+                    width: 300px;
+                }
+                &__img {
+                    width: 300px;
+                    height: 400px;
+                }
+            }
+            &__main-img {
+                display: none;
+            }
+            &__buttons {
+                position: static;
+            }
+            &__structure,
+            &__description,
+            &__meta,
+            &__buttons {
+                margin-top: 16px;
+            }
+            .carousel {
+                &__prev,
+                &__next {
+                    top: 50%;
+                    transform: rotate(-90deg);
+                    z-index: 2;
+                    svg {
+                        path {
+                            fill: $color-mint;
+                        }
+                    }
+                }
+                &__next {
+                    right: -5px;
+                    left: auto;
+                }
+                &__prev {
+                    bottom: 50%;
+                    left: -5px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .header {
+            background-color: $color-black !important;
+            &__logo_mobile {
+                display: block;
+                font-family: "Cormorant", sans-serif;
+                font-weight: 300;
+                font-size: 1.25rem;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: $color-white;
+                text-align: center;
+            }
+        }
+        .hero {
+            &__path {
+                margin-top: 100px;
+            }
+
+            &__content {
+                margin-top: 20px;
+                flex-direction: column;
+                gap: 0;
+            }
+            &__back {
+                display: none;
+                &_mobile {
+                    display: flex;
+                    text-transform: uppercase;
+                    transform: translateX(-6px);
+                }
+            }
+            .carousel {
+                &__wrapper {
+                    margin-top: 20px;
+                }
+            }
+            &__title {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            &__price {
+                line-height: 30px;
+                font-size: 20px;
+            }
+            &__buttons {
+                margin-top: 30px;
+                gap: 10px;
+            }
+            &__btn {
+                max-width: 180px;
+            }
+            .qty {
+                padding: 12px 10px;
+                min-width: 108px;
+            }
+        }
+    }
+}

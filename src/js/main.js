@@ -362,6 +362,9 @@ try {
         loop: true,
 
         direction: "vertical",
+        allowTouchMove: false,
+
+        touchReleaseOnEdges: true,
         slidesPerView: "auto",
         spaceBetween: 40,
 
@@ -618,6 +621,58 @@ try {
     });
 
     loadCards();
+} catch (e) {
+    console.error("Ошибка:", e);
+}
+
+try {
+    const el = document.querySelector(".carousel__wrapper");
+    if (el && el.swiper) el.swiper.destroy(true, true);
+
+    const swiper = new Swiper(".carousel__wrapper", {
+        direction: "horizontal",
+        slidesPerView: 1,
+        loop: true,
+        spaceBetween: 23,
+        allowTouchMove: true,
+        grabCursor: true,
+        speed: 450,
+        watchOverflow: true,
+
+        breakpoints: {
+            1025: {
+                direction: "vertical",
+                slidesPerView: 2,
+                allowTouchMove: true,
+            },
+        },
+
+        navigation: {
+            nextEl: ".carousel__next",
+            prevEl: ".carousel__prev",
+        },
+        modules: [Navigation],
+    });
+} catch (e) {
+    console.error("Ошибка:", e);
+}
+
+// выбор колличества +-
+try {
+    document.addEventListener("click", (e) => {
+        if (e.target.closest(".qty__btn")) {
+            const input = e.target.closest(".qty").querySelector(".qty__input");
+            let value = parseInt(input.textContent);
+
+            if (e.target.classList.contains("qty__plus")) {
+                value++;
+            } else if (e.target.classList.contains("qty__minus")) {
+                value = Math.max(1, value - 1);
+            }
+
+            input.textContent = value;
+        }
+    });
 } catch (e) {
     console.error("Ошибка:", e);
 }
