@@ -1,6 +1,21 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .page-card {
+    position: relative;
+    overflow: hidden;
+    &__bubble {
+        position: absolute;
+        z-index: -2;
+        width: clamp(10px, 10vw, 289px);
+        height: clamp(30px, 20vh, 51px);
+        &_two {
+            position: absolute;
+            z-index: -2;
+            width: clamp(30px, 20vw, 489px);
+            height: clamp(30px, 20vh, 51px);
+            animation: bubbleAnimateWine 45s infinite, bubbleTransformWine 45s infinite;
+        }
+    }
     .header {
         background-color: $color-black !important;
     }
@@ -9,9 +24,6 @@
         visibility: visible;
     }
     .hero {
-        position: relative;
-        overflow: hidden;
-        padding-bottom: 700px; // для вида
         &__path {
             margin-top: 115px;
         }
