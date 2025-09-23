@@ -5,74 +5,24 @@
         <title>LF-Card</title>
     </head>
     <body class="page-card">
-        <%- include('src/templates/header.html'); %>
-        <section class="hero">
-            <div class="container">
-                <div class="path hero__path">
-                    <a href="/index.html">Главная&nbsp;</a>
+        <main class="main">
+            <%- include('src/templates/header.html'); %>
+            <section class="hero">
+                <div class="container">
+                    <div class="path hero__path">
+                        <a href="/index.html">Главная&nbsp;</a>
 
-                    <a href="/catalog/index.html">/ Каталог
-                        букетов&nbsp;</a>
+                        <a href="/catalog/index.html">/ Каталог
+                            букетов&nbsp;</a>
 
-                    <a href="#">/ Популярное&nbsp;</a>
+                        <a href="#">/ Популярное&nbsp;</a>
 
-                    <a href="#">/ рубиновые искры&nbsp;</a>
-                </div>
-                <!--По моему мнению, тут должны быть ссылки ведущие на страницы, поэтому я немного отошел от макета -->
-                <div class="hero__content">
-                    <a class="hero__back hero__back_mobile"
-                        href="/catalog/index.html">
-                        <svg width="16" height="16" viewBox="0 0 16 16"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M10.2713 12.1045L6.5 8.33316L10.2713 4.56183L10.7427 5.03316L7.44267 8.33316L10.7427 11.6332L10.2713 12.1045Z"
-                                fill="white" />
-                        </svg>
-                        назад
-                    </a>
-                    <div class="carousel">
-                        <button class="carousel__prev"><svg width="20"
-                                height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M4.86914 12.8392L9.58331 8.125L14.2975 12.8392L13.7083 13.4283L9.58331 9.30333L5.45831 13.4283L4.86914 12.8392Z"
-                                    fill="white" />
-                            </svg></button>
-
-                        <div class="swiper carousel__wrapper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img class="carousel__img"
-                                        src="/src/image/product-card/photo2.jpg"
-                                        alt="Романтичный букет в эко-мешочке: рубиновые искры">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img class="carousel__img"
-                                        src="/src/image/product-card/photo3.jpg"
-                                        alt="Нежный цветочный сюрприз в льняном мешочке — идеальный подарок">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img class="carousel__img"
-                                        src="/src/image/product-card/photo1.jpg"
-                                        alt="Букет цветов в мешковине: натурально и уютно">
-                                </div>
-                            </div>
-
-                        </div>
-                        <button class="carousel__next"><svg width="20"
-                                height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M15.1309 7.16083L10.4167 11.875L5.70253 7.16083L6.29169 6.57167L10.4167 10.6967L14.5417 6.57167L15.1309 7.16083Z"
-                                    fill="white" />
-                            </svg></button>
+                        <a href="#">/ рубиновые искры&nbsp;</a>
                     </div>
-                    <img class="hero__main-img"
-                        src="/src/image/product-card/photo1.jpg"
-                        alt="Букет цветов в мешковине: натурально и уютно">
-                    <div class="hero__info">
-                        <a class="hero__back" href="/catalog/index.html">
+                    <!--По моему мнению, тут должны быть ссылки ведущие на страницы, поэтому я немного отошел от макета -->
+                    <div class="hero__content">
+                        <a class="hero__back hero__back_mobile"
+                            href="/catalog/index.html">
                             <svg width="16" height="16" viewBox="0 0 16 16"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -82,114 +32,512 @@
                             </svg>
                             назад
                         </a>
-                        <h1 class="hero__title">рубиновые искры</h1>
-                        <div class="hero__price">
-                            167.00 ₽
-                            <span class="hero__price_old">187.00 ₽</span>
+                        <div class="carousel">
+                            <button class="carousel__prev"><svg width="20"
+                                    height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.86914 12.8392L9.58331 8.125L14.2975 12.8392L13.7083 13.4283L9.58331 9.30333L5.45831 13.4283L4.86914 12.8392Z"
+                                        fill="white" />
+                                </svg></button>
+
+                            <div class="swiper carousel__wrapper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img class="carousel__img"
+                                            src="/src/image/product-card/photo2.jpg"
+                                            alt="Романтичный букет в эко-мешочке: рубиновые искры">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="carousel__img"
+                                            src="/src/image/product-card/photo3.jpg"
+                                            alt="Нежный цветочный сюрприз в льняном мешочке — идеальный подарок">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="carousel__img"
+                                            src="/src/image/product-card/photo1.jpg"
+                                            alt="Букет цветов в мешковине: натурально и уютно">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button class="carousel__next"><svg width="20"
+                                    height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.1309 7.16083L10.4167 11.875L5.70253 7.16083L6.29169 6.57167L10.4167 10.6967L14.5417 6.57167L15.1309 7.16083Z"
+                                        fill="white" />
+                                </svg></button>
                         </div>
-                        <div class="hero__structure">
-                            <span
-                                class="hero__structure_bold">Состав:</span>
-                            Гвоздика (Диантус), Леукодендрон, Леукоспермум
-                            (Нутан), Лотос, Роза
-                        </div>
-                        <div class="hero__description">
-                            Завораживающая глубина ваших чувств передана
-                            огненными красками этого букета
-                        </div>
-                        <div class="hero__meta">
-                            <span class="hero__meta_bold">Категории:</span>
-                            8
-                            марта, Букет на 14 февраля, Букет на
-                            праздник, Букеты цветов на День рождения,
-                            Композиции
-                            из цветов, Композиции из цветов в коробке <br>
-                            <span class="hero__meta_bold">Метки:</span> Для
-                            начальника, Мужские букеты
-                        </div>
-                        <div class="hero__buttons">
-                            <button class="hero__btn btn">В корзину</button>
-                            <div class="qty">
-                                <button
-                                    class="qty__btn qty__minus">-</button>
-                                <div class="qty__input">1</div>
-                                <button
-                                    class="qty__btn qty__plus">+</button>
+                        <img class="hero__main-img"
+                            src="/src/image/product-card/photo1.jpg"
+                            alt="Букет цветов в мешковине: натурально и уютно">
+                        <div class="hero__info">
+                            <a class="hero__back" href="/catalog/index.html">
+                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.2713 12.1045L6.5 8.33316L10.2713 4.56183L10.7427 5.03316L7.44267 8.33316L10.7427 11.6332L10.2713 12.1045Z"
+                                        fill="white" />
+                                </svg>
+                                назад
+                            </a>
+                            <h1 class="hero__title">рубиновые искры</h1>
+                            <div class="hero__price">
+                                167.00 ₽
+                                <span class="hero__price_old">187.00 ₽</span>
+                            </div>
+                            <div class="hero__structure">
+                                <span
+                                    class="hero__structure_bold">Состав:</span>
+                                Гвоздика (Диантус), Леукодендрон, Леукоспермум
+                                (Нутан), Лотос, Роза
+                            </div>
+                            <div class="hero__description">
+                                Завораживающая глубина ваших чувств передана
+                                огненными красками этого букета
+                            </div>
+                            <div class="hero__meta">
+                                <span class="hero__meta_bold">Категории:</span>
+                                8
+                                марта, Букет на 14 февраля, Букет на
+                                праздник, Букеты цветов на День рождения,
+                                Композиции
+                                из цветов, Композиции из цветов в коробке <br>
+                                <span class="hero__meta_bold">Метки:</span> Для
+                                начальника, Мужские букеты
+                            </div>
+                            <div class="hero__buttons">
+                                <button class="hero__btn btn">В корзину</button>
+                                <div class="qty">
+                                    <button
+                                        class="qty__btn qty__minus">-</button>
+                                    <div class="qty__input">1</div>
+                                    <button
+                                        class="qty__btn qty__plus">+</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="addons">
-                <div class="container">
-                    <h2 class="addons__title-h2 title-h2">Дополнительно к
-                        заказу:</h2>
+                <section class="addons">
+                    <div class="container">
+                        <h2 class="addons__title-h2 title-h2">Дополнительно к
+                            заказу:</h2>
 
-                    <div class="addons__wrap">
-                        <div class="addons__block">
-                            <label class="addons__checkbox">
-                                <input type="checkbox" class="addons__input"
-                                    name="checkbox" />
-                                <span class="addons__checkmark"></span>
-                            </label>
+                        <div class="addons__wrap">
+                            <div class="addons__block">
+                                <label class="addons__checkbox">
+                                    <input type="checkbox" class="addons__input"
+                                        name="checkbox" />
+                                    <span class="addons__checkmark"></span>
+                                </label>
 
-                            <h3 class="addons__title-h3">Удобрения для срезанных
-                                цветов</h3>
-                            <p class="addons__text">При указании об этом в
-                                пожеланиях к букету, мы приложим пакетик
-                                удобрения для вас</p>
-                        </div>
-                        <div class="addons__block">
-                            <label class="addons__checkbox">
-                                <input type="checkbox" class="addons__input"
-                                    name="checkbox" />
-                                <span class="addons__checkmark"></span>
-                            </label>
+                                <h3 class="addons__title-h3">Удобрения для
+                                    срезанных
+                                    цветов</h3>
+                                <p class="addons__text">При указании об этом в
+                                    пожеланиях к букету, мы приложим пакетик
+                                    удобрения для вас</p>
+                            </div>
+                            <div class="addons__block">
+                                <label class="addons__checkbox">
+                                    <input type="checkbox" class="addons__input"
+                                        name="checkbox" />
+                                    <span class="addons__checkmark"></span>
+                                </label>
 
-                            <h3 class="addons__title-h3">подпишем <br>
-                                открытку</h3>
-                            <p class="addons__text">В пожеланиях к букету
-                                укажите текст, какой хотите разместить и
-                                выберите на сайте саму открытку</p>
-                        </div>
-                        <div class="addons__block">
-                            <label class="addons__checkbox">
-                                <input type="checkbox" class="addons__input"
-                                    name="checkbox" />
-                                <span class="addons__checkmark"></span>
-                            </label>
+                                <h3 class="addons__title-h3">подпишем <br>
+                                    открытку</h3>
+                                <p class="addons__text">В пожеланиях к букету
+                                    укажите текст, какой хотите разместить и
+                                    выберите на сайте саму открытку</p>
+                            </div>
+                            <div class="addons__block">
+                                <label class="addons__checkbox">
+                                    <input type="checkbox" class="addons__input"
+                                        name="checkbox" />
+                                    <span class="addons__checkmark"></span>
+                                </label>
 
-                            <h3 class="addons__title-h3">Фото букета перед
-                                отправкой</h3>
-                            <p class="addons__text">В примечании к заказу
-                                укажите
-                                об этом и мы отправим фото готового букета перед
-                                доставкой.
-                                В праздничные дни в связи
-                                с большой загруженностью такой возможности
-                                нет</p>
-                        </div>
-                        <div class="addons__block">
-                            <label class="addons__checkbox">
-                                <input type="checkbox" class="addons__input"
-                                    name="checkbox" />
-                                <span class="addons__checkmark"></span>
-                            </label>
+                                <h3 class="addons__title-h3">Фото букета перед
+                                    отправкой</h3>
+                                <p class="addons__text">В примечании к заказу
+                                    укажите
+                                    об этом и мы отправим фото готового букета
+                                    перед
+                                    доставкой.
+                                    В праздничные дни в связи
+                                    с большой загруженностью такой возможности
+                                    нет</p>
+                            </div>
+                            <div class="addons__block">
+                                <label class="addons__checkbox">
+                                    <input type="checkbox" class="addons__input"
+                                        name="checkbox" />
+                                    <span class="addons__checkmark"></span>
+                                </label>
 
-                            <h3 class="addons__title-h3">Букет-сюрприз</h3>
-                            <p class="addons__text">Если хотите, чтобы
-                                получатель не знал, что ему вручат а также от
-                                кого, то укажите об этом
-                                в примечании к заказу</p>
+                                <h3 class="addons__title-h3">Букет-сюрприз</h3>
+                                <p class="addons__text">Если хотите, чтобы
+                                    получатель не знал, что ему вручат а также
+                                    от
+                                    кого, то укажите об этом
+                                    в примечании к заказу</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <div class="page-card__bubble bubble__mint"></div>
-            <div class="page-card__bubble bubble__wine"></div>
-            <div class="page-card__bubble_two bubble__mint"></div>
-            <div class="page-card__bubble_two bubble__wine"></div>
+                </section>
+
+                <section class="details">
+                    <div class="container">
+                        <div class="details__btns">
+                            <button
+                                class="details__btn active"
+                                data-index="0">доставка
+                                и
+                                оплата</button>
+                            <button class="details__btn"
+                                data-index="1">отзывы</button>
+                        </div>
+
+                        <div class="swiper details__swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h2 class="details__title title-h2">Способы
+                                        оплаты:</h2>
+                                    <ul class="details__list">
+                                        <li class="details__text">БАНКОВСКОЙ
+                                            КАРТОЙ ПРИ ОФОРМЛЕНИИ
+                                            ЗАКАЗА ЧЕРЕЗ САЙТ</li>
+                                        <li class="details__text">НАЛИЧНЫМИ ИЛИ
+                                            БАНКОВСКОЙ КАРТОЙ ПРИ
+                                            САМОВЫВОЗЕ</li>
+                                        <li class="details__text">НАЛИЧНЫМИ ПРИ
+                                            ДОСТАВКЕ КУРЬЕРОМ</li>
+                                        <li class="details__text">КРИПТОВАЛЮТОЙ
+                                            ОНЛАЙН</li>
+                                    </ul>
+                                    <h2
+                                        class="details__title title-h2">стоимость
+                                        доставки:</h2>
+                                    <ul class="details__list">
+                                        <li class="details__text"><span
+                                                class="details__text_bold">Бесплатно</span>
+                                            – при заказе на сумму <span
+                                                class="details__text_color">от
+                                                90
+                                                рублей</span></li>
+                                        <li class="details__text"><span
+                                                class="details__text_bold">10
+                                                рублей</span> – при заказе на
+                                            сумму <span
+                                                class="details__text_color">менее
+                                                90 рублей</span></li>
+                                        <li class="details__text">Возможность,
+                                            сроки и стоимость
+                                            доставки за пределы МКАД, доставки в
+                                            ночное время, праздники <span
+                                                class="details__text_color">оговариваются
+                                                с менеджером</span></li>
+                                        <li class="details__text">Так же вы
+                                            можете забрать ваш заказ
+                                            самостоятельно по адресу: <br>
+                                            <span class="details__text_color">г.
+                                                Минск, ул. Тимирязева д. 67,
+                                                комн. 112</span> <span
+                                                class="details__text_color">ежедневно
+                                                с 10.00 до
+                                                21.00</span></li>
+                                    </ul>
+                                    <h2 class="details__title title-h2">Условия
+                                        доставки:</h2>
+                                    <p class="details__text">Доставка
+                                        осуществляется по городу Минску в
+                                        пределах МКАД <span
+                                            class="details__text_color">в любой
+                                            день с 09.00 до
+                                            22.00.</span> Доставка в ночное
+                                        время
+                                        осуществляется по договоренности с
+                                        оператором</p>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="reviews">
+                                        <div class="reviews__wrap">
+                                            <h2 class="reviews__quote">“</h2>
+                                            <p class="reviews__feedback">Лучшая
+                                                доставка
+                                                цветов в городе! Быстро
+                                                доставили,
+                                                привезли к нужному времени, а
+                                                сам
+                                                букет превзошел все
+                                                ожидания!</p>
+                                            <div
+                                                class="reviews__rating">☆☆☆☆☆</div>
+                                            <div class="reviews__meta">Иван,
+                                                <time class="reviews__date"
+                                                    datetime="2033-02-31">31/02/2033</time></div>
+                                        </div>
+                                        <div class="reviews__wrap">
+                                            <h2 class="reviews__quote">“</h2>
+                                            <p
+                                                class="reviews__feedback">Заказывал
+                                                впервые и остался очень доволен!
+                                                Оперативная доставка, вежливый
+                                                курьер и свежайшие цветы. Теперь
+                                                буду обращаться только сюда.</p>
+                                            <div
+                                                class="reviews__rating">☆☆☆☆<span
+                                                    class="reviews__rating_dis">☆</span></div>
+                                            <div class="reviews__meta">Алекс,
+                                                <time
+                                                    class="reviews__date"
+                                                    datetime="2033-02-30">30/02/2033</time></div>
+                                        </div>
+                                        <div class="reviews__wrap">
+                                            <h2 class="reviews__quote">“</h2>
+                                            <p class="reviews__feedback">Спасибо
+                                                за
+                                                отличный сервис! Всё сделали
+                                                вовремя, композиция выглядела
+                                                даже
+                                                лучше, чем на фото. Получатель в
+                                                полном восторге!</p>
+                                            <div
+                                                class="reviews__rating">☆☆☆☆☆</div>
+                                            <div
+                                                class="reviews__meta">Мурадилохмухамадуст,
+                                                <time class="reviews__date"
+                                                    datetime="2033-02-29">29/02/2033</time>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <form class="reviews__form">
+                                        <div class="reviews__title">Оставьте
+                                            свой отзыв на “Рубиновые
+                                            искры”</div>
+                                        <div class="reviews__text">Ваш адрес
+                                            email не будет опубликован.
+                                            Обязательные поля помечены *</div>
+                                        <div class="reviews__text">Ваша
+                                            оценка:</div>
+
+                                        <div class="reviews__ratings">
+                                            <input type="radio" id="star5"
+                                                name="rating" value="5">
+                                            <label for="star5">☆</label>
+                                            <input type="radio" id="star4"
+                                                name="rating" value="4">
+                                            <label for="star4">☆</label>
+                                            <input type="radio" id="star3"
+                                                name="rating" value="3">
+                                            <label for="star3">☆</label>
+                                            <input type="radio" id="star2"
+                                                name="rating" value="2">
+                                            <label for="star2">☆</label>
+                                            <input type="radio" id="star1"
+                                                name="rating" value="1">
+                                            <label for="star1">☆</label>
+                                        </div>
+
+                                        <div class="reviews__wrap">
+
+                                            <div class="reviews__field">
+                                                <label class="reviews__label"
+                                                    for="reviews__textarea">Ваш
+                                                    отзыв*</label>
+                                                <textarea
+                                                    class="reviews__input reviews__textarea"
+                                                    id="reviews__textarea"
+                                                    placeholder="Введите комментарий"
+                                                    required
+                                                    minlength="10"></textarea>
+                                            </div>
+
+                                            <div class="reviews__field">
+                                                <label class="reviews__label"
+                                                    for="reviews__name">Имя*</label>
+                                                <input class="reviews__input"
+                                                    type="name"
+                                                    id="reviews__name"
+                                                    placeholder="Введите ваше имя"
+                                                    pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
+                                                    minlength="2"
+                                                    required
+                                                    title="Имя должно содержать только буквы и быть не менее 2 символов">
+                                            </div>
+
+                                            <div class="reviews__field">
+                                                <label class="reviews__label"
+                                                    for="reviews__email">E-mail*</label>
+                                                <input class="reviews__input"
+                                                    type="email"
+                                                    name="email"
+                                                    id="reviews__email"
+                                                    placeholder="Введите вашу почту"
+                                                    required>
+                                            </div>
+
+                                            <div class="reviews__field">
+                                                <button
+                                                    class="reviews__btn btn-color"
+                                                    type="submit">Оставить
+                                                    отзыв</button>
+                                                <div
+                                                    class="policy reviews__policy">Нажимая
+                                                    на кнопку
+                                                    «Отправить»,
+                                                    я даю свое согласие на
+                                                    обработку
+                                                    персональных
+                                                    данных, в
+                                                    соответствии
+                                                    с <a
+                                                        class="policy__link reviews__policy__link"
+                                                        href="/privacy/index.html">Политикой
+                                                        конфиденциальности</a></div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="recommend">
+                    <div class="container">
+                        <h2 class="recommend__title">вам может понравиться:</h2>
+                        <div class="recommend__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card__wrapper">
+                                            <img
+                                                src="/src/image/bouquet/bouquet1.jpg"
+                                                alt="bouquet" class="card__img">
+
+                                            <div class="card__name">лучшее
+                                                утро</div>
+                                            <div class="card__price">167.00
+                                                ₽<span
+                                                    class="card__price_old"></span></div>
+                                            <button class="card__btn btn">В
+                                                корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card__wrapper">
+                                            <img
+                                                src="/src/image/bouquet/bouquet12.jpg"
+                                                alt="bouquet" class="card__img">
+
+                                            <div class="card__name">лучшее
+                                                утро</div>
+                                            <div class="card__price">167.00
+                                                ₽<span
+                                                    class="card__price_old">217.00
+                                                    ₽</span></div>
+                                            <button class="card__btn btn">В
+                                                корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card__wrapper">
+                                            <img
+                                                src="/src/image/bouquet/bouquet4.jpg"
+                                                alt="bouquet" class="card__img">
+
+                                            <div class="card__name">лучшее
+                                                утро</div>
+                                            <div class="card__price">167.00
+                                                ₽<span
+                                                    class="card__price_old"></span></div>
+                                            <button class="card__btn btn">В
+                                                корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card__wrapper">
+                                            <img
+                                                src="/src/image/bouquet/bouquet3.jpg"
+                                                alt="bouquet" class="card__img">
+
+                                            <div class="card__name">лучшее
+                                                утро</div>
+                                            <div class="card__price">212.00
+                                                ₽<span
+                                                    class="card__price_old">236.00
+                                                    ₽</span></div>
+                                            <button class="card__btn btn">В
+                                                корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card__wrapper">
+                                            <img
+                                                src="/src/image/bouquet/bouquet2.jpg"
+                                                alt="bouquet" class="card__img">
+
+                                            <div class="card__name">лучшее
+                                                утро</div>
+                                            <div class="card__price">167.000
+                                                ₽<span
+                                                    class="card__price_old"></span></div>
+                                            <button class="card__btn btn">В
+                                                корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <button class="card__button-prev">
+                            <svg class="card__arrow-l" width="80" height="6"
+                                viewBox="0 0 80 6" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 2.99999L5 5.88674L5 0.113242L0 2.99999ZM80 2.5L4.5 2.49999L4.5 3.49999L80 3.5L80 2.5Z"
+                                    fill="#43FFD2" />
+                            </svg>
+
+                        </button>
+                        <button class="card__button-next">
+                            <svg class="card__arrow-r" width="80" height="6"
+                                viewBox="0 0 80 6" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M80 3L75 0.113249V5.88675L80 3ZM0 3.5L75.5 3.5V2.5L0 2.5L0 3.5Z"
+                                    fill="#43FFD2" />
+                            </svg>
+
+                        </button>
+                    </div>
+                </section>
+
+                <div class="page-card__bubble bubble__mint"></div>
+                <div class="page-card__bubble bubble__wine"></div>
+                <div class="page-card__bubble_two bubble__mint"></div>
+                <div class="page-card__bubble_two bubble__wine"></div>
+            </main>
+
             <%- include('src/templates/footer.html'); %>
             <script type="module" src="/src/js/main.js"></script>
         </body>

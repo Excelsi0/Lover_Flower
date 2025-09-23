@@ -1,0 +1,263 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.page-card {
+    .details {
+        padding-top: 100px;
+        &__btns {
+            display: flex;
+            justify-content: center;
+        }
+        &__btn {
+            max-width: 358px;
+            width: 100%;
+            border: none;
+            background: none;
+            border-bottom: 1px solid $color-disabled;
+            padding-bottom: 30px;
+
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-disabled;
+
+            cursor: pointer;
+        }
+        &__btn.active {
+            font-weight: 700;
+            color: $color-mint;
+            border-bottom: 3px solid $color-mint;
+        }
+
+        &__title {
+            margin-top: 60px;
+        }
+        &__list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            li {
+                max-width: 747px;
+                position: relative;
+                padding-left: 30px;
+                &::before {
+                    content: "•";
+                    position: absolute;
+                    left: 15px;
+                    color: $color-white;
+                }
+            }
+        }
+        &__text {
+            font-family: $font-family;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 20px;
+
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+
+            max-width: 880px;
+            &_bold {
+                font-weight: 700;
+            }
+            &_color {
+                color: $color-mint;
+                text-wrap: nowrap;
+            }
+        }
+    }
+    .reviews {
+        margin-top: 25px;
+        max-width: 539px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        &__quote {
+            margin-bottom: -18px;
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 30px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-mint;
+        }
+        &__feedback {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.02em;
+            color: $color-white;
+        }
+        &__rating {
+            margin-top: 10px;
+            font-family: $font-family;
+            font-weight: 200;
+            color: $color-yellow;
+            &_dis {
+                color: $color-disabled;
+            }
+        }
+        &__meta {
+            margin-top: 10px;
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            color: $color-disabled;
+        }
+        &__date {
+            letter-spacing: 0.01em;
+        }
+
+        &__form {
+            margin-top: 100px;
+        }
+        &__title {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: $color-mint;
+        }
+        &__text {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+            color: $color-white;
+            margin-top: 20px;
+            &:nth-child(2) {
+                margin-top: 4px;
+            }
+        }
+
+        &__ratings {
+            margin-top: 4px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+        &__ratings input {
+            display: none;
+        }
+        &__ratings label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 18px;
+            height: 18px;
+
+            font-size: 20px;
+            font-weight: 200;
+            color: $color-white;
+
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        &__ratings label:hover,
+        &__ratings label:hover ~ label {
+            color: $color-yellow;
+        }
+
+        &__ratings input:checked ~ label {
+            color: $color-yellow;
+        }
+
+        &__wrap {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 540px;
+        }
+
+        &__field {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        &__label {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+            color: $color-white;
+        }
+        &__input {
+            border: 1px solid $color-disabled;
+            padding: 19px 20px 20px;
+            background: none;
+
+            font-family: $font-family;
+            color: $color-white;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+            &:focus {
+                outline: none;
+                border: 1px solid $color-mint;
+            }
+            &::placeholder {
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                color: $color-disabled;
+            }
+        }
+        &__textarea {
+            height: 180px;
+            resize: none;
+        }
+        &__btn {
+            margin-top: 10px;
+            padding: 16px;
+            max-width: 255px;
+        }
+        &__policy {
+            margin-top: 10px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .details {
+            padding-bottom: 100px;
+            &__title {
+                font-size: 14px;
+                margin-top: 40px;
+                &:nth-child(1) {
+                    margin-top: 20px;
+                }
+            }
+            &__text {
+                font-size: 14px;
+                line-height: 21px;
+            }
+            &__list {
+                li {
+                    padding-left: 8px;
+                    &::before {
+                        left: 0;
+                    }
+                }
+            }
+            &__btn {
+                font-size: 14px;
+            }
+        }
+        .reviews {
+            margin-top: 21px;
+        }
+    }
+}

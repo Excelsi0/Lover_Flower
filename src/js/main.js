@@ -357,7 +357,7 @@ try {
 }
 
 try {
-    const swiper = new Swiper(".swiper", {
+    const swiper = new Swiper(".hits__swiper", {
         slidesPerView: 1,
         loop: true,
 
@@ -672,6 +672,59 @@ try {
 
             input.textContent = value;
         }
+    });
+} catch (e) {
+    console.error("Ошибка:", e);
+}
+
+try {
+    const swiper = new Swiper(".details__swiper", {
+        slidesPerView: 1,
+        allowTouchMove: true,
+        observer: true,
+        observeParents: true,
+        slidesPerView: "auto",
+        autoHeight: true,
+    });
+    const tabBtns = document.querySelectorAll(".details__btn");
+
+    tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const index = btn.getAttribute("data-index");
+            swiper.slideTo(index); // перейти к слайду
+        });
+    });
+
+    // обновление подсветки кнопок при смене слайда
+    swiper.on("slideChange", () => {
+        tabBtns.forEach((b) => b.classList.remove("active"));
+        tabBtns[swiper.activeIndex].classList.add("active");
+    });
+} catch (e) {
+    console.error("Ошибка:", e);
+}
+
+try {
+    const s = new Swiper(".recommend__swiper", {
+        slidesPerView: 1,
+        loop: true,
+        spaceBetween: 10,
+
+        breakpoints: {
+            769: {
+                slidesPerView: 3,
+                spaceBetween: 5,
+            },
+            1290: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
+        navigation: {
+            nextEl: ".card__button-next",
+            prevEl: ".card__button-prev",
+        },
+        modules: [Navigation],
     });
 } catch (e) {
     console.error("Ошибка:", e);

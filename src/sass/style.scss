@@ -12,6 +12,7 @@
 @use "/src/sass/blocks/bg__word.scss";
 @use "/src/sass/blocks/path.scss";
 @use "/src/sass/blocks/card.scss";
+@use "/src/sass/blocks/policy.scss";
 
 @use "/src/sass/blocks/header.scss";
 @use "/src/sass/blocks/footer.scss";
@@ -33,3 +34,5 @@
 
 @use "/src/sass/blocks/card/hero-card.scss";
 @use "/src/sass/blocks/card/addons-card.scss";
+@use "/src/sass/blocks/card/details-card.scss";
+@use "/src/sass/blocks/card/recommend.scss";

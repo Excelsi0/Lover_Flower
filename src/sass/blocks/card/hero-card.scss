@@ -1,8 +1,10 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .page-card {
-    position: relative;
-    overflow: hidden;
+    .main {
+        position: relative;
+        overflow: hidden;
+    }
     &__bubble {
         position: absolute;
         z-index: -2;

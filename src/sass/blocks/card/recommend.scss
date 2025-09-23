@@ -1,0 +1,72 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.page-card {
+    .recommend {
+        padding-bottom: 200px;
+        margin-top: 200px;
+        &__title {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 30px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-mint;
+        }
+        &__swiper {
+            margin-top: 25px;
+        }
+        .card {
+            margin: 0;
+            &__wrapper {
+                width: 100%;
+                max-width: 255px;
+            }
+            &__img {
+                height: 335px;
+                filter: none;
+            }
+            &__btn {
+                width: 100%;
+            }
+            &__button-prev,
+            &__button-next {
+                background: none;
+                border: none;
+                position: absolute;
+                width: 80px;
+                top: 225px;
+                transform: translateY(-50%);
+
+                cursor: pointer;
+            }
+            &__button-prev {
+                left: -100px;
+            }
+            &__button-next {
+                right: -100px;
+            }
+        }
+    }
+    @media screen and (max-width: 1343px) {
+        .recommend {
+            &__swiper {
+                margin-top: 40px;
+            }
+            .card {
+                &__button-prev {
+                    top: 50px;
+                    left: 10px;
+                }
+                &__button-next {
+                    top: 50px;
+                    right: 10px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .recommend {
+            display: none;
+        }
+    }
+}
