@@ -729,3 +729,72 @@ try {
 } catch (e) {
     console.error("Ошибка:", e);
 }
+try {
+    class CartSidebar {
+        constructor() {
+            this.cart = document.querySelector(".cart__wrap");
+            this.overlay = document.querySelector(".cart");
+            this.body = document.body;
+            this.scrollPosition = 0;
+
+            this.init();
+        }
+
+        init() {
+            // Открытие по клику на кнопку корзины
+            document.addEventListener("click", (e) => {
+                if (e.target.closest(".cart-goods")) {
+                    this.open();
+                }
+            });
+
+            // Закрытие по клику на крестик
+            this.cart.querySelector(".cart__close").addEventListener("click", () => {
+                this.close();
+            });
+
+            // Закрытие по клику на оверлей
+            this.overlay.addEventListener("click", (e) => {
+                if (e.target === this.overlay) {
+                    this.close();
+                }
+            });
+
+            // Закрытие по ESC
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") {
+                    this.close();
+                }
+            });
+        }
+
+        open() {
+            // Сохраняем позицию скролла
+            this.scrollPosition = window.pageYOffset;
+
+            // Блокируем скролл (5-й способ)
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
+
+            this.cart.classList.add("cart__wrap_open");
+            this.overlay.classList.add("cart_visible");
+        }
+
+        close() {
+            this.cart.classList.remove("cart__wrap_open");
+            this.overlay.classList.remove("cart_visible");
+
+            // Восстанавливаем скролл
+            document.body.style.overflow = "";
+            document.documentElement.style.overflow = "";
+
+            // Возвращаем скролл на место
+            window.scrollTo(0, this.scrollPosition);
+        }
+    }
+
+    // Инициализация
+    new CartSidebar();
+} catch (e) {
+    console.error("Ошибка:", e);
+}

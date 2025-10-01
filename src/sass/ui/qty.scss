@@ -1,0 +1,39 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.qty {
+    color: $color-disabled;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+    padding: 16px 13px;
+    border: 1px solid $color-disabled;
+    min-width: 160px;
+    &__btn {
+        border: none;
+        background: none;
+        padding: 0;
+
+        width: 10px;
+
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-disabled;
+        cursor: pointer;
+    }
+    &__input {
+        background: none;
+        border: none;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-disabled;
+    }
+}

@@ -1,0 +1,319 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.cart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+    visibility: hidden;
+    &_visible {
+        visibility: visible;
+    }
+    &__wrap {
+        overflow: hidden;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        right: -100%;
+
+        background-color: $color-black;
+        max-width: 420px;
+        width: 100%;
+
+        padding: 20px 30px;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+
+        transition: right 0.3s ease;
+        &_open {
+            right: 0 !important;
+        }
+    }
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $color-disabled;
+    }
+    &__close {
+        border: none;
+        background: none;
+        font-size: 21px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+
+        color: $color-mint;
+        cursor: pointer;
+    }
+    &__title {
+        font-family: $font-family;
+
+        font-weight: 700;
+        font-size: 30px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $color-mint;
+    }
+
+    &__cards {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__card {
+        display: flex;
+        gap: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $color-disabled;
+        &-img {
+            width: 60px;
+            height: 80px;
+        }
+        &-control {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .qty {
+                height: 30px;
+                padding: 5px 20px;
+                min-width: 100px;
+                max-width: 100px;
+                &__btn {
+                    width: 6px;
+                    font-size: 12px;
+                }
+                &__input {
+                    font-size: 12px;
+                }
+            }
+        }
+        &-title {
+            font-family: $font-family;
+
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+        }
+        &-actions {
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &-price {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-mint;
+            text-align: end;
+        }
+        &-btn {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            color: $color-white;
+
+            border: none;
+            background: none;
+
+            cursor: pointer;
+        }
+    }
+    .upsell {
+        margin-top: 40px;
+        border-bottom: 1px solid $color-disabled;
+        padding-bottom: 30px;
+        &__title {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+            &_color {
+                font-weight: 700;
+                color: $color-mint;
+            }
+        }
+        &__wrap {
+            margin-top: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        &__card {
+            display: flex;
+            gap: 10px;
+        }
+        &__img {
+            width: 60px;
+            height: 60px;
+        }
+        &__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__name {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+        }
+        &__price {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-mint;
+        }
+        &__btn {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-align: start;
+            text-decoration-skip-ink: none;
+            color: $color-mint;
+
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+    }
+    .subtotal {
+        margin-top: 10px;
+        &__result {
+            line-height: 21px;
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-mint;
+        }
+        &__title {
+            line-height: 21px;
+            font-family: $font-family;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: $color-white;
+        }
+        &__btn {
+            margin-top: 20px;
+            width: 100%;
+            padding: 19px;
+        }
+    }
+    &__bubble {
+        width: clamp(20px, 20vw, 89px);
+        height: clamp(10px, 10vh, 21px);
+        border-radius: 100%;
+        filter: blur(50px);
+        position: absolute;
+        z-index: -2;
+        &_wine {
+            box-shadow: 0 0 60px 70px $color-wine;
+        }
+        &_mint {
+            box-shadow: 0 0 60px 70px $color-mint;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cart {
+        &__wrap {
+            max-width: 259px;
+            padding: 10px;
+        }
+        &__head {
+            padding-bottom: 11px;
+        }
+        &__close {
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+        }
+        &__title {
+            font-size: 14px;
+        }
+        &__cards {
+            margin-top: 10px;
+            gap: 10px;
+        }
+        &__card {
+            gap: 10px;
+            padding-bottom: 10px;
+            &-img {
+                width: 60px;
+                height: 80px;
+            }
+            &-control {
+                .qty {
+                    min-width: 80px;
+                    max-width: 80px;
+                }
+            }
+            &-title,
+            &-price {
+                font-size: 12px;
+            }
+        }
+        .upsell {
+            padding-bottom: 10px;
+            &__title {
+                font-size: 10px;
+            }
+            &__wrap {
+                margin-top: 10px;
+            }
+            &__img {
+                width: 40px;
+                height: 40px;
+            }
+            &__name,
+            &__price,
+            &__btn {
+                font-size: 8px;
+            }
+        }
+        .subtotal {
+            &__result,
+            &__title {
+                line-height: 15px;
+                font-size: 10px;
+            }
+        }
+    }
+}
