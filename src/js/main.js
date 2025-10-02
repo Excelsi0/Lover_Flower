@@ -542,7 +542,7 @@ try {
 
 // прокркутка вниз
 try {
-    const container = document.querySelector(".catalog__content");
+    const container = document.querySelector(".catalog__content_block");
     const scrollTopBtn = document.getElementById("scrollTopBtn");
     let page = 1;
     let isLoading = false;
@@ -729,6 +729,8 @@ try {
 } catch (e) {
     console.error("Ошибка:", e);
 }
+
+// боковая корзина
 try {
     class CartSidebar {
         constructor() {
