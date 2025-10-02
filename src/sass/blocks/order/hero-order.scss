@@ -1,0 +1,110 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.page-order {
+    .header {
+        background-color: $color-black !important;
+    }
+    .header__phone,
+    .header__btn {
+        visibility: visible;
+    }
+    .hero {
+        &__path {
+            margin-top: 115px;
+        }
+        &__content {
+            position: relative;
+        }
+        &__title {
+            margin-top: 60px;
+            font-family: $second-family;
+            font-weight: 400;
+            @include fluid-font(40, 100);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+            @include fluid-line-height(40, 121);
+            span {
+                display: block;
+                padding-left: 95px;
+            }
+        }
+        &__painting {
+            position: absolute;
+            bottom: -74px;
+            left: 568px;
+        }
+        &__bg_left {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(21deg);
+            top: -298px;
+            left: -476px;
+        }
+        &__bg_right {
+            z-index: -1;
+            position: absolute;
+            top: -421px;
+            right: -490px;
+            height: 1185px;
+            transform: rotate(-43deg);
+        }
+        &__bg_right_two {
+            z-index: -1;
+            position: absolute;
+            top: -362px;
+            right: -410px;
+            height: 1185px;
+            transform: rotate(-43deg) scaleX(-1);
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .hero {
+            &__title {
+                margin-top: 40px;
+            }
+            &__painting {
+                bottom: -100px;
+                left: 362px;
+                width: 200px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .hero {
+            &__path {
+                margin-top: 100px;
+            }
+            &__title {
+                margin-top: 20px;
+                span {
+                    padding-left: 0;
+                }
+            }
+            &__painting {
+                width: 137px;
+                bottom: -48px;
+                left: 51%;
+            }
+            &__bg_left {
+                height: 324px;
+
+                top: -102px;
+                left: -122px;
+                transform: rotate(34deg) scaleX(-1);
+            }
+            &__bg_right {
+                height: 33.5rem;
+                top: -206px;
+                right: -158px;
+                transform: rotate(-36deg) scaleX(-1);
+                &_two {
+                    display: none;
+                }
+            }
+        }
+    }
+}

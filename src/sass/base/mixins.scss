@@ -1,3 +1,7 @@
 @mixin fluid-font($min-size, $max-size, $min-width: 320, $max-width: 1440) {
     font-size: clamp(#{$min-size}px, calc(#{$min-size}px + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width}))), #{$max-size}px);
 }
+
+@mixin fluid-line-height($min-height, $max-height, $min-width: 320, $max-width: 1440) {
+    line-height: clamp(#{$min-height}, calc(#{$min-height} + (#{$max-height} - #{$min-height}) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width}))), #{$max-height});
+}

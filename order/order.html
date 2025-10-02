@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <%- include('src/templates/head.html'); %>
+        <title>LF-order</title>
+    </head>
+    <body class="page-order">
+        <main class="page-order__main">
+            <%- include('src/templates/header.html'); %>
+            <section class="hero" style="height: 1000px;">
+                <div class="container">
+                    <div class="path hero__path">
+                        <a href="/index.html">Главная</a>
+                        /
+                        <a href="/order/order.html">Оформление заказа</a>
+                    </div>
+
+                    <div class="hero__content">
+                        <h1 class="hero__title">оформление
+                            <span>заказа</span></h1>
+                        <img src="/src/image/order/order-painting.svg"
+                            alt="painting" class="hero__painting">
+                    </div>
+
+                    <img src="/src/image/order/order__bg.png" alt="background"
+                        class="hero__bg_left">
+                    <img src="/src/image/order/order__bg.png" alt="background"
+                        class="hero__bg hero__bg_right">
+                    <img src="/src/image/order/order__bg.png" alt="background"
+                        class="hero__bg hero__bg_right_two">
+                </div>
+            </section>
+        </main>
+        <div class="page__bubble bubble__mint"></div>
+        <div class="page__bubble bubble__wine"></div>
+
+        <%- include('src/templates/cart.html'); %>
+        <%- include('src/templates/footer.html'); %>
+        <script type="module" src="/src/js/main.js"></script>
+    </body>
+</html>
