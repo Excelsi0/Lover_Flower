@@ -839,3 +839,23 @@ try {
 } catch (e) {
     console.error(e);
 }
+
+// делаем тектс в моб версии короче
+try {
+    function updateTextareaPlaceholder() {
+        const textarea = document.getElementById("order-form__textarea");
+        const isDesktop = window.innerWidth >= 1024;
+
+        if (isDesktop) {
+            textarea.placeholder = "Примечания к вашему заказу, особые пожелания отделу доставки";
+        } else {
+            textarea.placeholder = "Примечания к вашему заказу";
+        }
+    }
+
+    // Запускаем при загрузке и изменении размера окна
+    window.addEventListener("load", updateTextareaPlaceholder);
+    window.addEventListener("resize", updateTextareaPlaceholder);
+} catch (e) {
+    console.error(e);
+}

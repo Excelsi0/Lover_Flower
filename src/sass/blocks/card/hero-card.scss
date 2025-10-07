@@ -20,10 +20,10 @@
     }
     .header {
         background-color: $color-black !important;
-    }
-    .header__phone,
-    .header__btn {
-        visibility: visible;
+        &__phone,
+        &__btn {
+            visibility: visible;
+        }
     }
     .hero {
         &__path {

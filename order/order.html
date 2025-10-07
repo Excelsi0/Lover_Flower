@@ -33,267 +33,330 @@
             <section class="order-form">
                 <div class="container">
                     <h2 class="order-form__title">Оформление заказа</h2>
-                    <form action="#" class="order-form__content">
-                        <div class="order-form__section">
-                            <h3 class="order-form__subtitle">Контактные
-                                данные
-                            </h3>
-                            <div class="order-form__field">
-                                <label for="order-form__name"
-                                    class="order-form__label">Ваше имя*</label>
-                                <input type="name"
-                                    id="order-form__name"
-                                    class="order-form__input"
-                                    placeholder="Введите ваше имя"
-                                    pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
-                                    minlength="2"
-                                    required
-                                    title="Имя должно содержать только буквы и быть не менее 2 символов">
-                            </div>
-                            <div class="order-form__field">
-                                <label for="order-form__phone"
-                                    class="order-form__label">Ваш
-                                    телефон*</label>
-                                <input type="tel"
-                                    id="order-form__phone"
-                                    class="order-form__input"
-                                    placeholder="+7 (977) 777-77-77"
-                                    pattern="^(\+7|7|8)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
-                                    required>
-                            </div>
-                            <div class="order-form__field">
-                                <label class="order-form__label"
-                                    for="order-form__email">E-mail*</label>
-                                <input class="order-form__input"
-                                    type="email"
-                                    name="email"
-                                    id="order-form__email"
-                                    placeholder="Введите вашу почту"
-                                    required>
-                            </div>
-                            <div class="order-form__field">
-                                <label for="order-form__phone_bro"
-                                    class="order-form__label">Имя получателя
-                                    (необязательно)</label>
-                                <input type="tel"
-                                    id="order-form__phone_bro"
-                                    class="order-form__input"
-                                    placeholder="Введите имя получателя"
-                                    pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
-                                    minlength="2">
-                            </div>
-                            <div class="order-form__field">
-                                <label class="order-form__label"
-                                    for="order-form__textarea">Комментарий к
-                                    заказу</label>
-                                <textarea
-                                    class="order-form__input order-form__textarea"
-                                    id="order-form__textarea"
-                                    placeholder="Примечания к вашеу заказу,  особые пожелания отделу доставки"></textarea>
-                            </div>
-
-                        </div>
-                        <div class="order-form__section">
-                            <h3 class="order-form__subtitle">Доставка
-                            </h3>
-                            <div
-                                class="order-form__field order-form__field_radio">
-                                <label class="order-form__radio">
-                                    <input type="radio"
-                                        name="delivery">
-                                    <span
-                                        class="order-form__radio_custom"></span>
-                                    <span
-                                        class="order-form__radio_text">Самовывоз</span>
-                                </label>
-                                <label class="order-form__radio">
-
-                                    <input type="radio" name="delivery"
-                                        checked>
-                                    <span
-                                        class="order-form__radio_custom"></span>
-                                    <span
-                                        class="order-form__radio_text">Доставка
-                                        курьером</span>
-                                </label>
-                            </div>
-
-                            <div
-                                class="order-form__field order-form__field_city">
-                                <label for="order-form__city"
-                                    class="order-form__label">Город*</label>
-                                <input type="text"
-                                    id="order-form__city"
-                                    class="order-form__input"
-                                    list="order-form__arrow-city"
-                                    placeholder="Выберите город"
-                                    required>
-
-                                <datalist id="order-form__arrow-city">
-                                    <option value="Москва"></option>
-                                    <option value="Санкт-Петербург"></option>
-                                    <option value="Казань"></option>
-                                    <option value="Новосибирск"></option>
-                                    <option
-                                        value="Екатеринбург"></option>
-                                </datalist>
-                            </div>
-                            <div class="order-form__field">
-                                <label for="order-form__street"
-                                    class="order-form__label">Улица*</label>
-                                <input type="text"
-                                    id="order-form__street"
-                                    class="order-form__input"
-                                    placeholder="Введите улицу"
-                                    required>
-                            </div>
-
-                            <div class="order-form__unification">
+                    <div class="order-form__wrapper">
+                        <form action="#" class="order-form__content">
+                            <div class="order-form__section">
+                                <h3 class="order-form__subtitle">Контактные
+                                    данные
+                                </h3>
                                 <div class="order-form__field">
-                                    <label for="order-form__building"
-                                        class="order-form__label">Корп/стр
+                                    <label for="order-form__name"
+                                        class="order-form__label">Ваше
+                                        имя*</label>
+                                    <input type="name"
+                                        id="order-form__name"
+                                        class="order-form__input"
+                                        placeholder="Введите ваше имя"
+                                        pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
+                                        minlength="2"
+                                        required
+                                        title="Имя должно содержать только буквы и быть не менее 2 символов">
+                                </div>
+                                <div class="order-form__field">
+                                    <label for="order-form__phone"
+                                        class="order-form__label">Ваш
+                                        телефон*</label>
+                                    <input type="tel"
+                                        id="order-form__phone"
+                                        class="order-form__input"
+                                        placeholder="+7 (977) 777-77-77"
+                                        pattern="^(\+7|7|8)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
+                                        required>
+                                </div>
+                                <div class="order-form__field">
+                                    <label class="order-form__label"
+                                        for="order-form__email">E-mail*</label>
+                                    <input class="order-form__input"
+                                        type="email"
+                                        name="email"
+                                        id="order-form__email"
+                                        placeholder="Введите вашу почту"
+                                        required>
+                                </div>
+                                <div class="order-form__field">
+                                    <label for="order-form__phone_bro"
+                                        class="order-form__label">Имя получателя
+                                        (необязательно)</label>
+                                    <input type="tel"
+                                        id="order-form__phone_bro"
+                                        class="order-form__input"
+                                        placeholder="Введите имя получателя"
+                                        pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
+                                        minlength="2">
+                                </div>
+                                <div class="order-form__field">
+                                    <label class="order-form__label"
+                                        for="order-form__textarea">Комментарий к
+                                        заказу</label>
+                                    <textarea
+                                        class="order-form__input order-form__textarea"
+                                        id="order-form__textarea"
+                                        placeholder="Примечания к вашеу заказу,  особые пожелания отделу доставки"></textarea>
+                                </div>
+
+                            </div>
+                            <div class="order-form__section">
+                                <h3 class="order-form__subtitle">Доставка
+                                </h3>
+                                <div
+                                    class="order-form__field order-form__field_radio">
+                                    <label class="order-form__radio">
+                                        <input type="radio"
+                                            name="delivery">
+                                        <span
+                                            class="order-form__radio_custom"></span>
+                                        <span
+                                            class="order-form__radio_text">Самовывоз</span>
                                     </label>
+                                    <label class="order-form__radio">
+
+                                        <input type="radio" name="delivery"
+                                            checked>
+                                        <span
+                                            class="order-form__radio_custom"></span>
+                                        <span
+                                            class="order-form__radio_text">Доставка
+                                            курьером</span>
+                                    </label>
+                                </div>
+
+                                <div
+                                    class="order-form__field order-form__field_city">
+                                    <label for="order-form__city"
+                                        class="order-form__label">Город*</label>
                                     <input type="text"
-                                        id="order-form__building"
-                                        class="order-form__input order-form__input_mini"
-                                        placeholder="Корп/стр">
+                                        id="order-form__city"
+                                        class="order-form__input"
+                                        list="order-form__arrow-city"
+                                        placeholder="Выберите город"
+                                        required>
+
+                                    <datalist id="order-form__arrow-city">
+                                        <option value="Москва"></option>
+                                        <option
+                                            value="Санкт-Петербург"></option>
+                                        <option value="Казань"></option>
+                                        <option value="Новосибирск"></option>
+                                        <option
+                                            value="Екатеринбург"></option>
+                                    </datalist>
                                 </div>
                                 <div class="order-form__field">
-                                    <label for="order-form__house"
-                                        class="order-form__label">Дом</label>
+                                    <label for="order-form__street"
+                                        class="order-form__label">Улица*</label>
                                     <input type="text"
-                                        id="order-form__house"
-                                        class="order-form__input order-form__input_mini"
-                                        placeholder="Дом">
+                                        id="order-form__street"
+                                        class="order-form__input"
+                                        placeholder="Введите улицу"
+                                        required>
                                 </div>
-                                <div class="order-form__field">
-                                    <label for="order-form__apartment"
-                                        class="order-form__label">Кв/офис</label>
-                                    <input type="text"
-                                        id="order-form__apartment"
-                                        class="order-form__input order-form__input_mini"
-                                        placeholder="Кв/офис">
+
+                                <div class="order-form__unification">
+                                    <div class="order-form__field">
+                                        <label for="order-form__building"
+                                            class="order-form__label">Корп/стр
+                                        </label>
+                                        <input type="text"
+                                            id="order-form__building"
+                                            class="order-form__input order-form__input_mini"
+                                            placeholder="Корп/стр">
+                                    </div>
+                                    <div class="order-form__field">
+                                        <label for="order-form__house"
+                                            class="order-form__label">Дом</label>
+                                        <input type="text"
+                                            id="order-form__house"
+                                            class="order-form__input order-form__input_mini"
+                                            placeholder="Дом">
+                                    </div>
+                                    <div class="order-form__field">
+                                        <label for="order-form__apartment"
+                                            class="order-form__label">Кв/офис</label>
+                                        <input type="text"
+                                            id="order-form__apartment"
+                                            class="order-form__input order-form__input_mini"
+                                            placeholder="Кв/офис">
+                                    </div>
+                                    <div class="order-form__field">
+                                        <label for="order-form__time"
+                                            class="order-form__label">Время
+                                            доставки</label>
+                                        <input
+                                            type="text"
+                                            id="order-form__time"
+                                            class="order-form__input order-form__input_mini"
+                                            placeholder="__/__"
+                                            pattern="[0-2][0-9]/[0-5][0-9]"
+                                            maxlength="5">
+                                    </div>
                                 </div>
-                                <div class="order-form__field">
-                                    <label for="order-form__time"
-                                        class="order-form__label">Время
-                                        доставки</label>
-                                    <input
-                                        type="text"
-                                        id="order-form__time"
-                                        class="order-form__input order-form__input_mini"
-                                        placeholder="__/__"
-                                        pattern="[0-2][0-9]/[0-5][0-9]"
-                                        maxlength="5">
+
+                                <div class="order-form__delivery-price">
+                                    Стоимость доставки <span
+                                        id="order-form__delivery-price">0</span>₽
                                 </div>
                             </div>
 
-                            <div class="order-form__delivery-price">
-                                Стоимость доставки <span
-                                    id="order-form__delivery-price">0</span>₽
+                            <div class="order-form__section">
+                                <h3 class="order-form__subtitle">Оплата
+                                </h3>
+                                <div
+                                    class="order-form__field order-form__field_radio">
+                                    <label class="order-form__radio">
+                                        <input type="radio" name="payment"
+                                            checked>
+                                        <span
+                                            class="order-form__radio_custom"></span>
+                                        <span
+                                            class="order-form__radio_text">Банковская
+                                            карта</span>
+                                    </label>
+                                    <label class="order-form__radio">
+                                        <input type="radio" name="payment">
+                                        <span
+                                            class="order-form__radio_custom"></span>
+                                        <span
+                                            class="order-form__radio_text">Наличными</span>
+                                    </label>
+                                    <label class="order-form__radio">
+                                        <input type="radio" name="payment">
+                                        <span
+                                            class="order-form__radio_custom"></span>
+                                        <span
+                                            class="order-form__radio_text">Apple
+                                            pay</span>
+                                    </label>
+                                    <label class="order-form__radio">
+                                        <input type="radio" name="payment">
+                                        <span
+                                            class="order-form__radio_custom"></span>
+                                        <span
+                                            class="order-form__radio_text">Google
+                                            pay</span>
+                                    </label>
+                                    <label class="order-form__radio">
+                                        <input type="radio" name="payment">
+                                        <span
+                                            class="order-form__radio_custom"></span>
+                                        <span
+                                            class="order-form__radio_text">Криптовалюта</span>
+                                    </label>
+                                    <label class="order-form__radio">
+                                        <input type="radio" name="payment">
+                                        <span
+                                            class="order-form__radio_custom"></span>
+                                        <span
+                                            class="order-form__radio_text">С
+                                            расчетного счета</span>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
+                            <div class="order-form__section">
+                                <label for="order-form__promocode"
+                                    class="order-form__subtitle order-form__subtitle order-form__subtitle_capitalize">Промокод</label>
 
-                        <div class="order-form__section">
-                            <h3 class="order-form__subtitle">Оплата
-                            </h3>
-                            <div
-                                class="order-form__field order-form__field_radio">
-                                <label class="order-form__radio">
-                                    <input type="radio" name="payment"
-                                        checked>
-                                    <span
-                                        class="order-form__radio_custom"></span>
-                                    <span
-                                        class="order-form__radio_text">Банковская
-                                        карта</span>
-                                </label>
-                                <label class="order-form__radio">
-                                    <input type="radio" name="payment">
-                                    <span
-                                        class="order-form__radio_custom"></span>
-                                    <span
-                                        class="order-form__radio_text">Наличными</span>
-                                </label>
-                                <label class="order-form__radio">
-                                    <input type="radio" name="payment">
-                                    <span
-                                        class="order-form__radio_custom"></span>
-                                    <span
-                                        class="order-form__radio_text">Apple
-                                        pay</span>
-                                </label>
-                                <label class="order-form__radio">
-                                    <input type="radio" name="payment">
-                                    <span
-                                        class="order-form__radio_custom"></span>
-                                    <span
-                                        class="order-form__radio_text">Google
-                                        pay</span>
-                                </label>
-                                <label class="order-form__radio">
-                                    <input type="radio" name="payment">
-                                    <span
-                                        class="order-form__radio_custom"></span>
-                                    <span
-                                        class="order-form__radio_text">Криптовалюта</span>
-                                </label>
-                                <label class="order-form__radio">
-                                    <input type="radio" name="payment">
-                                    <span
-                                        class="order-form__radio_custom"></span>
-                                    <span
-                                        class="order-form__radio_text">С
-                                        расчетного счета</span>
-                                </label>
+                                <div class="order-form__promocode-wrap">
+                                    <input type="text" placeholder="Промокод"
+                                        id="order-form__promocode"
+                                        class="order-form__input order-form__input_promocode">
+                                    <button
+                                        class="order-form__promocode-btn btn">Применить
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="order-form__section">
-                            <label for="order-form__promocode"
-                                class="order-form__subtitle order-form__subtitle order-form__subtitle_capitalize">Промокод</label>
+                            <div class="order-form__summary">
+                                <div class="order-form__discount">
+                                    <h3
+                                        class="order-form__title order-form__title_wrap">Общая
+                                        сумма
+                                        заказа</h3>
+                                    <div class="order-form__amount">Скидка = 0
+                                        ₽</div>
+                                    <div class="order-form__amount">Доставка = 0
+                                        ₽</div>
+                                </div>
+                                <div class="order-form__title">334.00 ₽</div>
+                            </div>
 
-                            <div class="order-form__promocode-wrap">
-                                <input type="text" placeholder="Промокод"
-                                    id="order-form__promocode"
-                                    class="order-form__input order-form__input_promocode">
-                                <button
-                                    class="order-form__promocode-btn btn">Применить
-                                </button>
+                            <div>
+                                <button class="btn-color order-form__btn">К
+                                    оплате</button>
+                                <div class="order-form__policy policy">Нажимая
+                                    на
+                                    кнопку
+                                    «Отправить»,
+                                    я даю свое согласие на обработку
+                                    персональных
+                                    данных, в
+                                    соответствии
+                                    с <a class="order-form__link policy__link"
+                                        href="/privacy/index.html">Политикой
+                                        конфиденциальности,</a> а так же
+                                    ознакомлен с условиями оплаты и доставки
+                                </div>
+                                <img src="/src/image/order/order-painting2.svg"
+                                    class="order-form__painting" alt="payment">
                             </div>
-                        </div>
-                        <div class="order-form__summary">
-                            <div class="order-form__discount">
-                                <h3
-                                    class="order-form__title order-form__title_wrap">Общая
-                                    сумма
-                                    заказа</h3>
-                                <div class="order-form__amount">Скидка = 0
-                                    ₽</div>
-                                <div class="order-form__amount">Доставка = 0
-                                    ₽</div>
-                            </div>
-                            <div class="order-form__title">334.00 ₽</div>
-                        </div>
+                        </form>
+                        <div class="order-form__cart">
+                            <h3 class="cart__title">Ваш заказ:</h3>
+                            <div class="cart__cards">
+                                <div class="cart__card">
+                                    <img src="/src/image/bouquet/bouquet1.jpg"
+                                        alt="product card"
+                                        class="cart__card-img">
+                                    <div class="cart__card-control">
+                                        <h4 class="cart__card-title">рубиновые
+                                            искры</h4>
+                                        <div class="qty">
+                                            <button
+                                                class="qty__btn qty__minus">-</button>
+                                            <div class="qty__input">1</div>
+                                            <button
+                                                class="qty__btn qty__plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart__card-actions">
+                                        <div class="cart__card-price">167.00
+                                            ₽</div>
+                                        <button
+                                            class="cart__card-btn">Удалить</button>
+                                    </div>
+                                </div>
 
-                        <div>
-                            <button class="btn-color order-form__btn">К
-                                оплате</button>
-                            <div class="order-form__policy policy">Нажимая на
-                                кнопку
-                                «Отправить»,
-                                я даю свое согласие на обработку
-                                персональных
-                                данных, в
-                                соответствии
-                                с <a class="order-form__link policy__link"
-                                    href="/privacy/index.html">Политикой
-                                    конфиденциальности,</a> а так же
-                                ознакомлен с условиями оплаты и доставки
+                                <div class="cart__card">
+                                    <img src="/src/image/bouquet/bouquet2.jpg"
+                                        alt="product card"
+                                        class="cart__card-img">
+                                    <div class="cart__card-control">
+                                        <h4 class="cart__card-title">рубиновые
+                                            искры</h4>
+                                        <div class="qty">
+                                            <button
+                                                class="qty__btn qty__minus">-</button>
+                                            <div class="qty__input">1</div>
+                                            <button
+                                                class="qty__btn qty__plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="cart__card-actions">
+                                        <div class="cart__card-price">167.00
+                                            ₽</div>
+                                        <button
+                                            class="cart__card-btn">Удалить</button>
+                                    </div>
+                                </div>
                             </div>
-                            <img src="/src/image/order/order-painting2.svg"
-                                class="order-form__painting" alt="payment">
+
+                            <div class="cart__result">Предварительный
+                                итог:
+                                <span class="cart__value">315.00
+                                    руб.
+                                </span>
+
+                            </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </section>
             <div class="page__bubble bubble__mint"></div>
