@@ -2,6 +2,14 @@
 @use "/src/sass/base/mixins.scss" as *;
 
 .page-order {
+    &__main {
+        position: relative;
+        overflow: hidden;
+    }
+    .page__bubble {
+        position: absolute;
+        z-index: -2;
+    }
     .header {
         background-color: $color-black !important;
     }
@@ -9,6 +17,7 @@
     .header__btn {
         visibility: visible;
     }
+
     .hero {
         &__path {
             margin-top: 115px;

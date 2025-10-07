@@ -800,3 +800,42 @@ try {
 } catch (e) {
     console.error("Ошибка:", e);
 }
+
+//маска для времени
+try {
+    document.getElementById("order-form__time").addEventListener("input", function (e) {
+        let value = e.target.value.replace(/\D/g, ""); // только цифры
+
+        if (value.length > 0) {
+            value = value.substring(0, 4); // максимум 4 цифры
+
+            // Автоматически добавляем слеш
+            if (value.length >= 2) {
+                value = value.substring(0, 2) + "/" + value.substring(2);
+            }
+
+            e.target.value = value;
+        }
+    });
+
+    // Запрещаем ввод любых символов кроме цифр и управления
+    document.getElementById("order-form__time").addEventListener("keydown", function (e) {
+        // Разрешаем: backspace, delete, tab, escape, enter, стрелки
+        if (
+            [46, 8, 9, 27, 13, 37, 38, 39, 40].includes(e.keyCode) ||
+            // Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
+            (e.keyCode === 65 && e.ctrlKey === true) ||
+            (e.keyCode === 67 && e.ctrlKey === true) ||
+            (e.keyCode === 86 && e.ctrlKey === true) ||
+            (e.keyCode === 88 && e.ctrlKey === true) ||
+            // Цифры на основной клавиатуре и numpad
+            (e.keyCode >= 48 && e.keyCode <= 57) ||
+            (e.keyCode >= 96 && e.keyCode <= 105)
+        ) {
+            return;
+        }
+        e.preventDefault();
+    });
+} catch (e) {
+    console.error(e);
+}

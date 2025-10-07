@@ -1,0 +1,266 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.page-order {
+    .order-form {
+        margin-top: 80px;
+        padding-bottom: 188px;
+        &__title {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 30px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-mint;
+            line-height: 44px;
+        }
+        &__content {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            position: relative;
+        }
+        &__subtitle {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: $color-mint;
+            line-height: 21px;
+            &_capitalize {
+                text-transform: capitalize;
+            }
+        }
+        &__field {
+            position: relative;
+            margin-top: 20px;
+            max-width: 540px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            &_radio {
+                gap: 20px;
+            }
+            &_city {
+                &::after {
+                    content: "▶";
+                    position: absolute;
+                    top: 50%;
+                    right: 24px;
+                    transform: translateY(25%);
+                    color: $color-disabled;
+                }
+                &:focus-within::after {
+                    color: $color-white;
+                    transform: translateY(25%) rotate(90deg);
+                }
+            }
+        }
+        &__unification {
+            max-width: 540px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        &__label {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+            color: $color-white;
+        }
+        &__input {
+            padding: 20px;
+            width: 100%;
+            height: 60px;
+            border: 1px solid $color-disabled;
+            background: none;
+
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            color: $color-white;
+
+            &_mini {
+                max-width: 160px;
+            }
+            &::placeholder {
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                color: $color-disabled;
+            }
+            &:focus {
+                outline: none;
+                border: 1px solid $color-mint;
+            }
+
+            &[list] {
+                &::-webkit-calendar-picker-indicator {
+                    display: none !important;
+                }
+                &::-webkit-list-button {
+                    display: none !important;
+                }
+                &::-webkit-clear-button {
+                    display: none !important;
+                }
+            }
+            &_promocode {
+                text-transform: uppercase;
+                font-weight: 900;
+                color: $color-mint;
+                &::placeholder {
+                    text-transform: capitalize;
+                }
+            }
+        }
+        &__promocode {
+            &-wrap {
+                display: flex;
+                max-width: 350px;
+            }
+            &-btn {
+                min-width: 191px;
+                border: 1px solid $color-mint;
+                color: $color-mint;
+                text-transform: capitalize;
+            }
+        }
+        &__textarea {
+            resize: none;
+        }
+        &__radio {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-disabled;
+            &_custom {
+                width: 16px;
+                height: 16px;
+
+                border-radius: 50%;
+                border: 1px solid $color-disabled;
+                margin-right: 20px;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            &:hover .order-form__radio_custom {
+                border: 1px solid $color-white;
+            }
+            input:checked + &_custom {
+                border: 1px solid $color-white;
+                &::after {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    background: $color-white;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            input[type="radio"]:checked + &_custom + &_text {
+                color: $color-white;
+            }
+        }
+
+        &__radio input[type="radio"] {
+            display: none;
+        }
+        &__delivery-price {
+            margin-top: 20px;
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: $color-disabled;
+        }
+        &__summary {
+            display: flex;
+            gap: 96px;
+        }
+        &__discount {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__amount {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-white;
+        }
+        &__btn {
+            margin-top: -30px;
+            max-width: 255px;
+            width: 100%;
+            height: 50px;
+        }
+        &__policy {
+            margin-top: 10px;
+            max-width: 327px;
+        }
+        &__painting {
+            position: absolute;
+            bottom: -44px;
+            left: 354px;
+            transform: rotate(-14deg);
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .order-form {
+            padding-bottom: 163px;
+            &__title {
+                font-size: 20px;
+                line-height: 30px;
+                &_wrap {
+                    max-width: 150px;
+                    margin-bottom: 4px;
+                }
+            }
+            &__input {
+                &_mini {
+                    max-width: 140px;
+                }
+            }
+            &__summary {
+                gap: 69px;
+            }
+            &__unification {
+                gap: 20px;
+            }
+            &__promocode {
+                &-btn {
+                    min-width: 170px;
+                }
+            }
+            &__discount {
+                gap: 6px;
+            }
+            &__amount {
+                font-size: 12px;
+            }
+            &__painting {
+                height: 59px;
+                bottom: -5px;
+                left: 181px;
+                transform: translateY(100%) rotate(-14deg);
+            }
+        }
+    }
+}
