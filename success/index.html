@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <%- include('src/templates/head.html'); %>
+        <title>LF-success</title>
+    </head>
+    <body class="page-success">
+        <main class="page-success__main">
+            <%- include('src/templates/header.html'); %>
+            <section class="hero">
+                <div class="container">
+                    <h1 class="hero__title">Оплата <span
+                            class="hero__title_part-1">прошла</span>
+                        <span class="hero__title_part-2">успешно!</span>
+                    </h1>
+                    <p class="hero__text">Ваш номер заказа –
+                        <span>395808599</span>
+                    </p>
+                    <p class="hero__text hero__text_desctop">Спасибо за заказ!
+                        <br>
+                        Вы получите уведомление о статусе вашего заказа
+                    </p>
+                    <p class="hero__text hero__text_mobile">Спасибо за заказ!
+                        <br>
+                        Наш менеджер свяжется с вами <br>
+                        в течении 15 минут для уточнения деталей и подтверждения
+                        заказа
+                    </p>
+
+                    <a href="/index.html" class="hero__link">на главную</a>
+                    <img class="hero__painting"
+                        src="/src/image/success/success-painting.svg"
+                        alt="lover flower">
+                </div>
+            </section>
+            <div class="page__bubble bubble__mint"></div>
+            <div class="page__bubble bubble__wine"></div>
+            <img src="/src/image/success/success__bg.png
+            " class="page-success__img"
+                alt="beautiful flowers for the background">
+        </main>
+        <%- include('src/templates/cart.html'); %>
+        <%- include('src/templates/footer.html'); %>
+        <script type="module"
+            src="/src/js/main.js"></script>
+    </body>
+</html>

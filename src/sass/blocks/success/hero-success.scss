@@ -1,0 +1,168 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.page-success {
+    &__img {
+        position: absolute;
+        bottom: -105px;
+        right: -194px;
+        width: clamp(377px, 377px + 622 * ((100vw - 320px) / (1440 - 320)), 999px);
+    }
+    &__main {
+        position: relative;
+        overflow: hidden;
+    }
+    .page__bubble {
+        position: absolute;
+        z-index: -2;
+    }
+    .header {
+        background-color: $color-black !important;
+        &__phone,
+        &__btn {
+            visibility: visible;
+        }
+    }
+
+    .hero {
+        padding-bottom: 408px;
+        &__title {
+            font-family: $second-family;
+            margin-top: 193px;
+            font-weight: 400;
+            @include fluid-font(40, 100);
+            @include fluid-line-height(40, 121);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+            &_part-2 {
+                position: relative;
+                display: block;
+                padding-left: 505px;
+                &::before {
+                    content: "";
+
+                    position: absolute;
+                    top: 50%;
+
+                    left: 96px;
+
+                    width: 349px;
+                    height: 1px;
+                    background-color: $color-pink;
+                }
+            }
+        }
+        &__text {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-white;
+            line-height: 21px;
+
+            margin-top: 30px;
+            &_desctop {
+                margin-top: 20px;
+            }
+            &_mobile {
+                display: none;
+            }
+        }
+        &__link {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            color: $color-mint;
+
+            display: block;
+            margin-top: 61px;
+        }
+        &__painting {
+            position: absolute;
+            left: 346px;
+            bottom: 14px;
+            transform: translateY(100%) rotate(-14deg);
+            z-index: 1;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .hero {
+            &__title {
+                &_part-2 {
+                    padding-left: 380px;
+                    &::before {
+                        width: 210px;
+                        left: 80px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .hero {
+            padding-bottom: 159px;
+            &__title {
+                &_part-1 {
+                    display: block;
+                    position: relative;
+                    padding-left: 72px;
+                    &::before {
+                        content: "";
+
+                        position: absolute;
+                        top: 50%;
+
+                        left: 0;
+
+                        width: 45px;
+                        height: 1px;
+                        background-color: $color-pink;
+                    }
+                }
+                &_part-2 {
+                    padding-left: 51px;
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+            &__text {
+                margin-top: 10px;
+                &_mobile {
+                    position: relative;
+                    display: block;
+                    margin-top: 8px;
+                    max-width: 234px;
+                    z-index: 1;
+                }
+                &_desctop {
+                    display: none;
+                }
+            }
+            &__link {
+                margin-top: 20px;
+            }
+            &__painting {
+                width: 137px;
+                left: 21px;
+                bottom: -35px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .page-success {
+        &__img {
+            bottom: -51px;
+            right: -139px;
+        }
+    }
+}
