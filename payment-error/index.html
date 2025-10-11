@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('src/templates/head.html'); %>
+        <title>LF-payment-error</title>
+    </head>
+    <body class="page-payment-error">
+        <main class="page-payment-error__main">
+            <%- include('src/templates/header.html'); %>
+            <section class="hero">
+                <div class="container">
+                    <h1 class="hero__title">Ошибка<span
+                            class="hero__title_part-1">платежа</span>
+                    </h1>
+                    <div class="hero__messages">
+                        <p class="hero__text">Произошла ошибка....</p>
+                        <p class="hero__text">Попробуйте оплатить
+                            еще раз!</p>
+                    </div>
+
+                    <div class="hero__btns">
+                        <button class="btn-color hero__btn">Оплатить еще
+                            раз</button>
+                        <a href="/index.html" class="hero__link">на главную</a>
+                    </div>
+                </div>
+            </section>
+            <div class="page__bubble bubble__wine"></div>
+            <div class="page__bubble bubble__wine_two"></div>
+            <img src="/src/image/payment-error/payment-error__bg.png"
+                class="page-payment-error__img"
+                alt="beautiful flowers for the background">
+        </main>
+        <%- include('src/templates/cart.html'); %>
+        <%- include('src/templates/footer.html'); %>
+        <script type="module"
+            src="/src/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,145 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.page-payment-error {
+    &__img {
+        position: absolute;
+        bottom: -88px;
+        right: -55px;
+    }
+    &__main {
+        position: relative;
+        overflow: hidden;
+    }
+    .page__bubble {
+        position: absolute;
+        z-index: -2;
+    }
+    .bubble__wine_two {
+        width: clamp(100px, 50vw, 679px);
+        height: clamp(80px, 30vh, 111px);
+        border-radius: 100%;
+        filter: blur(130px);
+        box-shadow: 0 0 200px 100px $color-wine;
+        background-color: $color-wine;
+        animation: bubbleAnimateWine_two 15s infinite, bubbleTransformWine_two 20s infinite;
+        top: 0%;
+        right: 0%;
+    }
+
+    @keyframes bubbleAnimateWine_two {
+        0% {
+            top: 30%;
+            left: 0%;
+        }
+        25% {
+            top: 90%;
+            left: 0%;
+        }
+        50% {
+            top: 0%;
+            left: 80%;
+        }
+        75% {
+            top: 50%;
+            left: 50%;
+        }
+        100% {
+            top: 30%;
+            left: 0%;
+        }
+    }
+    .header {
+        background-color: $color-black !important;
+        &__phone,
+        &__btn {
+            visibility: visible;
+        }
+    }
+
+    .hero {
+        padding-bottom: 441px;
+        &__title {
+            font-family: $second-family;
+            margin-top: 193px;
+            font-weight: 400;
+            @include fluid-font(40, 100);
+            @include fluid-line-height(40, 121);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+            &_part-1 {
+                position: relative;
+                display: block;
+                padding-left: 191px;
+            }
+        }
+        &__messages {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding-left: 191px;
+        }
+        &__text {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-white;
+            line-height: 21px;
+        }
+        &__btns {
+            margin-top: 10px;
+            padding-left: 191px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        &__btn {
+            max-width: 255px;
+            width: 100%;
+            height: 50px;
+            background-color: $color-wine;
+            color: $color-white;
+        }
+        &__link {
+            font-weight: 300;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            color: $color-white;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .page-payment-error__img {
+            width: 403px;
+            right: -97px;
+            bottom: -48px;
+        }
+        .hero {
+            padding-bottom: 171px;
+            &__title {
+                margin-top: 101px;
+            }
+            &__title_part-1,
+            &__messages,
+            &__btns {
+                padding-left: 72px;
+            }
+            &__messages {
+                margin-top: 20px;
+                gap: 10px;
+            }
+            &__btns {
+                margin-top: 40px;
+                flex-direction: column;
+                align-items: start;
+                gap: 16px;
+            }
+        }
+    }
+}
