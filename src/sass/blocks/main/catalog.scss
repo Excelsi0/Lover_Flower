@@ -115,12 +115,12 @@
             position: absolute;
             z-index: -1;
         }
-        .bubble__wine {
+        .bubble__second {
             animation: bubbleAnimateWine 30s infinite, bubbleTransformWine 30s infinite;
             width: clamp(707px, 50vw, 879px);
             height: clamp(236px, 30vh, 211px);
         }
-        .bubble__mint {
+        .bubble__first {
             animation: bubbleAnimateMint 25s infinite, bubbleTransformMint 25s infinite;
             width: clamp(667px, 50vw, 879px);
             height: clamp(127px, 30vh, 211px);
@@ -186,8 +186,8 @@
                 display: none;
             }
         }
-        .bubble__wine,
-        .bubble__mint {
+        .bubble__second,
+        .bubble__first {
             filter: blur(50px);
         }
     }

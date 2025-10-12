@@ -1,6 +1,6 @@
 @use "/src//sass/base/variables.scss" as *;
 
-.bubble__mint {
+.bubble__first {
     width: clamp(200px, 50vw, 879px);
     height: clamp(100px, 30vh, 211px);
     border-radius: 100%;
@@ -51,7 +51,7 @@
     }
 }
 
-.bubble__wine {
+.bubble__second {
     width: clamp(200px, 50vw, 879px);
     height: clamp(100px, 30vh, 211px);
     border-radius: 100%;
@@ -104,9 +104,44 @@
     }
 }
 
+.bubble__second_two {
+    width: clamp(100px, 50vw, 679px);
+    height: clamp(80px, 30vh, 111px);
+    border-radius: 100%;
+    filter: blur(130px);
+    box-shadow: 0 0 200px 100px $color-wine;
+    background-color: $color-wine;
+    animation: bubbleAnimateWine_two 15s infinite, bubbleTransformWine_two 20s infinite;
+    top: 0%;
+    right: 0%;
+}
+
+@keyframes bubbleAnimateWine_two {
+    0% {
+        top: 30%;
+        left: 0%;
+    }
+    25% {
+        top: 90%;
+        left: 0%;
+    }
+    50% {
+        top: 0%;
+        left: 80%;
+    }
+    75% {
+        top: 50%;
+        left: 50%;
+    }
+    100% {
+        top: 30%;
+        left: 0%;
+    }
+}
+
 @media screen and (max-width: 768px) {
-    .bubble__mint,
-    .bubble__wine {
+    .bubble__first,
+    .bubble__second {
         filter: blur(50px);
     }
 }

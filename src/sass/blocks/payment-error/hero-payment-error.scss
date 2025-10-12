@@ -15,40 +15,6 @@
         position: absolute;
         z-index: -2;
     }
-    .bubble__wine_two {
-        width: clamp(100px, 50vw, 679px);
-        height: clamp(80px, 30vh, 111px);
-        border-radius: 100%;
-        filter: blur(130px);
-        box-shadow: 0 0 200px 100px $color-wine;
-        background-color: $color-wine;
-        animation: bubbleAnimateWine_two 15s infinite, bubbleTransformWine_two 20s infinite;
-        top: 0%;
-        right: 0%;
-    }
-
-    @keyframes bubbleAnimateWine_two {
-        0% {
-            top: 30%;
-            left: 0%;
-        }
-        25% {
-            top: 90%;
-            left: 0%;
-        }
-        50% {
-            top: 0%;
-            left: 80%;
-        }
-        75% {
-            top: 50%;
-            left: 50%;
-        }
-        100% {
-            top: 30%;
-            left: 0%;
-        }
-    }
     .header {
         background-color: $color-black !important;
         &__phone,

@@ -1,0 +1,23 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.page-404 {
+    &__img {
+        position: absolute;
+        bottom: -88px;
+        right: -55px;
+    }
+    &__main {
+        position: relative;
+        overflow: hidden;
+    }
+    .page__bubble {
+        position: absolute;
+        z-index: -2;
+    }
+    .bubble__second,
+    .bubble__second_two {
+        background-color: $color-bg-404;
+        box-shadow: 0 0 200px 100px $color-bg-404;
+    }
+}
