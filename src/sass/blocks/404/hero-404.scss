@@ -2,6 +2,7 @@
 @use "/src/sass/base/mixins.scss" as *;
 
 .page-404 {
+    position: relative;
     &__img {
         position: absolute;
         bottom: -88px;
@@ -19,5 +20,177 @@
     .bubble__second_two {
         background-color: $color-bg-404;
         box-shadow: 0 0 200px 100px $color-bg-404;
+    }
+    .header {
+        background-color: $color-black !important;
+        &__phone,
+        &__btn {
+            visibility: visible;
+        }
+    }
+    .hero {
+        height: 1023px;
+        &__wrapper {
+            visibility: visible;
+            position: absolute;
+            top: -245px;
+            left: 0;
+            width: 100%;
+            height: 1275px;
+        }
+        &__digit {
+            position: absolute;
+            font-family: $second-family;
+            font-weight: 400;
+            font-size: 600px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            background: linear-gradient(180deg, #163d8f 0%, #163d8f 0%, #4f6cab 54.69%, #b6cdff 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            &_one {
+                top: 73px;
+                left: 84px;
+            }
+            &_two {
+                top: 264px;
+                left: 301px;
+                z-index: 1;
+            }
+            &_three {
+                top: 0;
+                left: 469px;
+            }
+            &_mobile {
+                display: none;
+            }
+        }
+        &__img {
+            position: absolute;
+            left: -317px;
+            top: 195px;
+            &_mobile {
+                display: none;
+            }
+        }
+        &__painting {
+            position: absolute;
+            top: 537px;
+            right: 0;
+        }
+        &__bg {
+            position: absolute;
+            right: 0;
+            bottom: 84px;
+        }
+        &__info {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            position: absolute;
+            top: 828px;
+            right: 198px;
+        }
+        &__text {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-white;
+        }
+        &__link {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            color: $color-mint;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .hero {
+            &__img {
+                left: -130px;
+                top: 306px;
+                width: 910px;
+            }
+            &__digit {
+                font-size: 450px;
+                &_one {
+                    top: 112px;
+                    left: 135px;
+                }
+                &_three {
+                    top: 84px;
+                    left: 29.3125rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .header {
+            background-color: $color-black !important;
+            &__logo_mobile {
+                display: block;
+                font-family: $second-family;
+                font-weight: 300;
+                font-size: 20px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: $color-white;
+                text-align: center;
+            }
+        }
+        .hero {
+            height: 532px;
+            &__img {
+                display: none;
+                &_mobile {
+                    display: block;
+                    position: absolute;
+                    left: -240px;
+                    top: 12px;
+                    width: 820px;
+                    z-index: 99;
+                }
+            }
+            &__digit {
+                font-size: 300px;
+                &_one {
+                    top: 148px;
+                    left: -18px;
+                }
+                &_two {
+                    display: none;
+                }
+                &_three {
+                    top: 179px;
+                    left: 103px;
+                }
+                &_mobile {
+                    display: block;
+                    position: absolute;
+                    top: 72px;
+                    left: 64px;
+                    font-size: 12.5rem;
+                    z-index: 100;
+                }
+            }
+            &__bg {
+                display: none;
+            }
+            &__painting {
+                height: 98px;
+                top: 548px;
+            }
+            &__info {
+                top: 432px;
+                right: 30px;
+            }
+        }
     }
 }

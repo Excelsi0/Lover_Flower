@@ -159,6 +159,19 @@
         }
     }
     @media screen and (max-width: 1024px) {
+        .header {
+            background-color: $color-black !important;
+            &__logo_mobile {
+                display: block;
+                font-family: $second-family;
+                font-weight: 300;
+                font-size: 20px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: $color-white;
+                text-align: center;
+            }
+        }
         .hero {
             &__content {
                 justify-content: center;

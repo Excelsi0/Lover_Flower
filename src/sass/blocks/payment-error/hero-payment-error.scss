@@ -81,6 +81,19 @@
         }
     }
     @media screen and (max-width: 768px) {
+        .header {
+            background-color: $color-black !important;
+            &__logo_mobile {
+                display: block;
+                font-family: $second-family;
+                font-weight: 300;
+                font-size: 20px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: $color-white;
+                text-align: center;
+            }
+        }
         .page-payment-error__img {
             width: 403px;
             right: -97px;

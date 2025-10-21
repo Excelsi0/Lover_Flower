@@ -859,3 +859,19 @@ try {
 } catch (e) {
     console.error(e);
 }
+
+try {
+    const header = document.querySelector(".page-404 .header");
+
+    if (header) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 2) {
+                header.style.zIndex = "101";
+            } else {
+                header.style.zIndex = "";
+            }
+        });
+    }
+} catch (e) {
+    console.error("Ошибка при изменении z-index у header на странице 404:", e);
+}
