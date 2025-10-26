@@ -4,7 +4,7 @@
         <%- include('src/templates/head.html'); %>
         <title>LF-delivery</title>
     </head>
-    <body class="delivery">
+    <body class="page-delivery">
         <main class="delivery__main">
             <%- include('src/templates/header.html'); %>
             <section class="hero">
@@ -79,11 +79,63 @@
                     </div>
                 </div>
             </section>
+
+            <section class="details">
+                <div class="container">
+                    <div class="details__price">
+                        <h2
+                            class="details__title title-h2 details__price-title">стоимость
+                            доставки:</h2>
+                        <ul class="details__list">
+                            <li class="details__text"><span
+                                    class="details__text_bold">Бесплатно</span>
+                                –
+                                при заказе на
+                                сумму от <span
+                                    class="details__text_color details__text_no-wrap">90
+                                    рублей</span></li>
+                            <li class="details__text"><span
+                                    class="details__text_bold">10 рублей</span>
+                                –
+                                при заказе на
+                                сумму <span
+                                    class="details__text_color details__text_no-wrap">менее
+                                    90
+                                    рублей</span></li>
+                            <li class="details__text">Так же вы можете забрать
+                                ваш заказ самостоятельно по адресу:
+                                <br><span class="details__text_color">г. Минск,
+                                    ул.
+                                    Тимирязева д. 67, комн. 112
+                                    ежедневно с 10.00 до 21.00</span></li>
+
+                        </ul>
+                    </div>
+                    <div class="details__terms">
+                        <h2 class="details__title title-h2">Условия
+                            доставки:</h2>
+                        <ul class="details__list details__terms-list">
+                            <li class="details__text">Доставка осуществляется по
+                                городу Минску в пределах МКАД <span
+                                    class="details__text_color details__text_no-wrap">в
+                                    любой день
+                                </span></li>
+                            <li class="details__text">Возможность, сроки и
+                                стоимость доставки за пределы МКАД, доставки в
+                                ночное время, праздники <span
+                                    class="details__text_color details__text_no-wrap">оговариваются
+                                    с
+                                    менеджером</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
             <div class="page__bubble bubble__second"></div>
             <div class="page__bubble bubble__second_two"></div>
-            <img src="#"
+            <!-- <img src="#"
                 class="delivery__img"
-                alt="beautiful flowers for the background">
+                alt="beautiful flowers for the background"> -->
         </main>
         <%- include('src/templates/cart.html'); %>
         <%- include('src/templates/footer.html'); %>

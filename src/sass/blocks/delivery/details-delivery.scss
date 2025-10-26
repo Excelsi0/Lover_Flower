@@ -1,0 +1,94 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.page-delivery {
+    .details {
+        margin-top: 100px;
+        &__price {
+            padding-left: 95px;
+            &-title {
+                padding-left: 31px;
+            }
+        }
+
+        &__list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            li {
+                max-width: 747px;
+                position: relative;
+                padding-left: 30px;
+                &::before {
+                    content: "•";
+                    position: absolute;
+                    left: 15px;
+                    color: $color-white;
+                }
+            }
+        }
+        &__terms {
+            margin-top: 100px;
+            &-list {
+                gap: 0;
+            }
+        }
+        &__text {
+            font-family: $font-family;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 20px;
+
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+
+            max-width: 880px;
+            &_bold {
+                font-weight: 700;
+            }
+            &_color {
+                color: $color-mint;
+            }
+            &_no-wrap {
+                text-wrap: nowrap;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .details {
+            margin-top: 60px;
+            &__price {
+                padding-left: 0;
+                &-title {
+                    padding-left: 0;
+                }
+            }
+            &__terms {
+                margin-top: 60px;
+            }
+            &__title {
+                font-size: 14px;
+                letter-spacing: 0.04em;
+            }
+            &__text {
+                font-size: 14px;
+                letter-spacing: 0.02em;
+                line-height: 21px;
+            }
+            &__list {
+                margin-top: 10px;
+                gap: 10px;
+                li {
+                    max-width: 279px;
+                    padding-left: 8px;
+                    &::before {
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
