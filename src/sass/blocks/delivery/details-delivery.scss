@@ -66,9 +66,6 @@
                     padding-left: 0;
                 }
             }
-            &__terms {
-                margin-top: 60px;
-            }
             &__title {
                 font-size: 14px;
                 letter-spacing: 0.04em;
@@ -87,6 +84,12 @@
                     &::before {
                         left: 0;
                     }
+                }
+            }
+            &__terms {
+                margin-top: 60px;
+                &-list {
+                    gap: 0;
                 }
             }
         }
