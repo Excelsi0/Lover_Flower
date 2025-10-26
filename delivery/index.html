@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('src/templates/head.html'); %>
+        <title>LF-delivery</title>
+    </head>
+    <body class="delivery">
+        <main class="delivery__main">
+            <%- include('src/templates/header.html'); %>
+            <section class="hero">
+                <div class="container">
+                    <div class="path hero__path">
+                        <a href="/index.html">Главная</a>
+                        /
+                        <a href="/delivery/index.html">доставка и оплката</a>
+                    </div>
+                    <h1 class="hero__title">доставка<span
+                            class="hero__title_part-1">и оплата</span>
+                    </h1>
+                    <div class="hero__wrapper">
+                        <div class="hero__mark">!</div>
+                        <div class="hero__info">
+                            <h2 class="hero__info-title">Дорогие клиенты!</h2>
+                            <div class="hero__info-text">Во время пандемии
+                                (COVID-19) компания Lover Flower призывает всех
+                                меньше контактировать с другими людьми для
+                                защиты себя и своих близких. Именно поэтому мы
+                                организовали <span
+                                    class="hero__info-text_color">БЕСКОНТАКТНУЮ
+                                    ДОСТАВКУ</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="page__bubble bubble__second"></div>
+            <div class="page__bubble bubble__second_two"></div>
+            <img src="#"
+                class="delivery__img"
+                alt="beautiful flowers for the background">
+        </main>
+        <%- include('src/templates/cart.html'); %>
+        <%- include('src/templates/footer.html'); %>
+        <script type="module"
+            src="/src/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,114 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.delivery {
+    position: relative;
+    &__img {
+        position: absolute;
+        bottom: -88px;
+        right: -55px;
+    }
+    &__main {
+        position: relative;
+        overflow: hidden;
+    }
+    .page__bubble {
+        position: absolute;
+        z-index: -2;
+    }
+    .bubble__second,
+    .bubble__second_two {
+        background-color: #6b535f;
+        box-shadow: 0 0 200px 100px #6b535f;
+    }
+    .header {
+        background-color: $color-black !important;
+        &__phone,
+        &__btn {
+            visibility: visible;
+        }
+    }
+    .hero {
+        height: 1000px;
+        &__path {
+            margin-top: 115px;
+        }
+        &__title {
+            margin-top: 60px;
+            font-family: $second-family;
+            font-weight: 400;
+            @include fluid-font(40, 100);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+            line-height: 121px;
+            &_part-1 {
+                display: block;
+                padding-left: 95px;
+            }
+        }
+        &__wrapper {
+            margin-top: 24px;
+            display: flex;
+            gap: 11px;
+        }
+        &__mark {
+            margin-top: -27px;
+            font-family: $second-family;
+            font-weight: 400;
+            font-size: 100px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-pink;
+            line-height: 121px;
+        }
+        &__info {
+            &-title {
+                font-family: $font-family;
+                font-weight: 700;
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                color: $color-pink;
+            }
+            &-text {
+                margin-top: 10px;
+                max-width: 570px;
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                color: $color-white;
+                &_color {
+                    color: $color-mint;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .header {
+            background-color: $color-black !important;
+            &__logo_mobile {
+                display: block;
+                font-family: $second-family;
+                font-weight: 300;
+                font-size: 20px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: $color-white;
+                text-align: center;
+            }
+        }
+
+        .hero {
+            &__title {
+                margin-top: 20px;
+                line-height: 48px;
+                &_part-1 {
+                    padding-left: 51px;
+                }
+            }
+        }
+    }
+}
