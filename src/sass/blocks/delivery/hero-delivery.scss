@@ -18,8 +18,8 @@
     }
     .bubble__second,
     .bubble__second_two {
-        background-color: #6b535f;
-        box-shadow: 0 0 200px 100px #6b535f;
+        background-color: $color-delivery;
+        box-shadow: 0 0 200px 100px $color-delivery;
     }
     .header {
         background-color: $color-black !important;
@@ -29,7 +29,6 @@
         }
     }
     .hero {
-        height: 1000px;
         &__path {
             margin-top: 115px;
         }
