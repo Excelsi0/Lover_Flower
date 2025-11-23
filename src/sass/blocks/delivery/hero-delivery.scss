@@ -84,6 +84,20 @@
                 }
             }
         }
+        &__img {
+            position: absolute;
+            top: 115px;
+            right: -384px;
+            z-index: -1;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .hero {
+            &__img {
+                width: 500px;
+                right: -244px;
+            }
+        }
     }
     @media screen and (max-width: 768px) {
         .header {
@@ -107,6 +121,11 @@
                 &_part-1 {
                     padding-left: 51px;
                 }
+            }
+            &__img {
+                width: 210px;
+                top: 90px;
+                right: -95px;
             }
         }
     }
