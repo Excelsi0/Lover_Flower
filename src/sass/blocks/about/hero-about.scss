@@ -1,0 +1,219 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.page-about {
+    position: relative;
+    &__main {
+        position: relative;
+        overflow: hidden;
+    }
+    .page__bubble {
+        position: absolute;
+        z-index: -2;
+    }
+    .bubble__second,
+    .bubble__second_two {
+        background-color: $color-bg-about;
+        box-shadow: 0 0 200px 100px $color-bg-about;
+    }
+    .header {
+        background-color: $color-black !important;
+        &__phone,
+        &__btn {
+            visibility: visible;
+        }
+    }
+    .hero {
+        &__path {
+            margin-top: 115px;
+        }
+        &__title {
+            margin-top: 46px;
+            padding-left: 95px;
+            font-family: $second-family;
+            font-weight: 400;
+            @include fluid-font(40, 100);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+            line-height: 121px;
+        }
+
+        &__mark {
+            margin-top: 98px;
+            padding-left: 186px;
+            max-width: 428px;
+            position: relative;
+            font-family: $second-family;
+            font-weight: 400;
+            font-size: 60px;
+            line-height: 64px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-mint;
+            &::after {
+                content: "";
+                display: block;
+                border: 1px solid $color-mint;
+                width: 60px;
+
+                position: absolute;
+                right: -20px;
+                bottom: 31px;
+                transform: translateX(100%);
+            }
+        }
+
+        &__info {
+            margin-top: 18px;
+            margin-left: auto;
+            max-width: 847px;
+            width: 100%;
+            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.2);
+            padding: 40px 165px 40px 20px;
+
+            &-title {
+                font-family: $font-family;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 26px;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                color: $color-white;
+            }
+            &-text {
+                margin-top: 20px;
+                font-family: $font-family;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 26px;
+                letter-spacing: 0.04em;
+                color: $color-white;
+            }
+        }
+        &__img {
+            position: absolute;
+            &_left {
+                transform: rotate(17deg);
+                width: 808px;
+                top: 82px;
+                left: -446px;
+                z-index: -1;
+            }
+            &_right {
+                top: 42px;
+                right: -18px;
+                z-index: 100;
+            }
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .hero {
+            &__mark {
+                margin-top: 0;
+            }
+            &__img {
+                &_left {
+                    width: 500px;
+                    bottom: 100px;
+                    left: -200px;
+                }
+                &_right {
+                    width: 533px;
+                    top: 58px;
+                    right: -165px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .page-about {
+        .header {
+            background-color: $color-black !important;
+            &__logo_mobile {
+                display: block;
+                font-family: $second-family;
+                font-weight: 300;
+                font-size: 20px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: $color-white;
+                text-align: center;
+            }
+        }
+
+        .hero {
+            &__path {
+                margin-top: 100px;
+            }
+            &__mark {
+                padding-left: 0;
+                max-width: 244px;
+                &::after {
+                    width: 20px;
+                }
+            }
+            &__info {
+                padding: 20px;
+            }
+            &__img {
+                &_left {
+                    z-index: 1;
+                    width: 200px;
+                    bottom: auto;
+                    top: 123px;
+                    left: -94px;
+                }
+                &_right {
+                    width: 366px;
+                    top: 163px;
+                    right: -158px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .page-about {
+        .hero {
+            &__path {
+                margin-top: 100px;
+            }
+            &__title {
+                margin-top: 20px;
+                line-height: 48px;
+                padding-left: 51px;
+            }
+            &__mark {
+                margin-top: 89px;
+                font-size: 20px;
+                line-height: 24px;
+                max-width: 71px;
+                padding-left: 0;
+                &::after {
+                    width: 20px;
+                    bottom: 10px;
+                }
+            }
+            &__info {
+                margin-top: 0;
+                max-width: 259px;
+                padding: 10px;
+                &-title,
+                &-text {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+            }
+            &__img {
+                &_right {
+                    width: 268px;
+                    top: 126px;
+                    right: -100px;
+                }
+            }
+        }
+    }
+}

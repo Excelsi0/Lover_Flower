@@ -875,3 +875,18 @@ try {
 } catch (e) {
     console.error("Ошибка при изменении z-index у header на странице 404:", e);
 }
+
+//  Z-index control for hero image
+try {
+    document.addEventListener("scroll", () => {
+        const img = document.querySelector(".hero__img_right");
+
+        if (window.scrollY > 1) {
+            img.style.zIndex = "-1";
+        } else {
+            img.style.zIndex = "100";
+        }
+    });
+} catch (e) {
+    console.error("Ошибка:", e);
+}
