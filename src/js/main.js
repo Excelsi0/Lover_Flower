@@ -891,10 +891,31 @@ try {
     console.error("Ошибка:", e);
 }
 
+//  Z-index control for hero image сщтефсеы
+try {
+    document.addEventListener("scroll", () => {
+        const img = document.querySelector(".page-contacts__z-index");
+        if (!img) return;
+
+        if (window.innerWidth > 425) {
+            img.style.zIndex = "-1";
+            return;
+        }
+
+        if (window.scrollY > 1) {
+            img.style.zIndex = "-1";
+        } else {
+            img.style.zIndex = "100";
+        }
+    });
+} catch (e) {
+    console.error("Ошибка:", e);
+}
+
 //  Z-index control for hero block
 try {
     document.addEventListener("scroll", () => {
-        const arr = document.querySelector(".hero__z-index");
+        const arr = document.querySelector(".hero__title_z-index");
 
         if (window.scrollY > 1) {
             arr.style.zIndex = "1";

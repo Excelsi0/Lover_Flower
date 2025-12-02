@@ -1,0 +1,192 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.page-contacts {
+    .connect {
+        position: relative;
+        margin-top: 140px;
+        &__inner {
+            position: relative;
+            overflow: hidden;
+
+            padding-top: 22px;
+            padding-bottom: 52px;
+        }
+        .container {
+            position: relative;
+        }
+        &__title {
+            max-width: 604px;
+            display: flex;
+            justify-content: end;
+            flex-direction: column;
+            align-items: end;
+            span {
+                max-width: 604px;
+                display: block;
+                text-align: end;
+            }
+        }
+        &__text {
+            position: absolute;
+            top: min(136px, 9.4vw);
+            right: 10px;
+            max-width: 255px;
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-white;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -53px;
+                width: 255px;
+                width: 100%;
+                border: 0.5px solid $color-mint;
+            }
+        }
+        &__wrap {
+            display: flex;
+            justify-content: flex-end;
+        }
+        &__form {
+            margin-top: 5px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__input,
+        &__textarea {
+            border: 1px solid $color-mint;
+            background: none;
+            width: 100%;
+            max-width: 445px;
+            min-width: 300px;
+            padding: 20px;
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            color: $color-white;
+
+            &::placeholder {
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                color: #395959;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__input {
+            height: 60px;
+        }
+        &__textarea {
+            resize: none;
+            height: 120px;
+        }
+        &__btn {
+            margin-top: 10px;
+            width: fit-content;
+            padding: 16px 93px;
+        }
+
+        &__link {
+            text-decoration: underline;
+            color: $color-bg-contacts;
+        }
+        &__painting {
+            position: absolute;
+            width: clamp(132px, 21vw, 305px);
+            left: clamp(200px, 21vw, 305px);
+            top: clamp(115px, 18.5vw, 269px);
+            &_mobile {
+                display: none;
+            }
+        }
+
+        &__bg {
+            position: absolute;
+            width: clamp(675px, 53vw, 759px);
+            top: -80px;
+            left: -359px;
+            transform: rotate(39.15deg);
+            z-index: -1;
+            &_mobile {
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .connect {
+            &__title {
+                max-width: 472px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .connect {
+            margin-top: 60px;
+            &__inner {
+                padding-top: 30px;
+                padding-bottom: 34px;
+            }
+            &__title {
+                display: block;
+                span {
+                    text-align: start;
+                }
+            }
+
+            &__text {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-top: 135px;
+                &::before {
+                    top: -20px;
+                    width: 96px;
+                }
+            }
+            &__bg {
+                display: none;
+                &_mobile {
+                    display: block;
+                    position: absolute;
+                    top: -104px;
+                    right: 0;
+                }
+            }
+
+            &__wrap {
+                justify-content: center;
+            }
+            &__form {
+                margin-top: 30px;
+            }
+            &__policy {
+                max-width: 248px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        .connect {
+            &__painting {
+                display: none;
+                &_mobile {
+                    display: block;
+                    position: absolute;
+                    top: 134px;
+                    transform: translateY(-50%);
+                    left: 94px;
+                }
+            }
+        }
+    }
+}

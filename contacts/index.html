@@ -15,7 +15,7 @@
                         <a href="/contacts/index.html">контакты</a>
                     </div>
 
-                    <h1 class="hero__title hero__z-index">контакты</h1>
+                    <h1 class="hero__title hero__title_z-index">контакты</h1>
 
                     <ul class="hero__list">
                         <li>
@@ -46,9 +46,62 @@
                     </ul>
 
                 </div>
-                <img class="hero__img hero__img_z-index"
+                <img class="hero__img page-contacts__z-index"
                     src="/src/image/contacts/contacts__bg.png"
                     alt="beautiful flowers for the background">
+            </section>
+
+            <section class="connect">
+                <div class="connect__inner">
+                    <div class="container">
+                        <h2 class="title connect__title">напишите <br>
+                            <span>нам</span>
+                        </h2>
+                        <div class="connect__text">Отправьте ваш вопрос, заказ,
+                            предложение или жалобу через форму обратной связи, и
+                            наш
+                            специалист свяжется с вами в течение 15 минут.
+                        </div>
+                        <div class="connect__wrap">
+                            <form class="connect__form" action="#">
+                                <input class="connect__input" type="text"
+                                    placeholder="Ваше имя" required
+                                    pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
+                                    minlength="2">
+                                <input class="connect__input" type="tel"
+                                    placeholder="+7 (977) 777-77-77" required
+                                    pattern="^(\+7|7|8)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$">
+                                <textarea class="connect__textarea"
+                                    placeholder="Ваш комментарий"
+                                    minlength="5"
+                                    required></textarea>
+                                <button
+                                    class="btn-color connect__btn">отправить</button>
+                                <div class="connect__policy policy">Нажимая на
+                                    кнопку
+                                    «Отправить»,
+                                    я даю свое согласие на обработку
+                                    персональных
+                                    данных, в
+                                    соответствии
+                                    с <a class="connect__link policy__link"
+                                        href="/privacy/index.html">Политикой
+                                        конфиденциальности</a></div>
+                            </form>
+                        </div>
+                        <img src="/src/image/contacts/contacts__painting.svg"
+                            alt="signature"
+                            class="connect__painting">
+                        <img
+                            src="/src/image/contacts/contacts__painting_mobile.svg"
+                            alt="signature"
+                            class="connect__painting_mobile">
+                    </div>
+
+                </div>
+                <img src="/src/image/contacts/contacts__bg.png"
+                    alt="tree leaves"
+                    class="connect__bg">
             </section>
 
             <div class="page__bubble bubble__second"></div>
