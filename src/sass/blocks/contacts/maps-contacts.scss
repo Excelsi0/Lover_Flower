@@ -1,0 +1,31 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.page-contacts {
+    .maps {
+        padding: 100px 0 200px;
+        &__title {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $color-mint;
+        }
+        &__wrapper {
+            margin-top: 20px;
+            height: 427px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .maps {
+            padding: 60px 0 151px;
+            &__title {
+                font-size: 14px;
+            }
+            &__wrapper {
+                margin-top: 10px;
+                height: 300px;
+            }
+        }
+    }
+}

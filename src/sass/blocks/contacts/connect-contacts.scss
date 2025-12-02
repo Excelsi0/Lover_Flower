@@ -7,9 +7,6 @@
         &__inner {
             position: relative;
             overflow: hidden;
-
-            padding-top: 22px;
-            padding-bottom: 52px;
         }
         .container {
             position: relative;
@@ -117,9 +114,6 @@
             left: -359px;
             transform: rotate(39.15deg);
             z-index: -1;
-            &_mobile {
-                display: none;
-            }
         }
     }
     @media screen and (max-width: 1024px) {
@@ -132,10 +126,7 @@
     @media screen and (max-width: 768px) {
         .connect {
             margin-top: 60px;
-            &__inner {
-                padding-top: 30px;
-                padding-bottom: 34px;
-            }
+
             &__title {
                 display: block;
                 span {
@@ -155,12 +146,6 @@
             }
             &__bg {
                 display: none;
-                &_mobile {
-                    display: block;
-                    position: absolute;
-                    top: -104px;
-                    right: 0;
-                }
             }
 
             &__wrap {
