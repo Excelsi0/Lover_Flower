@@ -879,12 +879,27 @@ try {
 //  Z-index control for hero image
 try {
     document.addEventListener("scroll", () => {
-        const img = document.querySelector(".hero__img_right");
+        const img = document.querySelector(".hero__img_z-index");
 
         if (window.scrollY > 1) {
             img.style.zIndex = "-1";
         } else {
             img.style.zIndex = "100";
+        }
+    });
+} catch (e) {
+    console.error("Ошибка:", e);
+}
+
+//  Z-index control for hero block
+try {
+    document.addEventListener("scroll", () => {
+        const arr = document.querySelector(".hero__z-index");
+
+        if (window.scrollY > 1) {
+            arr.style.zIndex = "1";
+        } else {
+            arr.style.zIndex = "101";
         }
     });
 } catch (e) {

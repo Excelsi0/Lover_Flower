@@ -1,0 +1,157 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.page-contacts {
+    position: relative;
+    &__main {
+        position: relative;
+        overflow: hidden;
+    }
+    .page__bubble {
+        position: absolute;
+        z-index: -2;
+    }
+    .bubble__second,
+    .bubble__second_two {
+        background-color: $color-bg-contacts;
+        box-shadow: 0 0 200px 100px $color-bg-contacts;
+    }
+    .header {
+        background-color: $color-black !important;
+        &__phone,
+        &__btn {
+            visibility: visible;
+        }
+    }
+    .hero {
+        height: 1000px; //
+        &__path {
+            margin-top: 115px;
+        }
+        &__title {
+            position: relative;
+            margin-top: 46px;
+            padding-left: 95px;
+
+            font-family: $second-family;
+            font-weight: 400;
+            @include fluid-font(40, 100);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+            &_h3 {
+                font-weight: 700;
+                font-size: 20px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                color: $color-mint;
+            }
+        }
+        &__text {
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 20px;
+
+            line-height: 26px;
+
+            letter-spacing: 0.02em;
+            text-align: center;
+            color: $color-white;
+        }
+        &__list {
+            position: relative;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            li {
+                padding: 27px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 30px;
+
+                text-align: center;
+
+                border-radius: 20px;
+                width: 255px;
+                height: 255px;
+                backdrop-filter: blur(20px);
+                background: rgba(0, 0, 0, 0.2);
+            }
+        }
+        &__img {
+            position: absolute;
+            top: 68px;
+            right: -300px;
+            transform: rotate(-9deg);
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .hero {
+            &__list {
+                justify-content: center;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .page-about {
+            .header {
+                background-color: $color-black !important;
+                &__logo_mobile {
+                    display: block;
+                    font-family: $second-family;
+                    font-weight: 300;
+                    font-size: 20px;
+                    letter-spacing: 0.2em;
+                    text-transform: uppercase;
+                    color: $color-white;
+                    text-align: center;
+                }
+            }
+
+            .hero {
+                &__path {
+                    margin-top: 100px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 425px) {
+        .hero {
+            &__title {
+                margin-top: 20px;
+                padding-left: 0;
+            }
+            &__list {
+                margin-top: 20px;
+                justify-content: start;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                gap: 20px;
+                li {
+                    justify-content: start;
+                    align-items: start;
+                    gap: 0;
+                    padding: 0;
+                    text-align: start;
+                    width: auto;
+                    height: auto;
+                    backdrop-filter: none;
+                    background: none;
+                }
+            }
+            &__text {
+                text-align: start;
+            }
+            &__img {
+                width: 310px;
+                transform: rotate(-2.74deg);
+                top: 58px;
+                right: -144px;
+            }
+        }
+    }
+}

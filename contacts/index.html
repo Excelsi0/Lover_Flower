@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <%- include('src/templates/head.html'); %>
+        <title>LF-Contacts</title>
+    </head>
+    <body class="page-contacts">
+        <main class="page-contacts__main">
+            <%- include('src/templates/header.html'); %>
+            <section class="hero">
+                <div class="container">
+                    <div class="path hero__path">
+                        <a href="/index.html">Главная</a>
+                        /
+                        <a href="/contacts/index.html">контакты</a>
+                    </div>
+
+                    <h1 class="hero__title hero__z-index">контакты</h1>
+
+                    <ul class="hero__list">
+                        <li>
+                            <h3 class="hero__title_h3">время работы</h3>
+                            <div class="hero__text">с <time
+                                    datetime="10:00">10:00</time> до <time
+                                    datetime="21:00">21:00</time> <br> без
+                                выходных</div>
+                        </li>
+                        <li>
+                            <h3 class="hero__title_h3">Адрес</h3>
+                            <div class="hero__text"><a
+                                    href="https://yandex.by/maps/-/CLCyeBJ1"
+                                    target="_blank">г. Минск, ул. Тимирязева 67,
+                                    комн. 112</a></div>
+                        </li>
+                        <li>
+                            <h3 class="hero__title_h3">Телефон</h3>
+                            <div class="hero__text"><a
+                                    href="tel:+375 (29) 113-69-69">+375 (29)
+                                    113-69-69</a></div>
+                        </li>
+                        <li>
+                            <h3 class="hero__title_h3">E-mail</h3>
+                            <div class="hero__text"><a
+                                    href="mailto:zakaz@loverflower.by">zakaz@loverflower.by</a></div>
+                        </li>
+                    </ul>
+
+                </div>
+                <img class="hero__img hero__img_z-index"
+                    src="/src/image/contacts/contacts__bg.png"
+                    alt="beautiful flowers for the background">
+            </section>
+
+            <div class="page__bubble bubble__second"></div>
+            <div class="page__bubble bubble__second_two"></div>
+
+        </main>
+        <%- include('src/templates/cart.html'); %>
+        <%- include('src/templates/footer.html'); %>
+        <script type="module"
+            src="/src/js/main.js"></script>
+    </body>
+</html>
