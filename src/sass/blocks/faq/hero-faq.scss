@@ -1,0 +1,196 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.page-faq {
+    position: relative;
+    &__main {
+        position: relative;
+        overflow: hidden;
+    }
+    .page__bubble {
+        position: absolute;
+        z-index: -2;
+    }
+    .bubble__second,
+    .bubble__second_two {
+        background-color: $color-bg-faq;
+        box-shadow: 0 0 200px 100px $color-bg-faq;
+    }
+    .header {
+        background-color: $color-black !important;
+        &__phone,
+        &__btn {
+            visibility: visible;
+        }
+    }
+    .hero {
+        &__path {
+            margin-top: 115px;
+        }
+        &__title {
+            position: relative;
+            margin-top: 46px;
+            padding-left: 95px;
+
+            font-family: $second-family;
+            font-weight: 400;
+            @include fluid-font(40, 100);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $color-white;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                display: block;
+                width: 65px;
+                height: 1px;
+                background-color: $color-mint;
+            }
+        }
+        &__wrapper {
+            position: relative;
+            margin-top: 30px;
+            padding-bottom: 200px;
+        }
+        &__img {
+            position: absolute;
+            top: 49px;
+            right: -180px;
+            &_2 {
+                position: absolute;
+                z-index: 101;
+                width: 268px;
+                top: -60px;
+                left: -176px;
+            }
+        }
+    }
+    .faq {
+        max-width: 825px;
+        padding: 20px;
+        border: 1px solid $color-mint;
+        margin-top: 10px;
+        backdrop-filter: blur(20px); // от себя
+        background: rgba(0, 0, 0, 0.2);
+        &__content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition-duration: 0.3s;
+        }
+        &__title {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            text-transform: uppercase;
+            color: $color-mint;
+        }
+        &__text {
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 30px;
+            color: $color-white;
+
+            overflow: hidden;
+        }
+        &__summary {
+            position: relative;
+            list-style: none;
+            cursor: pointer;
+            padding-right: 72px;
+            &::after {
+                content: "+";
+                position: absolute;
+                right: 0;
+                top: -13px;
+                font-family: $font-family;
+                font-weight: 200;
+                font-size: 40px;
+                text-transform: uppercase;
+                color: $color-mint;
+            }
+        }
+        &__details[open] .faq__summary::after {
+            content: "-";
+        }
+        &__details[open] + .faq__content {
+            grid-template-rows: 1fr;
+            margin-top: 20px;
+        }
+    }
+    @media screen and (max-width: 1290px) {
+        .hero {
+            &__img {
+                &_2 {
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-faq {
+        .header {
+            background-color: $color-black !important;
+            &__logo_mobile {
+                display: block;
+                font-family: $second-family;
+                font-weight: 300;
+                font-size: 20px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: $color-white;
+                text-align: center;
+            }
+        }
+
+        .hero {
+            &__path {
+                margin-top: 100px;
+            }
+            &__title {
+                margin-top: 20px;
+                padding-left: 0;
+                &::before {
+                    display: none;
+                }
+            }
+            &__wrapper {
+                margin-top: 50px;
+                padding-bottom: 100px;
+            }
+            &__img {
+                width: 231px;
+                top: 52px;
+                right: -94px;
+                &_2 {
+                    z-index: 101;
+                    width: 76px;
+                    top: 48px;
+                    left: -56px;
+                }
+            }
+        }
+        .faq {
+            padding: 10px;
+            &__summary {
+                padding-right: 48px;
+            }
+            &__title {
+                font-size: 14px;
+                line-height: 21px;
+            }
+            &__text {
+                font-size: 14px;
+                line-height: 21px;
+            }
+            &__details[open] + .faq__content {
+                margin-top: 10px;
+            }
+        }
+    }
+}

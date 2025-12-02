@@ -915,7 +915,7 @@ try {
 //  Z-index control for hero block
 try {
     document.addEventListener("scroll", () => {
-        const arr = document.querySelector(".hero__title_z-index");
+        const arr = document.querySelector(".hero__up_z-index");
 
         if (window.scrollY > 1) {
             arr.style.zIndex = "1";
