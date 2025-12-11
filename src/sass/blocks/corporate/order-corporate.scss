@@ -1,0 +1,118 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.page-corporate {
+    .order {
+        padding-top: 184px;
+        padding-bottom: 130px;
+
+        &__title {
+            font-family: $second-family;
+            font-weight: 400;
+            @include fluid-font(14, 40);
+            letter-spacing: 0.02em;
+            line-height: 48px;
+            text-transform: uppercase;
+            color: $color-white;
+        }
+        &__subtitle {
+            margin-top: 60px;
+            font-family: $font-family;
+            color: $color-mint;
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        &__wrapper {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        &__section {
+            width: 100%;
+        }
+        &__field {
+            position: relative;
+            margin-top: 20px;
+            max-width: 540px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        &__label {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+            color: $color-white;
+        }
+        &__input {
+            padding: 20px;
+            width: 100%;
+            height: 60px;
+            border: 1px solid $color-disabled;
+            background: none;
+
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            color: $color-white;
+
+            &::placeholder {
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                color: $color-disabled;
+            }
+            &:focus {
+                outline: none;
+                border: 1px solid $color-mint;
+            }
+        }
+
+        &__btn {
+            margin-top: 40px;
+            max-width: 255px;
+            width: 100%;
+            height: 50px;
+        }
+        &__link {
+            color: $color-bg-contacts;
+        }
+        &__policy {
+            margin-top: 10px;
+            max-width: 327px;
+        }
+        &__painting {
+            position: absolute;
+            bottom: 110px;
+            right: 0;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .order {
+            padding-top: 60px;
+            padding-bottom: 110px;
+            &__title {
+                line-height: 21px;
+            }
+            &__wrapper {
+                display: block;
+            }
+
+            &__painting {
+                display: none;
+            }
+            &__btn {
+                margin-top: 30px;
+            }
+        }
+    }
+}

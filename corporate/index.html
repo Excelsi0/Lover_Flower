@@ -114,6 +114,174 @@
                     src="/src/image/corporate/corporate__bg.png"
                     alt="beautiful flowers for the background">
             </section>
+            <section class="order">
+                <div class="container">
+                    <h2 class="order__title">Если у Вас единичный заказ, то
+                        можете выбрать букет в каталоге либо заказать
+                        индивидуальный букет и указать его стоимость, а при
+                        оформлении заказа в корзине указать, что оплата будет
+                        производиться с расчётного счёта организации.
+                    </h2>
+
+                    <form action="#" class="order__form">
+                        <h3 class="order__subtitle">заполните заявку:</h3>
+
+                        <div class="order__wrapper">
+                            <div class="order__section">
+                                <div class="order__field">
+                                    <label class="order__label"
+                                        for="order__name-organization">Наименование
+                                        организации</label>
+                                    <input
+                                        type="name"
+                                        id="order__name-organization"
+                                        class="order__input"
+                                        placeholder="Введите наименование вашей организации"
+                                        pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
+                                        minlength="2"
+                                        required
+                                        title="Название должно содержать только буквы и быть не менее 2 символов">
+                                </div>
+                                <div class="order__field">
+                                    <label class="order__label"
+                                        for="order__mailing-address">Почтовый
+                                        адрес</label>
+                                    <input
+                                        type="text"
+                                        id="order__mailing-address"
+                                        class="order__input"
+                                        placeholder="Введите почтовый адрес"
+                                        required>
+                                </div>
+                                <div class="order__field">
+                                    <label for="order__contact-person"
+                                        class="order__label">Контактное
+                                        лицо</label>
+                                    <input type="name"
+                                        id="order__contact-person"
+                                        class="order__input"
+                                        placeholder="Введите ваше имя"
+                                        pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
+                                        minlength="2"
+                                        required
+                                        title="Имя должно содержать только буквы и быть не менее 2 символов">
+                                </div>
+                                <div class="order__field">
+                                    <label for="order__contact-phone"
+                                        class="order__label">Контактный номер
+                                        телефона</label>
+                                    <input type="tel"
+                                        id="order__contact-phone"
+                                        class="order__input"
+                                        placeholder="+7 (977) 777-77-77"
+                                        pattern="^(\+7|7|8)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
+                                        required>
+                                </div>
+                                <div class="order__field">
+                                    <label for="order__cost"
+                                        class="order__label">Стоимость букета
+                                        сотруднику
+                                        (если разная – указать)</label>
+                                    <input
+                                        type="text"
+                                        class="order__input"
+                                        id="order__cost"
+                                        placeholder="Укажите стоимость букета сотруднику"
+                                        required>
+                                </div>
+                                <div class="order__field">
+                                    <label class="order__label"
+                                        for="order__email">Адрес электронной
+                                        почты</label>
+                                    <input class="order__input"
+                                        type="email"
+                                        name="email"
+                                        id="order__email"
+                                        pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                        placeholder="Укажите ваш адрес электронной почты"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="order__section">
+                                <div class="order__field">
+                                    <label class="order__label"
+                                        for="order__unp">УНП</label>
+                                    <input
+                                        class="order__input"
+                                        type="number"
+                                        id="order__unp"
+                                        pattern="\d{9}"
+                                        placeholder="УНП"
+                                        minlength="9"
+                                        maxlength="9"
+                                        title="УНП номер состоит из 9 цифр"
+                                        required>
+                                </div>
+                                <div class="order__field">
+                                    <label for="order__payment-account"
+                                        class="order__label">Расчетный
+                                        счет</label>
+                                    <input
+                                        class="order__input"
+                                        type="number"
+                                        name="account"
+                                        id="order__payment-account"
+                                        minlength="20"
+                                        maxlength="20"
+                                        pattern="\d{20}"
+                                        placeholder="Введите номер расчетного счета"
+                                        required
+                                        title="Введите 20 цифр расчетного счета">
+                                </div>
+                                <div class="order__field">
+                                    <label class="order__label"
+                                        for="order__bank-code">Код банка</label>
+                                    <input
+                                        class="order__input"
+                                        type="number"
+                                        name="code"
+                                        id="order__bank-code"
+                                        placeholder="Код банка"
+                                        required>
+                                </div>
+                                <div class="order__field">
+                                    <label for="order__qty-application"
+                                        class="order__label">Предполагаемое
+                                        количество
+                                        заявок в месяц</label>
+                                    <input
+                                        class="order__input"
+                                        type="number"
+                                        name="qty"
+                                        id="order__qty-application"
+                                        placeholder="Введите предполагаемое количество заявок в месяц"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order__btns">
+                            <button class="btn-color order__btn">К
+                                оплате</button>
+                            <div class="order__policy policy">Нажимая
+                                на
+                                кнопку
+                                «Отправить»,
+                                я даю свое согласие на обработку
+                                персональных
+                                данных, в
+                                соответствии
+                                с <a class="order__link policy__link"
+                                    href="/privacy/index.html">Политикой
+                                    конфиденциальности,</a>
+                            </div>
+                        </div>
+                        <img
+                            src="/src/image/corporate/corporate__painting.svg"
+                            class="order__painting" alt="payment">
+                    </form>
+                </div>
+
+            </section>
 
             <div class="page__bubble bubble__second"></div>
             <div class="page__bubble bubble__second_two"></div>
